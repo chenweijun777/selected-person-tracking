@@ -50,24 +50,94 @@ flowchart LR
 
 ## 运行与复现
 
-在仓库根目录执行（Python 3.12 已验证）：
+以下以 **Windows／PowerShell、Python 3.12、NVIDIA GPU、CUDA 13.0** 为例，直接安装到当前 Python。所有命令在仓库根目录执行。
+
+### 1. 准备 Python 和 NVIDIA 驱动
+
+安装 [Python 3.12（64 位）](https://www.python.org/downloads/windows/)，包含 pip 和 Tcl/Tk，并将 Python 加入 PATH。安装支持 CUDA 13.0 的 [NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)，然后检查：
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -e ".[runtime,evaluation,dev]"
-.venv\Scripts\python.exe tools/prepare_models.py --source-dir <本地权重目录>
-.venv\Scripts\python.exe tools/run_tracking_gui.py
+python --version
+python -m pip --version
+nvidia-smi
 ```
 
-本地正式模型为 `models/best.pt`，ReID 为 `models/yolo26n-reid.onnx`。权重和数据不进入 Git。微调权重暂未发布下载；当前可从已有权重目录校验复制，或按训练入口重新训练。原始预训练演示可使用 `prepare_models.py --download --profile pretrained`，再显式加载 `configs/pretrained/`；该演示结果与正式微调结果不同。
+`nvidia-smi` 应能识别显卡。顶部 `CUDA Version` 表示驱动支持的最高 CUDA 版本，实际 PyTorch 运行时版本在第 3 步检查，见 [NVIDIA 说明](https://docs.nvidia.com/datacenter/tesla/drivers/latest/cuda-toolkit-driver-and-architecture-matrix.html)。本项目使用预编译 PyTorch，CUDA 运行时随安装包提供，运行现有代码无需额外安装 CUDA Toolkit 或 cuDNN，见 [PyTorch 说明](https://discuss.pytorch.org/t/should-i-install-the-extra-cudatoolkit-and-cudnn/194528/2)。
 
-无 GUI 批处理与脚本化点击：
+### 2. 安装 CUDA 版 PyTorch 和项目依赖
+
+先安装指定 CUDA 构建，再安装项目依赖。版本组合为 PyTorch 2.14.0＋torchvision 0.29.0，`cu130` 对应 CUDA 13.0；来源为 [PyTorch 官方安装源](https://download.pytorch.org/whl/cu130/)。
 
 ```powershell
-.venv\Scripts\python.exe tools/run_video_joint.py --source <视频路径> --output outputs/demo --device cpu --actions <点击清单.json>
+python -m pip install --upgrade pip
+python -m pip install "torch==2.14.0+cu130" "torchvision==0.29.0+cu130" --index-url https://download.pytorch.org/whl/cu130
+python -m pip install -e ".[runtime,evaluation,dev]"
+python -m pip check
 ```
 
-点击清单格式：`[{"frame":3,"action":"click","x":200,"y":180},{"frame":20,"action":"reset"}]`。交互演示加 `--display`；详细安装、训练、输入准备和评估命令见[评价与复现](docs/EVALUATION.md)。
+项目依赖包含固定版本 `ultralytics==8.4.158`、`trackeval==1.3.0`，以及 OpenCV、NumPy、ONNX Runtime、Pillow、lap 和检查工具。CUDA 用于 YOLO 检测；ShortLink/A2 的外观编码保持 ONNX Runtime CPU 路径。
+
+### 3. 检查 CUDA 是否真正可用
+
+```powershell
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA runtime:', torch.version.cuda); assert torch.cuda.is_available(), 'CUDA unavailable: check NVIDIA driver and CUDA-enabled PyTorch'; print('GPU:', torch.cuda.get_device_name(0)); print('GPU tensor:', torch.ones(1, device='cuda').cpu())"
+```
+
+应输出 `2.14.0+cu130`、`13.0`、显卡名称和 GPU 运算后的张量。检查通过后，下面的 `--device 0` 使用第一张 NVIDIA 显卡。
+
+### 4. 准备模型
+
+| 文件 | 用途 |
+| --- | --- |
+| `models/best.pt` | 正式微调 YOLO26s 检测权重 |
+| `models/yolo26s.pt` | 官方预训练参考权重及训练初始化 |
+| `models/yolo26n-reid.onnx` | ShortLink/A2 外观编码 |
+
+已有三个模型文件时，校验复制到仓库。将示例目录改成自己的权重目录：
+
+```powershell
+python tools/prepare_models.py --source-dir "D:\tracking-models"
+python tools/verify_models.py
+```
+
+权重和数据不进入 Git。正式微调权重暂未发布下载，复现最终结果需要取得原 `best.pt`；也可按[训练工作流](docs/EVALUATION.md#训练工作流)训练自己的权重。只运行官方预训练参考演示时，可执行 `python tools/prepare_models.py --download --profile pretrained`，再使用[对应参考配置](docs/EVALUATION.md#从安装到演示)。
+
+### 5. 运行指定目标跟踪
+
+启动 GUI，选择视频、开始分析，再点击画面中的行人。CUDA 可用时 GUI 自动使用 GPU：
+
+```powershell
+python tools/run_tracking_gui.py
+```
+
+命令行交互演示：
+
+```powershell
+python tools/run_video_joint.py --source "D:\videos\demo.mp4" --output outputs/demo --device 0 --display
+```
+
+将示例视频路径改成自己的文件；输出目录须为新目录。无窗口批处理可将 `--display` 换成 `--actions actions.json`，点击清单格式为 `[{"frame":3,"action":"click","x":200,"y":180},{"frame":20,"action":"reset"}]`。
+
+### 6. 复现指定目标评估结果
+
+精确回放需要当前冻结协议对应的 GT、轨迹、外观特征和运动输入。已有本地复现资料时，先校验迁移，再重跑三个集合：
+
+```powershell
+python tools/prepare_reproduction.py --source-dir "D:\tracking-reproduction"
+python tools/replay_benchmark.py --split development --output outputs/reproduce_development
+python tools/replay_benchmark.py --split validation --output outputs/reproduce_validation
+python tools/replay_benchmark.py --split test --output outputs/reproduce_test
+```
+
+默认比较 A0/A1/A2、NoBank、NoEMA，输出预测、逐帧评价、恢复事件和汇总。该回放使用固定图像派生输入，不需要 GPU 推理。源码包不含这些外部输入；只有原始 MOT 图像时，可按[评价与复现](docs/EVALUATION.md#结果复现固定输入回放)重新构建。
+
+模型准备完成后，可运行代码与公开结果检查：
+
+```powershell
+python -m pytest
+python tools/verify_results.py
+python tools/check_release.py
+```
 
 ## 仓库导航
 

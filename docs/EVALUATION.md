@@ -34,21 +34,20 @@ MOT17-02/04/05 为开发集，09/10 为验证集，11 为自定义测试序列�
 
 ## 从安装到演示
 
-在仓库根目录创建虚拟环境，安装 `.[runtime,evaluation,dev]`。GUI 需要 Python 的 Tkinter，Linux 可额外安装 python3-tk。模型路径/哈希见 `manifests/models.json`，不读取草稿区源码或旧虚拟环境。
+先按 [README 的 CUDA 安装步骤](../README.md#运行与复现)准备 Python 3.12、NVIDIA 驱动、CUDA 版 PyTorch 和项目依赖。所有命令直接使用当前 Python，在仓库根目录执行。GUI 需要 Tkinter，Linux 可额外安装 python3-tk；模型路径/哈希见 `manifests/models.json`。
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -e ".[runtime,evaluation,dev]"
-.venv\Scripts\python.exe tools/prepare_models.py --source-dir <本地权重目录>
-.venv\Scripts\python.exe tools/verify_models.py
-.venv\Scripts\python.exe tools/run_tracking_gui.py
+python -m pip install -e ".[runtime,evaluation,dev]"
+python tools/prepare_models.py --source-dir "D:\tracking-models"
+python tools/verify_models.py
+python tools/run_tracking_gui.py
 ```
 
 原始预训练参考（不等于正式微调结果）：
 
 ```powershell
-.venv\Scripts\python.exe tools/prepare_models.py --download --profile pretrained
-.venv\Scripts\python.exe tools/run_video_joint.py --source <视频路径> --output outputs/pretrained_demo --device cpu --display --model models/yolo26s.pt --tracker configs/pretrained/tracker.yaml --target-config configs/pretrained/target.json
+python tools/prepare_models.py --download --profile pretrained
+python tools/run_video_joint.py --source "D:\videos\demo.mp4" --output outputs/pretrained_demo --device 0 --display --model models/yolo26s.pt --tracker configs/pretrained/tracker.yaml --target-config configs/pretrained/target.json
 ```
 
 ## 结果复现：固定输入回放
@@ -56,9 +55,9 @@ python -m venv .venv
 当前本地整理版已经准备好忽略于 Git 的 `reproduction_inputs/` 和 GT。冻结协议在 `protocols/frozen/`；路径映射把旧路径映射到仓库内的有效输入副本。评估代码已经收进可安装的 `a1_tracker.evaluation`，不再动态导入草稿工具。
 
 ```powershell
-.venv\Scripts\python.exe tools/replay_benchmark.py --split development --output outputs/reproduce_development
-.venv\Scripts\python.exe tools/replay_benchmark.py --split validation --output outputs/reproduce_validation
-.venv\Scripts\python.exe tools/replay_benchmark.py --split test --output outputs/reproduce_test
+python tools/replay_benchmark.py --split development --output outputs/reproduce_development
+python tools/replay_benchmark.py --split validation --output outputs/reproduce_validation
+python tools/replay_benchmark.py --split test --output outputs/reproduce_test
 ```
 
 默认同时重跑 A0/A1/A2、NoBank、NoEMA，输出预测、逐帧评价、共同队列与正式事件结果、汇总及代码/输入哈希。输出目录必须是新目录。缓存只含当前观察轨迹、图像派生外观、因果 GMC 和同帧事件；每个策略、目标会话使用独立状态，不读取 GT 来做恢复。
@@ -68,7 +67,7 @@ python -m venv .venv
 无旧缓存时，可以从本地 MOT 图像与权重重新构建因果输入：
 
 ```powershell
-.venv\Scripts\python.exe tools/build_sequence_inputs.py --source <MOT17-11-SDP目录> --output reproduction_inputs/MOT17-11-SDP --device cpu
+python tools/build_sequence_inputs.py --source "D:\datasets\MOT17\train\MOT17-11-SDP" --output reproduction_inputs/MOT17-11-SDP --device 0
 ```
 
 对其他序列逐条执行。使用对应官方 GT/seqinfo，以及本仓库冻结选人和事件协议；复制 GT 到 `data/MOT17/MOT17/train/<序列>/gt/gt.txt`，seqinfo 放在同序列目录。更换设备/依赖可能引入检测数值差异，先核对本地锁定模型和输入哈希、初始化绑定，再判断能否复现相同数字。冻结的祖先记录只保留溯源，不加载旧 GT/旧事件实验结果。
@@ -78,10 +77,10 @@ python -m venv .venv
 外部 CrowdHuman 数据目录应包含 annotation_train.odgt、annotation_val.odgt 和 CrowdHuman_train*/Images、CrowdHuman_val/Images。
 
 ```powershell
-.venv\Scripts\python.exe tools/run_crowdhuman_yolo26s.py prepare --source <CrowdHuman目录> --output outputs/crowdhuman_run
-.venv\Scripts\python.exe tools/run_crowdhuman_yolo26s.py initialize --output outputs/crowdhuman_run
-.venv\Scripts\python.exe tools/run_crowdhuman_yolo26s.py smoke --output outputs/crowdhuman_run --device 0
-.venv\Scripts\python.exe tools/run_crowdhuman_yolo26s.py train --output outputs/crowdhuman_run --device 0
+python tools/run_crowdhuman_yolo26s.py prepare --source "D:\datasets\CrowdHuman" --output outputs/crowdhuman_run
+python tools/run_crowdhuman_yolo26s.py initialize --output outputs/crowdhuman_run
+python tools/run_crowdhuman_yolo26s.py smoke --output outputs/crowdhuman_run --device 0
+python tools/run_crowdhuman_yolo26s.py train --output outputs/crowdhuman_run --device 0
 ```
 
 快速 CPU 安装检查可在独立输出目录 prepare 时加 `--smoke-only`，随后 `smoke --device cpu --batch 2`。仅准备 64/32 张图、训练 1 轮；该产物不替代正式模型，也不能拿它复现最终成绩。完整训练为 15,000/4,370 张图、100 轮。训练脚本保留分类初始化、ignore 监督和 checkpoint 选择规则。
