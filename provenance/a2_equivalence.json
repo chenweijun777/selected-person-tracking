@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "policy_sessions": 194,
+  "session_frames": 49126,
+  "output_equal": true,
+  "internal_state_equal": true,
+  "original_sources": {
+    "conservative": "eb659b89dc1471e5ba336da3ae3d24017b358abc6928c70aa1c96768cfd48bbc",
+    "motion": "add341cba3be51aebe7de3f76adb4685a0723187c71c901939a60151ed4e452e",
+    "soft_motion": "1b5a550c917562fc9eef714d325250c1804cfd67d175999d9dcffc6caedece38",
+    "continuity": "e052c628faa8a7b98591a04c88bb6875e25e3787335d1ee838f2b8770375f50c",
+    "gmc_reseed": "b0c79e34aa091af5b26dcdf2c6bcf5804fc6b2bd649c62e288110eb3abb1931d",
+    "selection": "19d26b8c80426139e53a0d7d065567904ca734a4cdac393ea06952e122404a8c",
+    "evidence": "f71819a8f192c103e8026a9962d6f05fea7b1058a626cd96e06fffffd9ded8cb",
+    "appearance_bank": "8a679cc2776d084b0912436bf9f937215037387783209553db64eeaff956b7e9",
+    "multi_template": "edb13f147955aceb9d75afd9f208e4bd554f2db4629133ee9d175ca944698b7b"
+  },
+  "comparison": "All current development/validation/test sessions; output/state/memory/templates/pending confirmation/history/debug; random session tokens ignored"
+}

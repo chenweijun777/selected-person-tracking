@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-05",
+  "reviewer": "project_user",
+  "user_statement": "这些事件都是没有参考意义的，将这些事件从事件清单中删掉",
+  "scope": "All methods; development and validation; event metrics only",
+  "source_gallery": {
+    "path": "outputs/a2_latest_failure_gallery_20261004_v2/samples.json",
+    "sha256": "880f26e6241da3029343531cf455bf20ce592a35e0252cf5351fd591b9d9bbb1"
+  },
+  "supersedes": "Earlier positive occlusion reviews for these IDs; no additional semantic verdict inferred",
+  "decisions": [
+    {
+      "event_id": "MOT17-02-SDP_GT3_0002",
+      "split": "development",
+      "reappearance_frame": 250,
+      "clip_first": 198,
+      "clip_last": 280,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-05-SDP_GT2_0005",
+      "split": "development",
+      "reappearance_frame": 266,
+      "clip_first": 248,
+      "clip_last": 282,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-05-SDP_GT44_0002",
+      "split": "development",
+      "reappearance_frame": 362,
+      "clip_first": 341,
+      "clip_last": 376,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-05-SDP_GT94_0006",
+      "split": "development",
+      "reappearance_frame": 822,
+      "clip_first": 803,
+      "clip_last": 836,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-05-SDP_GT125_0002",
+      "split": "development",
+      "reappearance_frame": 275,
+      "clip_first": 235,
+      "clip_last": 292,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-09-SDP_GT7_0002",
+      "split": "validation",
+      "reappearance_frame": 169,
+      "clip_first": 121,
+      "clip_last": 203,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-09-SDP_GT10_0009",
+      "split": "validation",
+      "reappearance_frame": 375,
+      "clip_first": 279,
+      "clip_last": 409,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-09-SDP_GT29_0003",
+      "split": "validation",
+      "reappearance_frame": 193,
+      "clip_first": 159,
+      "clip_last": 224,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-10-SDP_GT11_0003",
+      "split": "validation",
+      "reappearance_frame": 115,
+      "clip_first": 62,
+      "clip_last": 145,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-10-SDP_GT13_0002",
+      "split": "validation",
+      "reappearance_frame": 132,
+      "clip_first": 101,
+      "clip_last": 162,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-10-SDP_GT18_0002",
+      "split": "validation",
+      "reappearance_frame": 140,
+      "clip_first": 54,
+      "clip_last": 178,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-10-SDP_GT23_0002",
+      "split": "validation",
+      "reappearance_frame": 64,
+      "clip_first": 1,
+      "clip_last": 101,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-10-SDP_GT26_0002",
+      "split": "validation",
+      "reappearance_frame": 14,
+      "clip_first": 1,
+      "clip_last": 44,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    },
+    {
+      "event_id": "MOT17-10-SDP_GT26_0005",
+      "split": "validation",
+      "reappearance_frame": 90,
+      "clip_first": 24,
+      "clip_last": 125,
+      "verdict": "exclude_no_reference_value",
+      "reason": "用户复核：没有参考意义，从事件清单中剔除"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+tracker_type: botsort
+track_high_thresh: 0.25
+track_low_thresh: 0.10
+new_track_thresh: 0.25
+track_buffer: 30
+match_thresh: 0.80
+fuse_score: true
+gmc_method: sparseOptFlow
+with_reid: true
+proximity_thresh: 0.5
+appearance_thresh: 0.8
+# Ultralytics' separate person-ReID ONNX encoder (v8.4.0 assets).
+model: models/yolo26n-reid.onnx
+device: cpu

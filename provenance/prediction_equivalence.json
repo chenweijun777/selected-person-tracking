@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "comparisons": [
+    {
+      "split": "development",
+      "rows": 31187,
+      "equal": true,
+      "original_predictions_sha256": "219e9647a8a6d5a3d1457fd3aa9e239079ad1cf7ab5a4f3ef5eb7154b538d6b9",
+      "migrated_predictions_sha256": "219e9647a8a6d5a3d1457fd3aa9e239079ad1cf7ab5a4f3ef5eb7154b538d6b9"
+    },
+    {
+      "split": "validation",
+      "rows": 12238,
+      "equal": true,
+      "original_predictions_sha256": "9d8a1e94a5b510d4c0071369dcc3d699522e3bc38cc263e1b5d9ac6b744e06bd",
+      "migrated_predictions_sha256": "9d8a1e94a5b510d4c0071369dcc3d699522e3bc38cc263e1b5d9ac6b744e06bd"
+    },
+    {
+      "split": "test",
+      "rows": 5701,
+      "equal": true,
+      "original_predictions_sha256": "cb9bdd9f0b6adf166ae1eac5700f47aba98e0c5140da14f65367a3aead944a99",
+      "migrated_predictions_sha256": "cb9bdd9f0b6adf166ae1eac5700f47aba98e0c5140da14f65367a3aead944a99"
+    }
+  ]
+}

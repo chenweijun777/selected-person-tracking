@@ -1,0 +1,9 @@
+split,group,C,W,U,A,R,C_percent,initialization_percent,recovered,events,wrong_events,mean_delay_s,target_preset
+development,Pretrained_Joint,12151,38,425,446,15049,43.23,83.62,25,32,0,0.20247616000000002,Original
+development,Finetuned_Joint,18210,200,466,353,8880,64.78,93.97,23,32,5,0.06045547826086957,Tuned
+development,Pretrained_T2A0,10817,36,335,481,16440,38.48,83.62,19,32,1,0.0724311052631579,ID-lock
+development,Finetuned_T2A0,19250,245,611,366,7637,68.48,93.97,23,32,5,0.023188391304347824,ID-lock
+validation,Pretrained_Joint,4029,13,68,533,4997,41.79,76.6,11,14,0,0.11818181818181818,Original
+validation,Finetuned_Joint,5388,25,90,524,3613,55.89,91.49,14,14,0,0.06904757142857143,Tuned
+validation,Pretrained_T2A0,3038,8,61,457,6076,31.51,76.6,7,14,0,0.07619042857142856,ID-lock
+validation,Finetuned_T2A0,5272,25,98,520,3725,54.69,91.49,14,14,0,0.05952378571428572,ID-lock

@@ -1,0 +1,10 @@
+# 第一阶段高召回对照；检测工作点 0.10。
+detector:
+  backend: ultralytics
+  model: models/yolo11n.pt
+  image_size: 960
+  confidence: 0.10
+  iou_threshold: 0.70
+  person_class_id: 0
+  device: 0
+  nms: true

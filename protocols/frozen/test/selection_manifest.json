@@ -1,0 +1,999 @@
+{
+  "cases": [
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 1,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        873.0,
+        148.0,
+        1093.0,
+        778.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.18642117376294592,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 2,
+      "fps": 30.0,
+      "end_frame": 13,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        -95.0,
+        -20.0,
+        336.0,
+        1136.0
+      ],
+      "selection_visibility": 0.72602,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 3,
+      "fps": 30.0,
+      "end_frame": 77,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        389.0,
+        267.0,
+        505.0,
+        598.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 4,
+      "fps": 30.0,
+      "end_frame": 102,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        535.0,
+        268.0,
+        638.0,
+        593.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 5,
+      "fps": 30.0,
+      "end_frame": 255,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        693.0,
+        336.0,
+        734.0,
+        463.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.009939682269985558,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 6,
+      "fps": 30.0,
+      "end_frame": 268,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        733.0,
+        322.0,
+        784.0,
+        453.0
+      ],
+      "selection_visibility": 0.96562,
+      "selection_max_gt_iou": 0.009939682269985558,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 7,
+      "fps": 30.0,
+      "end_frame": 427,
+      "selection_frame": 269,
+      "selection_bbox_xyxy": [
+        778.0,
+        435.0,
+        861.0,
+        662.0
+      ],
+      "selection_visibility": 0.63095,
+      "selection_max_gt_iou": 0.06340723084515042,
+      "preselection_annotated_frames": 20
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 10,
+      "fps": 30.0,
+      "end_frame": 571,
+      "selection_frame": 382,
+      "selection_bbox_xyxy": [
+        726.0,
+        314.0,
+        797.0,
+        529.0
+      ],
+      "selection_visibility": 0.52778,
+      "selection_max_gt_iou": 0.04538362701908957,
+      "preselection_annotated_frames": 13
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 12,
+      "fps": 30.0,
+      "end_frame": 552,
+      "selection_frame": 413,
+      "selection_bbox_xyxy": [
+        650.0,
+        331.0,
+        719.0,
+        547.0
+      ],
+      "selection_visibility": 0.65714,
+      "selection_max_gt_iou": 0.01804812834224599,
+      "preselection_annotated_frames": 35
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 14,
+      "fps": 30.0,
+      "end_frame": 679,
+      "selection_frame": 16,
+      "selection_bbox_xyxy": [
+        1000.0,
+        240.0,
+        1115.0,
+        662.0
+      ],
+      "selection_visibility": 0.56034,
+      "selection_max_gt_iou": 0.1306210380348653,
+      "preselection_annotated_frames": 15
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 20,
+      "fps": 30.0,
+      "end_frame": 308,
+      "selection_frame": 236,
+      "selection_bbox_xyxy": [
+        605.0,
+        402.0,
+        713.0,
+        712.0
+      ],
+      "selection_visibility": 0.7156,
+      "selection_max_gt_iou": 0.049104243557048045,
+      "preselection_annotated_frames": 44
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 24,
+      "fps": 30.0,
+      "end_frame": 183,
+      "selection_frame": 86,
+      "selection_bbox_xyxy": [
+        474.0,
+        405.0,
+        561.0,
+        713.0
+      ],
+      "selection_visibility": 0.64773,
+      "selection_max_gt_iou": 0.03118797845194216,
+      "preselection_annotated_frames": 5
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 84,
+      "selection_bbox_xyxy": [
+        978.0,
+        376.0,
+        1072.0,
+        699.0
+      ],
+      "selection_visibility": 0.6,
+      "selection_max_gt_iou": 0.07425979432690216,
+      "preselection_annotated_frames": 83
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 26,
+      "fps": 30.0,
+      "end_frame": 251,
+      "selection_frame": 134,
+      "selection_bbox_xyxy": [
+        1010.0,
+        370.0,
+        1088.0,
+        598.0
+      ],
+      "selection_visibility": 0.56962,
+      "selection_max_gt_iou": 0.08874866836023929,
+      "preselection_annotated_frames": 43
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 27,
+      "fps": 30.0,
+      "end_frame": 345,
+      "selection_frame": 259,
+      "selection_bbox_xyxy": [
+        977.0,
+        419.0,
+        1091.0,
+        766.0
+      ],
+      "selection_visibility": 0.56522,
+      "selection_max_gt_iou": 0.2659835745013688,
+      "preselection_annotated_frames": 9
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 31,
+      "fps": 30.0,
+      "end_frame": 589,
+      "selection_frame": 331,
+      "selection_bbox_xyxy": [
+        1172.0,
+        316.0,
+        1227.0,
+        504.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 33,
+      "fps": 30.0,
+      "end_frame": 815,
+      "selection_frame": 647,
+      "selection_bbox_xyxy": [
+        821.0,
+        406.0,
+        895.0,
+        620.0
+      ],
+      "selection_visibility": 0.58667,
+      "selection_max_gt_iou": 0.0755418539524157,
+      "preselection_annotated_frames": 20
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 34,
+      "fps": 30.0,
+      "end_frame": 851,
+      "selection_frame": 813,
+      "selection_bbox_xyxy": [
+        242.0,
+        65.0,
+        510.0,
+        881.0
+      ],
+      "selection_visibility": 0.86245,
+      "selection_max_gt_iou": 0.06000588292969899,
+      "preselection_annotated_frames": 135
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 35,
+      "fps": 30.0,
+      "end_frame": 874,
+      "selection_frame": 773,
+      "selection_bbox_xyxy": [
+        610.0,
+        253.0,
+        729.0,
+        611.0
+      ],
+      "selection_visibility": 0.7,
+      "selection_max_gt_iou": 0.09578926362003592,
+      "preselection_annotated_frames": 41
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 36,
+      "fps": 30.0,
+      "end_frame": 887,
+      "selection_frame": 794,
+      "selection_bbox_xyxy": [
+        617.0,
+        256.0,
+        739.0,
+        655.0
+      ],
+      "selection_visibility": 0.8374,
+      "selection_max_gt_iou": 0.20128998968008255,
+      "preselection_annotated_frames": 21
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 37,
+      "fps": 30.0,
+      "end_frame": 839,
+      "selection_frame": 757,
+      "selection_bbox_xyxy": [
+        1033.0,
+        223.0,
+        1161.0,
+        579.0
+      ],
+      "selection_visibility": 0.65501,
+      "selection_max_gt_iou": 0.21814959633182368,
+      "preselection_annotated_frames": 14
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 38,
+      "fps": 30.0,
+      "end_frame": 844,
+      "selection_frame": 753,
+      "selection_bbox_xyxy": [
+        961.0,
+        246.0,
+        1072.0,
+        575.0
+      ],
+      "selection_visibility": 0.66071,
+      "selection_max_gt_iou": 0.23440293591794487,
+      "preselection_annotated_frames": 7
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 39,
+      "fps": 30.0,
+      "end_frame": 790,
+      "selection_frame": 450,
+      "selection_bbox_xyxy": [
+        1038.0,
+        299.0,
+        1125.0,
+        551.0
+      ],
+      "selection_visibility": 0.50076,
+      "selection_max_gt_iou": 0.11376535366370182,
+      "preselection_annotated_frames": 23
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 42,
+      "fps": 30.0,
+      "end_frame": 713,
+      "selection_frame": 622,
+      "selection_bbox_xyxy": [
+        1258.0,
+        325.0,
+        1391.0,
+        724.0
+      ],
+      "selection_visibility": 0.54478,
+      "selection_max_gt_iou": 0.2746704299039686,
+      "preselection_annotated_frames": 132
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 44,
+      "fps": 30.0,
+      "end_frame": 729,
+      "selection_frame": 624,
+      "selection_bbox_xyxy": [
+        1095.0,
+        333.0,
+        1230.0,
+        749.0
+      ],
+      "selection_visibility": 0.61029,
+      "selection_max_gt_iou": 0.24988590842249378,
+      "preselection_annotated_frames": 5
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 45,
+      "fps": 30.0,
+      "end_frame": 448,
+      "selection_frame": 357,
+      "selection_bbox_xyxy": [
+        694.0,
+        204.0,
+        843.0,
+        654.0
+      ],
+      "selection_visibility": 0.60667,
+      "selection_max_gt_iou": 0.1889620121196325,
+      "preselection_annotated_frames": 17
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 48,
+      "fps": 30.0,
+      "end_frame": 742,
+      "selection_frame": 712,
+      "selection_bbox_xyxy": [
+        923.0,
+        63.0,
+        1223.0,
+        1035.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.26828532235939645,
+      "preselection_annotated_frames": 73
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 49,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 878,
+      "selection_bbox_xyxy": [
+        560.0,
+        148.0,
+        742.0,
+        657.0
+      ],
+      "selection_visibility": 0.6612,
+      "selection_max_gt_iou": 0.16015020257584242,
+      "preselection_annotated_frames": 84
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 51,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 818,
+      "selection_bbox_xyxy": [
+        1055.0,
+        301.0,
+        1155.0,
+        567.0
+      ],
+      "selection_visibility": 0.57426,
+      "selection_max_gt_iou": 0.036045686261857134,
+      "preselection_annotated_frames": 35
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 62,
+      "fps": 30.0,
+      "end_frame": 869,
+      "selection_frame": 843,
+      "selection_bbox_xyxy": [
+        1393.0,
+        214.0,
+        1647.0,
+        922.0
+      ],
+      "selection_visibility": 0.92941,
+      "selection_max_gt_iou": 0.025023077114986404,
+      "preselection_annotated_frames": 12
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 89,
+      "fps": 30.0,
+      "end_frame": 326,
+      "selection_frame": 208,
+      "selection_bbox_xyxy": [
+        745.0,
+        398.0,
+        836.0,
+        649.0
+      ],
+      "selection_visibility": 0.58696,
+      "selection_max_gt_iou": 0.07535702693930542,
+      "preselection_annotated_frames": 16
+    }
+  ],
+  "eligible": [
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 1,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        873.0,
+        148.0,
+        1093.0,
+        778.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.18642117376294592,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 2,
+      "fps": 30.0,
+      "end_frame": 13,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        -95.0,
+        -20.0,
+        336.0,
+        1136.0
+      ],
+      "selection_visibility": 0.72602,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 3,
+      "fps": 30.0,
+      "end_frame": 77,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        389.0,
+        267.0,
+        505.0,
+        598.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 4,
+      "fps": 30.0,
+      "end_frame": 102,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        535.0,
+        268.0,
+        638.0,
+        593.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 5,
+      "fps": 30.0,
+      "end_frame": 255,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        693.0,
+        336.0,
+        734.0,
+        463.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.009939682269985558,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 6,
+      "fps": 30.0,
+      "end_frame": 268,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        733.0,
+        322.0,
+        784.0,
+        453.0
+      ],
+      "selection_visibility": 0.96562,
+      "selection_max_gt_iou": 0.009939682269985558,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 7,
+      "fps": 30.0,
+      "end_frame": 427,
+      "selection_frame": 269,
+      "selection_bbox_xyxy": [
+        778.0,
+        435.0,
+        861.0,
+        662.0
+      ],
+      "selection_visibility": 0.63095,
+      "selection_max_gt_iou": 0.06340723084515042,
+      "preselection_annotated_frames": 20
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 10,
+      "fps": 30.0,
+      "end_frame": 571,
+      "selection_frame": 382,
+      "selection_bbox_xyxy": [
+        726.0,
+        314.0,
+        797.0,
+        529.0
+      ],
+      "selection_visibility": 0.52778,
+      "selection_max_gt_iou": 0.04538362701908957,
+      "preselection_annotated_frames": 13
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 12,
+      "fps": 30.0,
+      "end_frame": 552,
+      "selection_frame": 413,
+      "selection_bbox_xyxy": [
+        650.0,
+        331.0,
+        719.0,
+        547.0
+      ],
+      "selection_visibility": 0.65714,
+      "selection_max_gt_iou": 0.01804812834224599,
+      "preselection_annotated_frames": 35
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 14,
+      "fps": 30.0,
+      "end_frame": 679,
+      "selection_frame": 16,
+      "selection_bbox_xyxy": [
+        1000.0,
+        240.0,
+        1115.0,
+        662.0
+      ],
+      "selection_visibility": 0.56034,
+      "selection_max_gt_iou": 0.1306210380348653,
+      "preselection_annotated_frames": 15
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 20,
+      "fps": 30.0,
+      "end_frame": 308,
+      "selection_frame": 236,
+      "selection_bbox_xyxy": [
+        605.0,
+        402.0,
+        713.0,
+        712.0
+      ],
+      "selection_visibility": 0.7156,
+      "selection_max_gt_iou": 0.049104243557048045,
+      "preselection_annotated_frames": 44
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 24,
+      "fps": 30.0,
+      "end_frame": 183,
+      "selection_frame": 86,
+      "selection_bbox_xyxy": [
+        474.0,
+        405.0,
+        561.0,
+        713.0
+      ],
+      "selection_visibility": 0.64773,
+      "selection_max_gt_iou": 0.03118797845194216,
+      "preselection_annotated_frames": 5
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 84,
+      "selection_bbox_xyxy": [
+        978.0,
+        376.0,
+        1072.0,
+        699.0
+      ],
+      "selection_visibility": 0.6,
+      "selection_max_gt_iou": 0.07425979432690216,
+      "preselection_annotated_frames": 83
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 26,
+      "fps": 30.0,
+      "end_frame": 251,
+      "selection_frame": 134,
+      "selection_bbox_xyxy": [
+        1010.0,
+        370.0,
+        1088.0,
+        598.0
+      ],
+      "selection_visibility": 0.56962,
+      "selection_max_gt_iou": 0.08874866836023929,
+      "preselection_annotated_frames": 43
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 27,
+      "fps": 30.0,
+      "end_frame": 345,
+      "selection_frame": 259,
+      "selection_bbox_xyxy": [
+        977.0,
+        419.0,
+        1091.0,
+        766.0
+      ],
+      "selection_visibility": 0.56522,
+      "selection_max_gt_iou": 0.2659835745013688,
+      "preselection_annotated_frames": 9
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 31,
+      "fps": 30.0,
+      "end_frame": 589,
+      "selection_frame": 331,
+      "selection_bbox_xyxy": [
+        1172.0,
+        316.0,
+        1227.0,
+        504.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 33,
+      "fps": 30.0,
+      "end_frame": 815,
+      "selection_frame": 647,
+      "selection_bbox_xyxy": [
+        821.0,
+        406.0,
+        895.0,
+        620.0
+      ],
+      "selection_visibility": 0.58667,
+      "selection_max_gt_iou": 0.0755418539524157,
+      "preselection_annotated_frames": 20
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 34,
+      "fps": 30.0,
+      "end_frame": 851,
+      "selection_frame": 813,
+      "selection_bbox_xyxy": [
+        242.0,
+        65.0,
+        510.0,
+        881.0
+      ],
+      "selection_visibility": 0.86245,
+      "selection_max_gt_iou": 0.06000588292969899,
+      "preselection_annotated_frames": 135
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 35,
+      "fps": 30.0,
+      "end_frame": 874,
+      "selection_frame": 773,
+      "selection_bbox_xyxy": [
+        610.0,
+        253.0,
+        729.0,
+        611.0
+      ],
+      "selection_visibility": 0.7,
+      "selection_max_gt_iou": 0.09578926362003592,
+      "preselection_annotated_frames": 41
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 36,
+      "fps": 30.0,
+      "end_frame": 887,
+      "selection_frame": 794,
+      "selection_bbox_xyxy": [
+        617.0,
+        256.0,
+        739.0,
+        655.0
+      ],
+      "selection_visibility": 0.8374,
+      "selection_max_gt_iou": 0.20128998968008255,
+      "preselection_annotated_frames": 21
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 37,
+      "fps": 30.0,
+      "end_frame": 839,
+      "selection_frame": 757,
+      "selection_bbox_xyxy": [
+        1033.0,
+        223.0,
+        1161.0,
+        579.0
+      ],
+      "selection_visibility": 0.65501,
+      "selection_max_gt_iou": 0.21814959633182368,
+      "preselection_annotated_frames": 14
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 38,
+      "fps": 30.0,
+      "end_frame": 844,
+      "selection_frame": 753,
+      "selection_bbox_xyxy": [
+        961.0,
+        246.0,
+        1072.0,
+        575.0
+      ],
+      "selection_visibility": 0.66071,
+      "selection_max_gt_iou": 0.23440293591794487,
+      "preselection_annotated_frames": 7
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 39,
+      "fps": 30.0,
+      "end_frame": 790,
+      "selection_frame": 450,
+      "selection_bbox_xyxy": [
+        1038.0,
+        299.0,
+        1125.0,
+        551.0
+      ],
+      "selection_visibility": 0.50076,
+      "selection_max_gt_iou": 0.11376535366370182,
+      "preselection_annotated_frames": 23
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 42,
+      "fps": 30.0,
+      "end_frame": 713,
+      "selection_frame": 622,
+      "selection_bbox_xyxy": [
+        1258.0,
+        325.0,
+        1391.0,
+        724.0
+      ],
+      "selection_visibility": 0.54478,
+      "selection_max_gt_iou": 0.2746704299039686,
+      "preselection_annotated_frames": 132
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 44,
+      "fps": 30.0,
+      "end_frame": 729,
+      "selection_frame": 624,
+      "selection_bbox_xyxy": [
+        1095.0,
+        333.0,
+        1230.0,
+        749.0
+      ],
+      "selection_visibility": 0.61029,
+      "selection_max_gt_iou": 0.24988590842249378,
+      "preselection_annotated_frames": 5
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 45,
+      "fps": 30.0,
+      "end_frame": 448,
+      "selection_frame": 357,
+      "selection_bbox_xyxy": [
+        694.0,
+        204.0,
+        843.0,
+        654.0
+      ],
+      "selection_visibility": 0.60667,
+      "selection_max_gt_iou": 0.1889620121196325,
+      "preselection_annotated_frames": 17
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 48,
+      "fps": 30.0,
+      "end_frame": 742,
+      "selection_frame": 712,
+      "selection_bbox_xyxy": [
+        923.0,
+        63.0,
+        1223.0,
+        1035.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.26828532235939645,
+      "preselection_annotated_frames": 73
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 49,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 878,
+      "selection_bbox_xyxy": [
+        560.0,
+        148.0,
+        742.0,
+        657.0
+      ],
+      "selection_visibility": 0.6612,
+      "selection_max_gt_iou": 0.16015020257584242,
+      "preselection_annotated_frames": 84
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 51,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 818,
+      "selection_bbox_xyxy": [
+        1055.0,
+        301.0,
+        1155.0,
+        567.0
+      ],
+      "selection_visibility": 0.57426,
+      "selection_max_gt_iou": 0.036045686261857134,
+      "preselection_annotated_frames": 35
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 62,
+      "fps": 30.0,
+      "end_frame": 869,
+      "selection_frame": 843,
+      "selection_bbox_xyxy": [
+        1393.0,
+        214.0,
+        1647.0,
+        922.0
+      ],
+      "selection_visibility": 0.92941,
+      "selection_max_gt_iou": 0.025023077114986404,
+      "preselection_annotated_frames": 12
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 89,
+      "fps": 30.0,
+      "end_frame": 326,
+      "selection_frame": 208,
+      "selection_bbox_xyxy": [
+        745.0,
+        398.0,
+        836.0,
+        649.0
+      ],
+      "selection_visibility": 0.58696,
+      "selection_max_gt_iou": 0.07535702693930542,
+      "preselection_annotated_frames": 16
+    }
+  ],
+  "no_qualifying_start": []
+}

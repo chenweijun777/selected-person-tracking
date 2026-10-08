@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "detector": "Finetuned",
+  "tracker": "Finetuned_Joint",
+  "case_scope": "Workbook-selected test31 IDs; model-independent frozen clear starts; failed detector initialization retained",
+  "sequences": {
+    "MOT17-11-SDP": {
+      "split": "test",
+      "gt": "E:\\CV\\data\\MOT17\\MOT17\\train\\MOT17-11-SDP\\gt\\gt.txt",
+      "seqinfo": "E:\\CV\\data\\MOT17\\MOT17\\train\\MOT17-11-SDP\\seqinfo.ini",
+      "images": "E:\\CV\\data\\MOT17\\MOT17\\train\\MOT17-11-SDP\\img1",
+      "image_count": 900,
+      "images_sha256": "dc103e4f0b5d8b941cbe6f73fa1ebce8ea72eee4087d369e5ab370cfc4e5c0c9",
+      "t2_tracks": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\tracks\\Finetuned_Joint\\MOT17-11-SDP.txt",
+      "detector_cache": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\detections\\Finetuned\\MOT17-11-SDP.txt"
+    }
+  },
+  "cases": [
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 1,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        873.0,
+        148.0,
+        1093.0,
+        778.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.18642117376294592,
+      "preselection_annotated_frames": 2,
+      "initial_tracker_id": 3
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 2,
+      "fps": 30.0,
+      "end_frame": 13,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        -95.0,
+        -20.0,
+        336.0,
+        1136.0
+      ],
+      "selection_visibility": 0.72602,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2,
+      "initial_tracker_id": 1
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 3,
+      "fps": 30.0,
+      "end_frame": 77,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        389.0,
+        267.0,
+        505.0,
+        598.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2,
+      "initial_tracker_id": 4
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 4,
+      "fps": 30.0,
+      "end_frame": 102,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        535.0,
+        268.0,
+        638.0,
+        593.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2,
+      "initial_tracker_id": 2
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 5,
+      "fps": 30.0,
+      "end_frame": 255,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        693.0,
+        336.0,
+        734.0,
+        463.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.009939682269985558,
+      "preselection_annotated_frames": 2,
+      "initial_tracker_id": 11
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 6,
+      "fps": 30.0,
+      "end_frame": 268,
+      "selection_frame": 3,
+      "selection_bbox_xyxy": [
+        733.0,
+        322.0,
+        784.0,
+        453.0
+      ],
+      "selection_visibility": 0.96562,
+      "selection_max_gt_iou": 0.009939682269985558,
+      "preselection_annotated_frames": 2,
+      "initial_tracker_id": 8
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 7,
+      "fps": 30.0,
+      "end_frame": 427,
+      "selection_frame": 269,
+      "selection_bbox_xyxy": [
+        778.0,
+        435.0,
+        861.0,
+        662.0
+      ],
+      "selection_visibility": 0.63095,
+      "selection_max_gt_iou": 0.06340723084515042,
+      "preselection_annotated_frames": 20,
+      "initial_tracker_id": 291
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 10,
+      "fps": 30.0,
+      "end_frame": 571,
+      "selection_frame": 382,
+      "selection_bbox_xyxy": [
+        726.0,
+        314.0,
+        797.0,
+        529.0
+      ],
+      "selection_visibility": 0.52778,
+      "selection_max_gt_iou": 0.04538362701908957,
+      "preselection_annotated_frames": 13,
+      "initial_tracker_id": 375
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 12,
+      "fps": 30.0,
+      "end_frame": 552,
+      "selection_frame": 413,
+      "selection_bbox_xyxy": [
+        650.0,
+        331.0,
+        719.0,
+        547.0
+      ],
+      "selection_visibility": 0.65714,
+      "selection_max_gt_iou": 0.01804812834224599,
+      "preselection_annotated_frames": 35,
+      "initial_tracker_id": 410
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 14,
+      "fps": 30.0,
+      "end_frame": 679,
+      "selection_frame": 16,
+      "selection_bbox_xyxy": [
+        1000.0,
+        240.0,
+        1115.0,
+        662.0
+      ],
+      "selection_visibility": 0.56034,
+      "selection_max_gt_iou": 0.1306210380348653,
+      "preselection_annotated_frames": 15,
+      "initial_tracker_id": 6
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 20,
+      "fps": 30.0,
+      "end_frame": 308,
+      "selection_frame": 236,
+      "selection_bbox_xyxy": [
+        605.0,
+        402.0,
+        713.0,
+        712.0
+      ],
+      "selection_visibility": 0.7156,
+      "selection_max_gt_iou": 0.049104243557048045,
+      "preselection_annotated_frames": 44,
+      "initial_tracker_id": 8
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 24,
+      "fps": 30.0,
+      "end_frame": 183,
+      "selection_frame": 86,
+      "selection_bbox_xyxy": [
+        474.0,
+        405.0,
+        561.0,
+        713.0
+      ],
+      "selection_visibility": 0.64773,
+      "selection_max_gt_iou": 0.03118797845194216,
+      "preselection_annotated_frames": 5,
+      "initial_tracker_id": 154
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 84,
+      "selection_bbox_xyxy": [
+        978.0,
+        376.0,
+        1072.0,
+        699.0
+      ],
+      "selection_visibility": 0.6,
+      "selection_max_gt_iou": 0.07425979432690216,
+      "preselection_annotated_frames": 83,
+      "initial_tracker_id": 5
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 26,
+      "fps": 30.0,
+      "end_frame": 251,
+      "selection_frame": 134,
+      "selection_bbox_xyxy": [
+        1010.0,
+        370.0,
+        1088.0,
+        598.0
+      ],
+      "selection_visibility": 0.56962,
+      "selection_max_gt_iou": 0.08874866836023929,
+      "preselection_annotated_frames": 43,
+      "initial_tracker_id": 169
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 27,
+      "fps": 30.0,
+      "end_frame": 345,
+      "selection_frame": 259,
+      "selection_bbox_xyxy": [
+        977.0,
+        419.0,
+        1091.0,
+        766.0
+      ],
+      "selection_visibility": 0.56522,
+      "selection_max_gt_iou": 0.2659835745013688,
+      "preselection_annotated_frames": 9,
+      "initial_tracker_id": 169
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 31,
+      "fps": 30.0,
+      "end_frame": 589,
+      "selection_frame": 331,
+      "selection_bbox_xyxy": [
+        1172.0,
+        316.0,
+        1227.0,
+        504.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.0,
+      "preselection_annotated_frames": 2,
+      "initial_tracker_id": 338
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 33,
+      "fps": 30.0,
+      "end_frame": 815,
+      "selection_frame": 647,
+      "selection_bbox_xyxy": [
+        821.0,
+        406.0,
+        895.0,
+        620.0
+      ],
+      "selection_visibility": 0.58667,
+      "selection_max_gt_iou": 0.0755418539524157,
+      "preselection_annotated_frames": 20,
+      "initial_tracker_id": 544
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 34,
+      "fps": 30.0,
+      "end_frame": 851,
+      "selection_frame": 813,
+      "selection_bbox_xyxy": [
+        242.0,
+        65.0,
+        510.0,
+        881.0
+      ],
+      "selection_visibility": 0.86245,
+      "selection_max_gt_iou": 0.06000588292969899,
+      "preselection_annotated_frames": 135,
+      "initial_tracker_id": 700
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 35,
+      "fps": 30.0,
+      "end_frame": 874,
+      "selection_frame": 773,
+      "selection_bbox_xyxy": [
+        610.0,
+        253.0,
+        729.0,
+        611.0
+      ],
+      "selection_visibility": 0.7,
+      "selection_max_gt_iou": 0.09578926362003592,
+      "preselection_annotated_frames": 41,
+      "initial_tracker_id": 604
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 36,
+      "fps": 30.0,
+      "end_frame": 887,
+      "selection_frame": 794,
+      "selection_bbox_xyxy": [
+        617.0,
+        256.0,
+        739.0,
+        655.0
+      ],
+      "selection_visibility": 0.8374,
+      "selection_max_gt_iou": 0.20128998968008255,
+      "preselection_annotated_frames": 21,
+      "initial_tracker_id": 664
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 37,
+      "fps": 30.0,
+      "end_frame": 839,
+      "selection_frame": 757,
+      "selection_bbox_xyxy": [
+        1033.0,
+        223.0,
+        1161.0,
+        579.0
+      ],
+      "selection_visibility": 0.65501,
+      "selection_max_gt_iou": 0.21814959633182368,
+      "preselection_annotated_frames": 14,
+      "initial_tracker_id": 538
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 38,
+      "fps": 30.0,
+      "end_frame": 844,
+      "selection_frame": 753,
+      "selection_bbox_xyxy": [
+        961.0,
+        246.0,
+        1072.0,
+        575.0
+      ],
+      "selection_visibility": 0.66071,
+      "selection_max_gt_iou": 0.23440293591794487,
+      "preselection_annotated_frames": 7,
+      "initial_tracker_id": 587
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 39,
+      "fps": 30.0,
+      "end_frame": 790,
+      "selection_frame": 450,
+      "selection_bbox_xyxy": [
+        1038.0,
+        299.0,
+        1125.0,
+        551.0
+      ],
+      "selection_visibility": 0.50076,
+      "selection_max_gt_iou": 0.11376535366370182,
+      "preselection_annotated_frames": 23,
+      "initial_tracker_id": 324
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 42,
+      "fps": 30.0,
+      "end_frame": 713,
+      "selection_frame": 622,
+      "selection_bbox_xyxy": [
+        1258.0,
+        325.0,
+        1391.0,
+        724.0
+      ],
+      "selection_visibility": 0.54478,
+      "selection_max_gt_iou": 0.2746704299039686,
+      "preselection_annotated_frames": 132,
+      "initial_tracker_id": 496
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 44,
+      "fps": 30.0,
+      "end_frame": 729,
+      "selection_frame": 624,
+      "selection_bbox_xyxy": [
+        1095.0,
+        333.0,
+        1230.0,
+        749.0
+      ],
+      "selection_visibility": 0.61029,
+      "selection_max_gt_iou": 0.24988590842249378,
+      "preselection_annotated_frames": 5,
+      "initial_tracker_id": 535
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 45,
+      "fps": 30.0,
+      "end_frame": 448,
+      "selection_frame": 357,
+      "selection_bbox_xyxy": [
+        694.0,
+        204.0,
+        843.0,
+        654.0
+      ],
+      "selection_visibility": 0.60667,
+      "selection_max_gt_iou": 0.1889620121196325,
+      "preselection_annotated_frames": 17,
+      "initial_tracker_id": 331
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 48,
+      "fps": 30.0,
+      "end_frame": 742,
+      "selection_frame": 712,
+      "selection_bbox_xyxy": [
+        923.0,
+        63.0,
+        1223.0,
+        1035.0
+      ],
+      "selection_visibility": 1.0,
+      "selection_max_gt_iou": 0.26828532235939645,
+      "preselection_annotated_frames": 73,
+      "initial_tracker_id": 417
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 49,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 878,
+      "selection_bbox_xyxy": [
+        560.0,
+        148.0,
+        742.0,
+        657.0
+      ],
+      "selection_visibility": 0.6612,
+      "selection_max_gt_iou": 0.16015020257584242,
+      "preselection_annotated_frames": 84,
+      "initial_tracker_id": 683
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 51,
+      "fps": 30.0,
+      "end_frame": 900,
+      "selection_frame": 818,
+      "selection_bbox_xyxy": [
+        1055.0,
+        301.0,
+        1155.0,
+        567.0
+      ],
+      "selection_visibility": 0.57426,
+      "selection_max_gt_iou": 0.036045686261857134,
+      "preselection_annotated_frames": 35,
+      "initial_tracker_id": 579
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 62,
+      "fps": 30.0,
+      "end_frame": 869,
+      "selection_frame": 843,
+      "selection_bbox_xyxy": [
+        1393.0,
+        214.0,
+        1647.0,
+        922.0
+      ],
+      "selection_visibility": 0.92941,
+      "selection_max_gt_iou": 0.025023077114986404,
+      "preselection_annotated_frames": 12,
+      "initial_tracker_id": 705
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 89,
+      "fps": 30.0,
+      "end_frame": 326,
+      "selection_frame": 208,
+      "selection_bbox_xyxy": [
+        745.0,
+        398.0,
+        836.0,
+        649.0
+      ],
+      "selection_visibility": 0.58696,
+      "selection_max_gt_iou": 0.07535702693930542,
+      "preselection_annotated_frames": 16,
+      "initial_tracker_id": 221
+    }
+  ],
+  "files": [
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\clear_start_protocol.json",
+      "sha256": "13bc1f873389aedbfcdf84831eae08ab3477037c92d7fe636388c886db993207"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\episode_manifest.json",
+      "sha256": "f963c7f863ee8d8ee3bf731201e10519d7b70fdea230eafa2b4831d933e81983"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\gt_events.csv",
+      "sha256": "6fc591099e03ff192ffd7c41dc4d3cbbb82088e162530e891008822853e0d2bf"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\gt_events.json",
+      "sha256": "9048b727feb4c9c023701c1f96c0872f705721e48977bb437447160bbeb8679b"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\selection_manifest.json",
+      "sha256": "0bc02e9758d0861437e365fe58c19f14db00eb4956f5de48cc190528c42c8d24"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\visibility_intervals.csv",
+      "sha256": "4f9a7cdd9e11afb1b878e04303ce6b722b11f0929654befb2071308786656fcb"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\images_manifest.json",
+      "sha256": "dc103e4f0b5d8b941cbe6f73fa1ebce8ea72eee4087d369e5ab370cfc4e5c0c9"
+    },
+    {
+      "path": "E:\\CV\\data\\Select_GT_ID.xlsx",
+      "sha256": "5bddd73b2a04da67a5c539671297c42f9b88e71dd2c9e3a3cfd93fcd7b1efc68"
+    },
+    {
+      "path": "E:\\CV\\outputs\\01a11549-a9b6-7af2-8520-79b20bddee6d\\selected_gt_events_20261007\\selected_gt_scope.json",
+      "sha256": "6ab42f53131285cdcafc63da8da94c1cb03f6c2bc74e945f2f644d9a288ad1aa"
+    },
+    {
+      "path": "E:\\CV\\manifests\\test_recovery_events_20261007.json",
+      "sha256": "107df63a64c79a388709826847fe399efd45da291872e43281e52f1dfc27e8db"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\tracks\\Finetuned_Joint\\MOT17-11-SDP.txt",
+      "sha256": "7763c7badac7a36660d7f2d8da1555ead0a6c817a77aeb953e0133d58364726d"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\configs\\Finetuned_Joint.json",
+      "sha256": "ffaa9a17751bb594aec3746976213f40c8095a7c363397183a420bd9c512b82c"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\configs\\Finetuned_Joint.yaml",
+      "sha256": "b0ed2b1f942db10eded30a6b7c90c1f9833bff89f19079af26ab88a122619647"
+    },
+    {
+      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\detections\\Finetuned\\MOT17-11-SDP.txt",
+      "sha256": "1b86964efd6195ca88bb7c9b4aaed859678ad8f0d6d7999a7f25db6c1595e7de"
+    }
+  ],
+  "events": {
+    "test": {
+      "common_event_ids": [
+        "MOT17-11-SDP_GT1_0002",
+        "MOT17-11-SDP_GT1_0003",
+        "MOT17-11-SDP_GT10_0003",
+        "MOT17-11-SDP_GT10_0004",
+        "MOT17-11-SDP_GT14_0002",
+        "MOT17-11-SDP_GT25_0003",
+        "MOT17-11-SDP_GT25_0004",
+        "MOT17-11-SDP_GT25_0005",
+        "MOT17-11-SDP_GT25_0006",
+        "MOT17-11-SDP_GT25_0007",
+        "MOT17-11-SDP_GT25_0008",
+        "MOT17-11-SDP_GT25_0009",
+        "MOT17-11-SDP_GT33_0003",
+        "MOT17-11-SDP_GT33_0004",
+        "MOT17-11-SDP_GT35_0003",
+        "MOT17-11-SDP_GT37_0003",
+        "MOT17-11-SDP_GT39_0003",
+        "MOT17-11-SDP_GT39_0004",
+        "MOT17-11-SDP_GT42_0003",
+        "MOT17-11-SDP_GT51_0003"
+      ]
+    }
+  },
+  "scoring": {
+    "iou_min": 0.5,
+    "primary_visibility_min": 0.3,
+    "event_correct_visibility_min_exclusive": 0,
+    "stable_correct_seconds": 0.2,
+    "ambiguous_multiple_gt_overlap": "A, never force an identity",
+    "unannotated_target_frames": "unknown; not exit errors"
+  }
+}

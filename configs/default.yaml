@@ -1,0 +1,31 @@
+project:
+  seed: 42
+  output_dir: outputs
+
+input:
+  source: 0
+  process_every_frame: true
+
+detector:
+  backend: ultralytics
+  model: models/yolo26n.pt
+  image_size: 960
+  confidence: 0.10
+  iou_threshold: 0.70
+  person_class_id: 0
+  device: 0
+  nms: true
+
+tracker:
+  backend: greedy_iou
+  match_iou: 0.30
+  max_missed_frames: 30
+
+target:
+  lost_timeout_frames: 60
+  verify_observations: 3
+  candidate_iou: 0.20
+
+display:
+  enabled: true
+  save_video: false

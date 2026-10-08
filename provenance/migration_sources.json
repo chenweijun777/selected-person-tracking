@@ -1,0 +1,450 @@
+{
+  "draft_modified": false,
+  "records": [
+    {
+      "source": "src/a1_tracker/buffered_playback.py",
+      "destination": "src/a1_tracker/buffered_playback.py",
+      "source_sha256": "42b65ef152eaeeec7acb4262e75211170144ff835605d4b99e651b6cd5737e50"
+    },
+    {
+      "source": "src/a1_tracker/cli.py",
+      "destination": "src/a1_tracker/cli.py",
+      "source_sha256": "62d13918fb1ce033746f8d3ef5d6aa3ed5bfebc03337fd66339605ebc17293a6"
+    },
+    {
+      "source": "src/a1_tracker/geometry.py",
+      "destination": "src/a1_tracker/geometry.py",
+      "source_sha256": "0d3537627a2ae9bd8221067a4d2453d7a8d89e00176dc50753c06d14660b186b"
+    },
+    {
+      "source": "src/a1_tracker/gui_analysis_cache.py",
+      "destination": "src/a1_tracker/gui_analysis_cache.py",
+      "source_sha256": "a2a8bcc28093601b4d2f84100e8e51fc2487022d3ab40ba1097ee51f8901344b"
+    },
+    {
+      "source": "src/a1_tracker/gui_control.py",
+      "destination": "src/a1_tracker/gui_control.py",
+      "source_sha256": "91d8961486977be660ce3b7801ae39fc4be4cb583197f85ce644926d6ba923b6"
+    },
+    {
+      "source": "src/a1_tracker/identity_events.py",
+      "destination": "src/a1_tracker/identity_events.py",
+      "source_sha256": "f482393684b6e5025a12d60bb0ff257f3230154ef3dbe28efcead5f0022ba5da"
+    },
+    {
+      "source": "src/a1_tracker/joint_runtime.py",
+      "destination": "src/a1_tracker/joint_runtime.py",
+      "source_sha256": "3f88d9885cf94350d8e0b043b427e4c11989d470894fa51bb26f3e57ef59b007"
+    },
+    {
+      "source": "src/a1_tracker/motion.py",
+      "destination": "src/a1_tracker/motion.py",
+      "source_sha256": "8c4669738a19d5ce426dc429ebb8a036c36f5dcbf5bdb739c2c5d36704de0660"
+    },
+    {
+      "source": "src/a1_tracker/pipeline.py",
+      "destination": "src/a1_tracker/pipeline.py",
+      "source_sha256": "e5b5300e40193806f45e5bfda65c53a79ab34595e5a9b12efc25af41ea440940"
+    },
+    {
+      "source": "src/a1_tracker/tracking_gui.py",
+      "destination": "src/a1_tracker/tracking_gui.py",
+      "source_sha256": "742c72b30e7e13386060f674345d97cc52d934dd9067a67ec8927ecb4fc4eba3"
+    },
+    {
+      "source": "src/a1_tracker/types.py",
+      "destination": "src/a1_tracker/types.py",
+      "source_sha256": "3c853a0b37490cc72506a3b0d9d69e29dd3a0c618fd1c4516797cc0b3573ab26"
+    },
+    {
+      "source": "src/a1_tracker/video_app.py",
+      "destination": "src/a1_tracker/video_app.py",
+      "source_sha256": "d40f8959fdf4d0d13783107753fa0e12feacf00c58a919c4ae7583d8a2c765f2"
+    },
+    {
+      "source": "src/a1_tracker/__init__.py",
+      "destination": "src/a1_tracker/__init__.py",
+      "source_sha256": "fc9d58bfd8ada595d7c53d580e21df4dc10a5e92a9a06d100f0ec73f6fc71413"
+    },
+    {
+      "source": "src/a1_tracker/detectors/base.py",
+      "destination": "src/a1_tracker/detectors/base.py",
+      "source_sha256": "eeaa351fd82b28b5800dd558d9bb150f2a431c86757786db61cf2efa253dc199"
+    },
+    {
+      "source": "src/a1_tracker/detectors/ultralytics.py",
+      "destination": "src/a1_tracker/detectors/ultralytics.py",
+      "source_sha256": "d308bdb762504c8e8921322ed21196ca52ea53e4ca30b23061709a384ae5f7ff"
+    },
+    {
+      "source": "src/a1_tracker/detectors/__init__.py",
+      "destination": "src/a1_tracker/detectors/__init__.py",
+      "source_sha256": "e164dd443ee09a9ca2be7fd8048d7dbb025fa1386309461726db7c2a33d26355"
+    },
+    {
+      "source": "src/a1_tracker/evaluation/_adapters.py",
+      "destination": "src/a1_tracker/evaluation/_adapters.py",
+      "source_sha256": "4d004ee425bc713d527d50efc962263831f201c554415043888d123f425d94ce"
+    },
+    {
+      "source": "src/a1_tracker/evaluation/_common.py",
+      "destination": "src/a1_tracker/evaluation/_common.py",
+      "source_sha256": "476c8429000839958eb0d4f3a0ec0e14caba6914f31f1a455b4333d7f2b669f5"
+    },
+    {
+      "source": "src/a1_tracker/evaluation/_event_curation.py",
+      "destination": "src/a1_tracker/evaluation/_event_curation.py",
+      "source_sha256": "8447999c14b49d4a68ced82e89ef4f4e1b6b5cad9046578d29ddde5ae4bb6177"
+    },
+    {
+      "source": "src/a1_tracker/evaluation/_run.py",
+      "destination": "src/a1_tracker/evaluation/_run.py",
+      "source_sha256": "07a50e72d0e7ca2de1da37627d6eedf5602b25e92d281b501714407dacc709fd"
+    },
+    {
+      "source": "src/a1_tracker/evaluation/_scoring.py",
+      "destination": "src/a1_tracker/evaluation/_scoring.py",
+      "source_sha256": "3f069dd81d48507b4de3ccd0db2ef54b0a4fb1fa0ee16d2a52724062ad760740"
+    },
+    {
+      "source": "src/a1_tracker/evaluation/__init__.py",
+      "destination": "src/a1_tracker/evaluation/__init__.py",
+      "source_sha256": "70d0f7829915a35abe5b40c06959f628381e31ced1a324df7f90dc01d05ea5eb"
+    },
+    {
+      "source": "src/a1_tracker/io/results.py",
+      "destination": "src/a1_tracker/io/results.py",
+      "source_sha256": "28787451537b0dc19a8cd4736e87c8843f53309bcedc8a96a6e68c8d2a87e1aa"
+    },
+    {
+      "source": "src/a1_tracker/io/__init__.py",
+      "destination": "src/a1_tracker/io/__init__.py",
+      "source_sha256": "08fc9a84afb4927cda9c9a4e080d289c35698c4bc89fd4d3224363377034c5a0"
+    },
+    {
+      "source": "src/a1_tracker/profiling/timer.py",
+      "destination": "src/a1_tracker/profiling/timer.py",
+      "source_sha256": "98a184964bce94ab698bdd29581f5a2f29f1da159aa1a8d1e967212c4e1fabfb"
+    },
+    {
+      "source": "src/a1_tracker/profiling/__init__.py",
+      "destination": "src/a1_tracker/profiling/__init__.py",
+      "source_sha256": "d6d57fb54df677e57a978372c691abb82a791c1028c83c4ce33e789c1122aa49"
+    },
+    {
+      "source": "src/a1_tracker/reid/ultralytics_onnx.py",
+      "destination": "src/a1_tracker/reid/ultralytics_onnx.py",
+      "source_sha256": "5ed05c6a279da2e0fc0c074423712a6000f9122c83e4e220d96f47a7f41e38a3"
+    },
+    {
+      "source": "src/a1_tracker/trackers/base.py",
+      "destination": "src/a1_tracker/trackers/base.py",
+      "source_sha256": "ccac279b7201464d425798675c84a667094301508599481579ece558f1d918ae"
+    },
+    {
+      "source": "src/a1_tracker/trackers/greedy_iou.py",
+      "destination": "src/a1_tracker/trackers/greedy_iou.py",
+      "source_sha256": "e0a10227ff4c7e37c4a9b3a6fb0dc813d7de483b1a79b14177372a7d8f1f2e7e"
+    },
+    {
+      "source": "src/a1_tracker/trackers/ultralytics_mot.py",
+      "destination": "src/a1_tracker/trackers/ultralytics_mot.py",
+      "source_sha256": "f8fe5dadb7dba2c5f55b2af53e516316c7d0bbf703bb09e695a3bcfd039e985a"
+    },
+    {
+      "source": "src/a1_tracker/trackers/__init__.py",
+      "destination": "src/a1_tracker/trackers/__init__.py",
+      "source_sha256": "bbc7fec491f7ea75d5408bd7c477aad72fe4d0829ff5b10c54b58064cec0e72b"
+    },
+    {
+      "source": "src/a1_tracker/target/manager.py",
+      "destination": "src/a1_tracker/target/manager.py",
+      "source_sha256": "4b4525c28a80639b7b2f879b3a333356cd183aa4f8a83233a518f9a512aa4df2"
+    },
+    {
+      "source": "src/a1_tracker/target/baselines.py",
+      "destination": "src/a1_tracker/target/baselines.py",
+      "source_sha256": "4b2d539993256bfae15f9f4a887666957e552950d63d211caed2ce02ab23118a"
+    },
+    {
+      "source": "src/a1_tracker/target/__init__.py",
+      "destination": "src/a1_tracker/target/__init__.py",
+      "source_sha256": "38b2264f84417a686ee4a9559b880b540239e0466e74852a7b87c475bfbaef87"
+    },
+    {
+      "source": "src/a1_tracker/trackers/identity/__init__.py",
+      "destination": "src/a1_tracker/trackers/identity/__init__.py",
+      "source_sha256": "bfd5d26010bc135c3a3cb1bf6c3c1103c83539677de2dde1848d88fba4ad3452"
+    },
+    {
+      "source": "src/a1_tracker/trackers/identity/short_identity.py",
+      "destination": "src/a1_tracker/trackers/identity/short_identity.py",
+      "source_sha256": "ebf4f691fed9aeb057c8843b0fcffef04ae93d9489bb732ea8acb87ea97bb2df"
+    },
+    {
+      "source": "src/a1_tracker/trackers/identity/shortlink_support.py",
+      "destination": "src/a1_tracker/trackers/identity/shortlink_support.py",
+      "source_sha256": "314204159b1ccfc560464c9c42b7feef9f18990f7a840b2c9b808c141c3e788d"
+    },
+    {
+      "source": "configs/tracker_joint_shortlink2.yaml",
+      "destination": "configs/pretrained/tracker.yaml",
+      "source_sha256": "2f3ee6f34d72273c64776c27b8d8274c82ac9eb9d68a058e38fde6ead1ded452"
+    },
+    {
+      "source": "configs/target_joint_a2_v7.json",
+      "destination": "configs/pretrained/target.json",
+      "source_sha256": "d08adc10c78ea3930922f294cfc2822a627a2328925a706414085f26867a7f09"
+    },
+    {
+      "source": "configs/tracker_joint_shortlink2_finetuned26s_20261007.yaml",
+      "destination": "configs/finetuned/tracker.yaml",
+      "source_sha256": "b0ed2b1f942db10eded30a6b7c90c1f9833bff89f19079af26ab88a122619647"
+    },
+    {
+      "source": "configs/target_joint_a2_v7_finetuned26s_grid2916_20261007.json",
+      "destination": "configs/finetuned/target.json",
+      "source_sha256": "ffaa9a17751bb594aec3746976213f40c8095a7c363397183a420bd9c512b82c"
+    },
+    {
+      "source": "configs/tracker_t2_botsort_gmc.yaml",
+      "destination": "configs/tracker_t2_botsort_gmc.yaml",
+      "source_sha256": "bfb77d25e1f3526e2466494a4ffa7dad29e3a67eb2c99af0fa23cc65dbd8419f"
+    },
+    {
+      "source": "configs/tracker_t1_botsort_plain.yaml",
+      "destination": "configs/tracker_t1_botsort_plain.yaml",
+      "source_sha256": "54f9ebf2f044f3f87bf7e9bfbceb56cc88357799ccb9d04150df3feb508a6970"
+    },
+    {
+      "source": "configs/tracker_t3_botsort_gmc_reid.yaml",
+      "destination": "configs/tracker_t3_botsort_gmc_reid.yaml",
+      "source_sha256": "eaf28ccd1da56b0989bfb072638c4698c87d07ce13c6aaabc92682411b41c3f7"
+    },
+    {
+      "source": "configs/bytetrack.yaml",
+      "destination": "configs/bytetrack.yaml",
+      "source_sha256": "fc51ba839cbd3e63bda83a478f66860151758aa162aa0c8947061aa0175b2f92"
+    },
+    {
+      "source": "configs/default.yaml",
+      "destination": "configs/default.yaml",
+      "source_sha256": "419f2147f8d16166f97176c8a5e069f1d6f50b2ef116d604f3d6ac814930a7fa"
+    },
+    {
+      "source": "configs/yolo11n-one2many-960.yaml",
+      "destination": "configs/yolo11n-one2many-960.yaml",
+      "source_sha256": "4154eab1ce7ee49565692e7c5d67e5edea0ba64c689674305f036b1c5458264f"
+    },
+    {
+      "source": "configs/yolo26n-one2many-960.yaml",
+      "destination": "configs/yolo26n-one2many-960.yaml",
+      "source_sha256": "65f20ec1296446dd49900c523c958bf9b72080bcf83620c90f15a6bc7e246652"
+    },
+    {
+      "source": "configs/yolo26n-one2one-960.yaml",
+      "destination": "configs/yolo26n-one2one-960.yaml",
+      "source_sha256": "0af0bf2fd9b600805e7b896618d51e5b705c90344f7c6b682712058d0af4992f"
+    },
+    {
+      "source": "configs/yolo11n.yaml",
+      "destination": "configs/yolo11n.yaml",
+      "source_sha256": "c51a6c59a4013a38ff9c228a5c03a69961295d8328dc0f44ca86a6da05d9e32f"
+    },
+    {
+      "source": "configs/yolo26n.yaml",
+      "destination": "configs/yolo26n.yaml",
+      "source_sha256": "7f2c690af3fcd1e5e93a1d305003785ec9a9bdf67df1b1e10dee6a12a7d42bcd"
+    },
+    {
+      "source": "configs/yolo26n-one2one.yaml",
+      "destination": "configs/yolo26n-one2one.yaml",
+      "source_sha256": "f63248efe26e44cc38a0163fa1b705d65497b2c7ed90ad978907993c74f9088c"
+    },
+    {
+      "source": "tools/run_video_joint.py",
+      "destination": "tools/run_video_joint.py",
+      "source_sha256": "63600efbadbf125f6b21fe164f6a6ed15ddc4a8303a2d85d1a80d00b7130965d"
+    },
+    {
+      "source": "tools/run_tracking_gui.py",
+      "destination": "tools/run_tracking_gui.py",
+      "source_sha256": "a83786eb67ca2c8cf4dbb894c9ebe152f65718b0de3492d539cd091f929fb236"
+    },
+    {
+      "source": "tools/crowdhuman_training.py",
+      "destination": "tools/crowdhuman_training.py",
+      "source_sha256": "3465d9b44916e185ac2613b57c1d2a68814777c7274dd453c873916bef118b0f"
+    },
+    {
+      "source": "tools/run_crowdhuman_yolo26s.py",
+      "destination": "tools/run_crowdhuman_yolo26s.py",
+      "source_sha256": "32b4e052353e526c36fcf62b773f91af2fe99020645b90fdabb2ef9c39c5fc16"
+    },
+    {
+      "source": "tools/vendor/crowdhuman_eval/database.py",
+      "destination": "tools/vendor/crowdhuman_eval/database.py",
+      "source_sha256": "64a6b6a9175b96e36f199ad6991dae50bf0a33be96a2d60aa6865a05a376106e"
+    },
+    {
+      "source": "tools/vendor/crowdhuman_eval/image.py",
+      "destination": "tools/vendor/crowdhuman_eval/image.py",
+      "source_sha256": "1e88d5cb04abcfa56395c42ac5463cebac897d5bd0ada323dc942aa880d4cb42"
+    },
+    {
+      "source": "tools/vendor/crowdhuman_eval/LICENSE",
+      "destination": "tools/vendor/crowdhuman_eval/LICENSE",
+      "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "source": "tools/vendor/crowdhuman_eval/SOURCE.md",
+      "destination": "tools/vendor/crowdhuman_eval/SOURCE.md",
+      "source_sha256": "8b63b6b6cc8afceb7849f0d590d0d708fc430e4538e2fb85e7ff8f0a1da9618d"
+    },
+    {
+      "source": "tools/vendor/crowdhuman_eval/__init__.py",
+      "destination": "tools/vendor/crowdhuman_eval/__init__.py",
+      "source_sha256": "8926940ba4141d7aa0559b6e97be6387ebee14e3584a1b62811ab216d9ed4671"
+    },
+    {
+      "source": "tests/conftest.py",
+      "destination": "tests/conftest.py",
+      "source_sha256": "24b0de9831e418e324bf6c5151b4f41748d7a4c76d82652ea3ef0d38cae46023"
+    },
+    {
+      "source": "tests/test_types.py",
+      "destination": "tests/test_types.py",
+      "source_sha256": "a1e1deb66dad59f44db161ae3867fddc88c60113bd76b19c4271196aef629b13"
+    },
+    {
+      "source": "tests/test_geometry.py",
+      "destination": "tests/test_geometry.py",
+      "source_sha256": "d349393b253f6a0d87af14dc69ad6fea2d5eab728c4a8f7462f1ad5cf3472c37"
+    },
+    {
+      "source": "tests/test_tracker.py",
+      "destination": "tests/test_tracker.py",
+      "source_sha256": "a5c8e3e0df7b51ffeab466d554737fd2243e85bc75565fe60025acf45005c947"
+    },
+    {
+      "source": "tests/test_target_manager.py",
+      "destination": "tests/test_target_manager.py",
+      "source_sha256": "a3a0de8fdcf6643980d4e8c9ac0172dad6c4d26af015f0ebce8a28e907862522"
+    },
+    {
+      "source": "tests/test_target_baselines.py",
+      "destination": "tests/test_target_baselines.py",
+      "source_sha256": "3ca046fb7b324f6ce05e6e6c03a14056962b8354c47ce9a249af1a34f140f6fb"
+    },
+    {
+      "source": "tests/test_ultralytics_mot_adapter.py",
+      "destination": "tests/test_ultralytics_mot_adapter.py",
+      "source_sha256": "189ba1e407b7ced5b7567d1b4540ca0ca88ef2dd310069c3b6ae4f3e3cc01c32"
+    },
+    {
+      "source": "tests/test_video_app.py",
+      "destination": "tests/test_video_app.py",
+      "source_sha256": "435f87fb4fc69f6e1e43e5856e0ecb48c2ecefa4ef3e3e61e2d3076614e3728f"
+    },
+    {
+      "source": "tests/test_joint_runtime.py",
+      "destination": "tests/test_joint_runtime.py",
+      "source_sha256": "3f17c6de530345025fa32c151f2c48c126908c531c87caa28d3afea19f1e13dd"
+    },
+    {
+      "source": "tests/test_multi_template_target.py",
+      "destination": "tests/test_multi_template_target.py",
+      "source_sha256": "e23b19f77419dc8f99888b2a88bbb930932e5a98b71e98632346b2c8aa34445e"
+    },
+    {
+      "source": "tests/test_identity_handoff.py",
+      "destination": "tests/test_identity_handoff.py",
+      "source_sha256": "ca2973ed0afc33e60dc758bf18f0fb42e2ccfe4bb70fc9821edc68ba9cfa5840"
+    },
+    {
+      "source": "tests/test_short_identity.py",
+      "destination": "tests/test_short_identity.py",
+      "source_sha256": "9bfe4464651249ee9ba6178d49dd1108cd4d23ad05ea57d74b73c338d75bce3f"
+    },
+    {
+      "source": "tests/test_reid_rgb_contract.py",
+      "destination": "tests/test_reid_rgb_contract.py",
+      "source_sha256": "c09e4cbe389de64b984d72c9e7ca72e4437e36c6fec4ad76e10424ab3d48ff9a"
+    },
+    {
+      "source": "tests/test_buffered_playback.py",
+      "destination": "tests/test_buffered_playback.py",
+      "source_sha256": "205569b886cc5ad209e63a0aa095885976791d9d1f3e1d530610e4fcc7467f04"
+    },
+    {
+      "source": "tests/test_gui_analysis_cache.py",
+      "destination": "tests/test_gui_analysis_cache.py",
+      "source_sha256": "ce0a71c6dba6789022a6121b6ea90e7b7ad4cd0dae8c30f5bb2aaf592b7623af"
+    },
+    {
+      "source": "tests/test_tracking_gui.py",
+      "destination": "tests/test_tracking_gui.py",
+      "source_sha256": "1ac43e457c2c53b0ec572945ef94a8adf8f2184c62af6fe9442aaff391e718cd"
+    },
+    {
+      "source": "tests/test_crowdhuman_training.py",
+      "destination": "tests/test_crowdhuman_training.py",
+      "source_sha256": "ce4318ecf433e7bef82700050f846905b9519ae9969cc2a496d5869ccb2640b5"
+    },
+    {
+      "source": "tests/test_target_recovery_metrics.py",
+      "destination": "tests/test_target_recovery_metrics.py",
+      "source_sha256": "8774af5cfadf268f4013fcb04056d602a1bd36deada85b2cef15cad9babdd26f"
+    },
+    {
+      "source": "manifests/gt_event_scope_20261005.json",
+      "destination": "manifests/gt_event_scope_20261005.json",
+      "source_sha256": "9b574d1c3c94908f9cb17d4c69a39886e12672640a3262a90497825c0dd2d4eb"
+    },
+    {
+      "source": "manifests/target_scope_20261005.json",
+      "destination": "manifests/target_scope_20261005.json",
+      "source_sha256": "bd307b343a09d6b29092e1fbf191c3f1f7fc09f83350fab4db6f71b0a21396ce"
+    },
+    {
+      "source": "manifests/recovery_event_exclusions_20261005.json",
+      "destination": "manifests/recovery_event_exclusions_20261005.json",
+      "source_sha256": "b125609dc8b8aae729040a9ae9fa9f8db3425952650200355ab48cf92d6bef8b"
+    },
+    {
+      "source": "manifests/test_recovery_event_exclusions_20261007.json",
+      "destination": "manifests/test_recovery_event_exclusions_20261007.json",
+      "source_sha256": "7331fb70c4a7773869b44d4152d32cbef22a08f415736c5939dca2d5d3fd5238"
+    },
+    {
+      "source": "manifests/test_recovery_events_20261007.json",
+      "destination": "manifests/test_recovery_events_20261007.json",
+      "source_sha256": "107df63a64c79a388709826847fe399efd45da291872e43281e52f1dfc27e8db"
+    },
+    {
+      "source": "models/best.pt",
+      "destination": "models/best.pt",
+      "source_sha256": "41b4d15f8024e2b153aa0c2e77d59ff8e4054fc91d5537bb14acdbfb2f8e2fb2"
+    },
+    {
+      "source": "models/yolo26s.pt",
+      "destination": "models/yolo26s.pt",
+      "source_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b"
+    },
+    {
+      "source": "models/yolo26n-reid.onnx",
+      "destination": "models/yolo26n-reid.onnx",
+      "source_sha256": "8529c383197ae4c468eda535d1b165f8b4162cf17bf5fbcff49c7cb6455bc0bb"
+    },
+    {
+      "source": "models/yolo26n.pt",
+      "destination": "models/yolo26n.pt",
+      "source_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "source": "models/yolo11n.pt",
+      "destination": "models/yolo11n.pt",
+      "source_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+    }
+  ]
+}

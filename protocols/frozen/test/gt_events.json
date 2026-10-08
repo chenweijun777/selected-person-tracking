@@ -1,0 +1,2179 @@
+{
+  "schema_version": 1,
+  "split": "test",
+  "rules": {
+    "main_visibility_threshold": 0.3,
+    "boundary_margin": 0.02,
+    "gt_filter": "mark=1 and class=1; visibility=0 retained",
+    "timestamps": "(frame-1)/fps; endpoints inclusive; duration=(end-start+1)/fps",
+    "interval_domain": "full sequence for each selected ID",
+    "events": "maximal contiguous subthreshold phases; zero runs retained; no smoothing",
+    "reappearance": "first v>0 after LAST zero block of phase; each zero block is retained",
+    "missing_gt": "unknown, not absent; never bridge annotation gaps",
+    "review": "all events need review; no automatic confirmed exit or occlusion semantics",
+    "evaluation": "candidate flag is not a finalized denominator; require reviewed event and correct pre-event initialization",
+    "data_use": "02/04/05 development; 09/10 validation; 11 test; no threshold tuning",
+    "selection": "Exact workbook GT IDs, deduplicated by sequence and ID"
+  },
+  "sources": {
+    "MOT17-11-SDP": {
+      "gt_path": "data/MOT17/MOT17/train/MOT17-11-SDP/gt/gt.txt",
+      "gt_sha256": "4952d6e4efc705c90688e434fd138a55ada2c0d5f576ba3847ee102fc18aff93",
+      "seqinfo_sha256": "b6487e5ae527741884ae30d3dd470c406f5b4aa8ed35381085941c421a43784b",
+      "fps": 30.0,
+      "length": 900,
+      "width": 1920,
+      "height": 1080,
+      "split": "test"
+    }
+  },
+  "events": [
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 1,
+      "fps": 30.0,
+      "start_frame": 709,
+      "end_frame": 728,
+      "start_s": 23.6,
+      "end_s": 24.233333333,
+      "duration_frames": 20,
+      "duration_s": 0.666666667,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 712,
+      "last_visible_s": 23.7,
+      "reappearance_frame": 726,
+      "reappearance_s": 24.166666667,
+      "main_visible_frame": 729,
+      "main_visible_s": 24.266666667,
+      "before_position": {
+        "bbox_xywh": [
+          912.0,
+          223.0,
+          174.0,
+          433.0
+        ],
+        "visibility": 0.062857,
+        "center_normalized": [
+          0.5203125,
+          0.40694444444444444
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          914.0,
+          234.0,
+          173.0,
+          431.0
+        ],
+        "visibility": 0.26437,
+        "center_normalized": [
+          0.52109375,
+          0.4162037037037037
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          897.0,
+          189.0,
+          178.0,
+          435.0
+        ],
+        "visibility": 0.22905,
+        "center_normalized": [
+          0.5135416666666667,
+          0.3763888888888889
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          899.0,
+          193.0,
+          177.0,
+          435.0
+        ],
+        "visibility": 0.067416,
+        "center_normalized": [
+          0.5143229166666666,
+          0.3800925925925926
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          896.0,
+          187.0,
+          178.0,
+          435.0
+        ],
+        "visibility": 0.36313,
+        "center_normalized": [
+          0.5130208333333334,
+          0.37453703703703706
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          713,
+          725
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 679,
+      "context_end_frame": 758,
+      "left_censored": false,
+      "zero_visibility_frames": 13,
+      "low_visibility_frames": 7,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT1_0002",
+      "split": "test",
+      "review_number": 1,
+      "video": "test/001_MOT17-11-SDP_GT1_0002.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 1,
+      "fps": 30.0,
+      "start_frame": 746,
+      "end_frame": 759,
+      "start_s": 24.833333333,
+      "end_s": 25.266666667,
+      "duration_frames": 14,
+      "duration_s": 0.466666667,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 747,
+      "last_visible_s": 24.866666667,
+      "reappearance_frame": 758,
+      "reappearance_s": 25.233333333,
+      "main_visible_frame": 760,
+      "main_visible_s": 25.3,
+      "before_position": {
+        "bbox_xywh": [
+          735.0,
+          184.0,
+          161.0,
+          438.0
+        ],
+        "visibility": 0.12346,
+        "center_normalized": [
+          0.42473958333333334,
+          0.3731481481481482
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          747.0,
+          184.0,
+          161.0,
+          438.0
+        ],
+        "visibility": 0.24691,
+        "center_normalized": [
+          0.4309895833333333,
+          0.3731481481481482
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          690.0,
+          197.0,
+          171.0,
+          439.0
+        ],
+        "visibility": 0.20349,
+        "center_normalized": [
+          0.40390625,
+          0.38564814814814813
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          691.0,
+          196.0,
+          170.0,
+          439.0
+        ],
+        "visibility": 0.046784,
+        "center_normalized": [
+          0.4041666666666667,
+          0.38472222222222224
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          690.0,
+          199.0,
+          171.0,
+          439.0
+        ],
+        "visibility": 0.35465,
+        "center_normalized": [
+          0.40390625,
+          0.3875
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          748,
+          757
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 716,
+      "context_end_frame": 789,
+      "left_censored": false,
+      "zero_visibility_frames": 10,
+      "low_visibility_frames": 4,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT1_0003",
+      "split": "test",
+      "review_number": 2,
+      "video": "test/002_MOT17-11-SDP_GT1_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 10,
+      "fps": 30.0,
+      "start_frame": 412,
+      "end_frame": 418,
+      "start_s": 13.7,
+      "end_s": 13.9,
+      "duration_frames": 7,
+      "duration_s": 0.233333333,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 411,
+      "last_visible_s": 13.666666667,
+      "reappearance_frame": 419,
+      "reappearance_s": 13.933333333,
+      "main_visible_frame": 419,
+      "main_visible_s": 13.933333333,
+      "before_position": {
+        "bbox_xywh": [
+          707.0,
+          303.0,
+          87.0,
+          244.0
+        ],
+        "visibility": 0.30682,
+        "center_normalized": [
+          0.39088541666666665,
+          0.39351851851851855
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          711.0,
+          303.0,
+          88.0,
+          245.0
+        ],
+        "visibility": 0.2809,
+        "center_normalized": [
+          0.3932291666666667,
+          0.3939814814814815
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          722.0,
+          300.0,
+          89.0,
+          254.0
+        ],
+        "visibility": 0.25556,
+        "center_normalized": [
+          0.39921875,
+          0.39537037037037037
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          719.0,
+          299.0,
+          88.0,
+          255.0
+        ],
+        "visibility": 0.30337,
+        "center_normalized": [
+          0.39739583333333334,
+          0.39490740740740743
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          719.0,
+          299.0,
+          88.0,
+          255.0
+        ],
+        "visibility": 0.30337,
+        "center_normalized": [
+          0.39739583333333334,
+          0.39490740740740743
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 382,
+      "context_end_frame": 449,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 7,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT10_0003",
+      "split": "test",
+      "review_number": 8,
+      "video": "test/008_MOT17-11-SDP_GT10_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 10,
+      "fps": 30.0,
+      "start_frame": 433,
+      "end_frame": 457,
+      "start_s": 14.4,
+      "end_s": 15.2,
+      "duration_frames": 25,
+      "duration_s": 0.833333333,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 436,
+      "last_visible_s": 14.5,
+      "reappearance_frame": 446,
+      "reappearance_s": 14.833333333,
+      "main_visible_frame": 458,
+      "main_visible_s": 15.233333333,
+      "before_position": {
+        "bbox_xywh": [
+          674.0,
+          274.0,
+          85.0,
+          285.0
+        ],
+        "visibility": 0.05814,
+        "center_normalized": [
+          0.3731770833333333,
+          0.38564814814814813
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          673.0,
+          277.0,
+          86.0,
+          282.0
+        ],
+        "visibility": 0.26437,
+        "center_normalized": [
+          0.3729166666666667,
+          0.387037037037037
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          717.0,
+          249.0,
+          96.0,
+          326.0
+        ],
+        "visibility": 0.24903,
+        "center_normalized": [
+          0.3984375,
+          0.3814814814814815
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          677.0,
+          264.0,
+          84.0,
+          297.0
+        ],
+        "visibility": 0.0064745,
+        "center_normalized": [
+          0.37447916666666664,
+          0.3819444444444444
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          722.0,
+          247.0,
+          97.0,
+          330.0
+        ],
+        "visibility": 0.39796,
+        "center_normalized": [
+          0.40130208333333334,
+          0.3814814814814815
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          437,
+          445
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 403,
+      "context_end_frame": 487,
+      "left_censored": false,
+      "zero_visibility_frames": 9,
+      "low_visibility_frames": 16,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT10_0004",
+      "split": "test",
+      "review_number": 9,
+      "video": "test/009_MOT17-11-SDP_GT10_0004.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 14,
+      "fps": 30.0,
+      "start_frame": 319,
+      "end_frame": 334,
+      "start_s": 10.6,
+      "end_s": 11.1,
+      "duration_frames": 16,
+      "duration_s": 0.533333333,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 324,
+      "last_visible_s": 10.766666667,
+      "reappearance_frame": 332,
+      "reappearance_s": 11.033333333,
+      "main_visible_frame": 335,
+      "main_visible_s": 11.133333333,
+      "before_position": {
+        "bbox_xywh": [
+          1268.0,
+          150.0,
+          214.0,
+          671.0
+        ],
+        "visibility": 0.065116,
+        "center_normalized": [
+          0.7161458333333334,
+          0.449537037037037
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          1263.0,
+          152.0,
+          201.0,
+          665.0
+        ],
+        "visibility": 0.28218,
+        "center_normalized": [
+          0.71015625,
+          0.4486111111111111
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1251.0,
+          159.0,
+          242.0,
+          681.0
+        ],
+        "visibility": 0.25103,
+        "center_normalized": [
+          0.7145833333333333,
+          0.4625
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          1258.0,
+          157.0,
+          234.0,
+          678.0
+        ],
+        "visibility": 0.07234,
+        "center_normalized": [
+          0.7161458333333334,
+          0.45925925925925926
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1247.0,
+          160.0,
+          246.0,
+          683.0
+        ],
+        "visibility": 0.33603,
+        "center_normalized": [
+          0.7135416666666666,
+          0.46435185185185185
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          325,
+          331
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 289,
+      "context_end_frame": 364,
+      "left_censored": false,
+      "zero_visibility_frames": 7,
+      "low_visibility_frames": 9,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT14_0002",
+      "split": "test",
+      "review_number": 11,
+      "video": "test/011_MOT17-11-SDP_GT14_0002.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "start_frame": 9,
+      "end_frame": 66,
+      "start_s": 0.266666667,
+      "end_s": 2.166666667,
+      "duration_frames": 58,
+      "duration_s": 1.933333333,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 12,
+      "last_visible_s": 0.366666667,
+      "reappearance_frame": 57,
+      "reappearance_s": 1.866666667,
+      "main_visible_frame": 67,
+      "main_visible_s": 2.2,
+      "before_position": {
+        "bbox_xywh": [
+          862.0,
+          262.0,
+          88.0,
+          307.0
+        ],
+        "visibility": 0.05618,
+        "center_normalized": [
+          0.471875,
+          0.38472222222222224
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          863.0,
+          260.0,
+          88.0,
+          306.0
+        ],
+        "visibility": 0.24719,
+        "center_normalized": [
+          0.47239583333333335,
+          0.3824074074074074
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1006.0,
+          428.0,
+          93.0,
+          318.0
+        ],
+        "visibility": 0.29787,
+        "center_normalized": [
+          0.5481770833333334,
+          0.5435185185185185
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          995.0,
+          437.0,
+          93.0,
+          316.0
+        ],
+        "visibility": 0.031915,
+        "center_normalized": [
+          0.5424479166666667,
+          0.5509259259259259
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1010.0,
+          425.0,
+          93.0,
+          318.0
+        ],
+        "visibility": 0.31915,
+        "center_normalized": [
+          0.5502604166666667,
+          0.5407407407407407
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          13,
+          56
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 1,
+      "context_end_frame": 96,
+      "left_censored": false,
+      "zero_visibility_frames": 44,
+      "low_visibility_frames": 14,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT25_0003",
+      "split": "test",
+      "review_number": 16,
+      "video": "test/016_MOT17-11-SDP_GT25_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "start_frame": 186,
+      "end_frame": 247,
+      "start_s": 6.166666667,
+      "end_s": 8.2,
+      "duration_frames": 62,
+      "duration_s": 2.066666667,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 229,
+      "last_visible_s": 7.6,
+      "reappearance_frame": 232,
+      "reappearance_s": 7.7,
+      "main_visible_frame": 248,
+      "main_visible_s": 8.233333333,
+      "before_position": {
+        "bbox_xywh": [
+          933.0,
+          356.0,
+          105.0,
+          380.0
+        ],
+        "visibility": 0.009434,
+        "center_normalized": [
+          0.51328125,
+          0.5055555555555555
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          915.0,
+          321.0,
+          106.0,
+          360.0
+        ],
+        "visibility": 0.29907,
+        "center_normalized": [
+          0.5041666666666667,
+          0.4638888888888889
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          910.0,
+          366.0,
+          105.0,
+          388.0
+        ],
+        "visibility": 0.29245,
+        "center_normalized": [
+          0.5013020833333334,
+          0.5185185185185185
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          934.0,
+          357.0,
+          105.0,
+          382.0
+        ],
+        "visibility": 0.009434,
+        "center_normalized": [
+          0.5138020833333333,
+          0.5074074074074074
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          911.0,
+          367.0,
+          104.0,
+          389.0
+        ],
+        "visibility": 0.34286,
+        "center_normalized": [
+          0.5015625,
+          0.5199074074074074
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          230,
+          231
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 156,
+      "context_end_frame": 277,
+      "left_censored": false,
+      "zero_visibility_frames": 2,
+      "low_visibility_frames": 60,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT25_0004",
+      "split": "test",
+      "review_number": 17,
+      "video": "test/017_MOT17-11-SDP_GT25_0004.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "start_frame": 257,
+      "end_frame": 260,
+      "start_s": 8.533333333,
+      "end_s": 8.633333333,
+      "duration_frames": 4,
+      "duration_s": 0.133333333,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 256,
+      "last_visible_s": 8.5,
+      "reappearance_frame": 261,
+      "reappearance_s": 8.666666667,
+      "main_visible_frame": 261,
+      "main_visible_s": 8.666666667,
+      "before_position": {
+        "bbox_xywh": [
+          917.0,
+          378.0,
+          104.0,
+          393.0
+        ],
+        "visibility": 0.30476,
+        "center_normalized": [
+          0.5046875,
+          0.5319444444444444
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          918.0,
+          378.0,
+          105.0,
+          393.0
+        ],
+        "visibility": 0.29245,
+        "center_normalized": [
+          0.50546875,
+          0.5319444444444444
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          923.0,
+          378.0,
+          104.0,
+          395.0
+        ],
+        "visibility": 0.29524,
+        "center_normalized": [
+          0.5078125,
+          0.5328703703703703
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          924.0,
+          378.0,
+          105.0,
+          395.0
+        ],
+        "visibility": 0.31132,
+        "center_normalized": [
+          0.50859375,
+          0.5328703703703703
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          924.0,
+          378.0,
+          105.0,
+          395.0
+        ],
+        "visibility": 0.31132,
+        "center_normalized": [
+          0.50859375,
+          0.5328703703703703
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 227,
+      "context_end_frame": 291,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 4,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT25_0005",
+      "split": "test",
+      "review_number": 18,
+      "video": "test/018_MOT17-11-SDP_GT25_0005.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "start_frame": 262,
+      "end_frame": 264,
+      "start_s": 8.7,
+      "end_s": 8.766666667,
+      "duration_frames": 3,
+      "duration_s": 0.1,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 261,
+      "last_visible_s": 8.666666667,
+      "reappearance_frame": 265,
+      "reappearance_s": 8.8,
+      "main_visible_frame": 265,
+      "main_visible_s": 8.8,
+      "before_position": {
+        "bbox_xywh": [
+          924.0,
+          378.0,
+          105.0,
+          395.0
+        ],
+        "visibility": 0.31132,
+        "center_normalized": [
+          0.50859375,
+          0.5328703703703703
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          925.0,
+          378.0,
+          105.0,
+          395.0
+        ],
+        "visibility": 0.034829,
+        "center_normalized": [
+          0.5091145833333334,
+          0.5328703703703703
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          928.0,
+          378.0,
+          105.0,
+          396.0
+        ],
+        "visibility": 0.030773,
+        "center_normalized": [
+          0.5106770833333333,
+          0.5333333333333333
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          930.0,
+          378.0,
+          105.0,
+          397.0
+        ],
+        "visibility": 0.36792,
+        "center_normalized": [
+          0.51171875,
+          0.5337962962962963
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          930.0,
+          378.0,
+          105.0,
+          397.0
+        ],
+        "visibility": 0.36792,
+        "center_normalized": [
+          0.51171875,
+          0.5337962962962963
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 232,
+      "context_end_frame": 295,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 3,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT25_0006",
+      "split": "test",
+      "review_number": 19,
+      "video": "test/019_MOT17-11-SDP_GT25_0006.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "start_frame": 266,
+      "end_frame": 286,
+      "start_s": 8.833333333,
+      "end_s": 9.5,
+      "duration_frames": 21,
+      "duration_s": 0.7,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 265,
+      "last_visible_s": 8.8,
+      "reappearance_frame": 287,
+      "reappearance_s": 9.533333333,
+      "main_visible_frame": 287,
+      "main_visible_s": 9.533333333,
+      "before_position": {
+        "bbox_xywh": [
+          930.0,
+          378.0,
+          105.0,
+          397.0
+        ],
+        "visibility": 0.36792,
+        "center_normalized": [
+          0.51171875,
+          0.5337962962962963
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          927.0,
+          374.0,
+          105.0,
+          398.0
+        ],
+        "visibility": 0.044593,
+        "center_normalized": [
+          0.51015625,
+          0.5305555555555556
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          881.0,
+          248.0,
+          106.0,
+          422.0
+        ],
+        "visibility": 0.27249,
+        "center_normalized": [
+          0.4864583333333333,
+          0.425
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          888.0,
+          245.0,
+          106.0,
+          422.0
+        ],
+        "visibility": 0.30967,
+        "center_normalized": [
+          0.4901041666666667,
+          0.4222222222222222
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          888.0,
+          245.0,
+          106.0,
+          422.0
+        ],
+        "visibility": 0.30967,
+        "center_normalized": [
+          0.4901041666666667,
+          0.4222222222222222
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 236,
+      "context_end_frame": 317,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 21,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT25_0007",
+      "split": "test",
+      "review_number": 20,
+      "video": "test/020_MOT17-11-SDP_GT25_0007.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "start_frame": 689,
+      "end_frame": 719,
+      "start_s": 22.933333333,
+      "end_s": 23.933333333,
+      "duration_frames": 31,
+      "duration_s": 1.033333333,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 694,
+      "last_visible_s": 23.1,
+      "reappearance_frame": 717,
+      "reappearance_s": 23.866666667,
+      "main_visible_frame": 720,
+      "main_visible_s": 23.966666667,
+      "before_position": {
+        "bbox_xywh": [
+          1034.0,
+          269.0,
+          152.0,
+          500.0
+        ],
+        "visibility": 0.03268,
+        "center_normalized": [
+          0.578125,
+          0.48055555555555557
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          1017.0,
+          291.0,
+          151.0,
+          498.0
+        ],
+        "visibility": 0.26316,
+        "center_normalized": [
+          0.5690104166666666,
+          0.5
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1055.0,
+          171.0,
+          154.0,
+          511.0
+        ],
+        "visibility": 0.27097,
+        "center_normalized": [
+          0.5895833333333333,
+          0.39490740740740743
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          1052.0,
+          177.0,
+          154.0,
+          509.0
+        ],
+        "visibility": 0.058065,
+        "center_normalized": [
+          0.5880208333333333,
+          0.399537037037037
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1057.0,
+          169.0,
+          155.0,
+          511.0
+        ],
+        "visibility": 0.38462,
+        "center_normalized": [
+          0.5908854166666667,
+          0.39305555555555555
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          695,
+          716
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 659,
+      "context_end_frame": 749,
+      "left_censored": false,
+      "zero_visibility_frames": 22,
+      "low_visibility_frames": 9,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT25_0008",
+      "split": "test",
+      "review_number": 21,
+      "video": "test/021_MOT17-11-SDP_GT25_0008.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 25,
+      "fps": 30.0,
+      "start_frame": 736,
+      "end_frame": 753,
+      "start_s": 24.5,
+      "end_s": 25.066666667,
+      "duration_frames": 18,
+      "duration_s": 0.6,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 741,
+      "last_visible_s": 24.666666667,
+      "reappearance_frame": 752,
+      "reappearance_s": 25.033333333,
+      "main_visible_frame": 754,
+      "main_visible_s": 25.1,
+      "before_position": {
+        "bbox_xywh": [
+          937.0,
+          142.0,
+          156.0,
+          519.0
+        ],
+        "visibility": 0.082803,
+        "center_normalized": [
+          0.5286458333333334,
+          0.37175925925925923
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          981.0,
+          144.0,
+          155.0,
+          517.0
+        ],
+        "visibility": 0.29487,
+        "center_normalized": [
+          0.5513020833333333,
+          0.3726851851851852
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          842.0,
+          149.0,
+          156.0,
+          524.0
+        ],
+        "visibility": 0.28662,
+        "center_normalized": [
+          0.4791666666666667,
+          0.38055555555555554
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          845.0,
+          146.0,
+          156.0,
+          523.0
+        ],
+        "visibility": 0.14013,
+        "center_normalized": [
+          0.48072916666666665,
+          0.3773148148148148
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          840.0,
+          153.0,
+          156.0,
+          524.0
+        ],
+        "visibility": 0.44586,
+        "center_normalized": [
+          0.478125,
+          0.38425925925925924
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          742,
+          751
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 706,
+      "context_end_frame": 783,
+      "left_censored": false,
+      "zero_visibility_frames": 10,
+      "low_visibility_frames": 8,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT25_0009",
+      "split": "test",
+      "review_number": 22,
+      "video": "test/022_MOT17-11-SDP_GT25_0009.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 33,
+      "fps": 30.0,
+      "start_frame": 721,
+      "end_frame": 734,
+      "start_s": 24.0,
+      "end_s": 24.433333333,
+      "duration_frames": 14,
+      "duration_s": 0.466666667,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 722,
+      "last_visible_s": 24.033333333,
+      "reappearance_frame": 734,
+      "reappearance_s": 24.433333333,
+      "main_visible_frame": 735,
+      "main_visible_s": 24.466666667,
+      "before_position": {
+        "bbox_xywh": [
+          735.0,
+          232.0,
+          136.0,
+          375.0
+        ],
+        "visibility": 0.051095,
+        "center_normalized": [
+          0.41822916666666665,
+          0.38842592592592595
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          738.0,
+          236.0,
+          136.0,
+          370.0
+        ],
+        "visibility": 0.18978,
+        "center_normalized": [
+          0.4197916666666667,
+          0.38981481481481484
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          698.0,
+          189.0,
+          143.0,
+          426.0
+        ],
+        "visibility": 0.13194,
+        "center_normalized": [
+          0.40078125,
+          0.37222222222222223
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          698.0,
+          189.0,
+          143.0,
+          426.0
+        ],
+        "visibility": 0.13194,
+        "center_normalized": [
+          0.40078125,
+          0.37222222222222223
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          695.0,
+          186.0,
+          144.0,
+          430.0
+        ],
+        "visibility": 0.31724,
+        "center_normalized": [
+          0.39947916666666666,
+          0.3712962962962963
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          723,
+          733
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 691,
+      "context_end_frame": 764,
+      "left_censored": false,
+      "zero_visibility_frames": 11,
+      "low_visibility_frames": 3,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT33_0003",
+      "split": "test",
+      "review_number": 28,
+      "video": "test/028_MOT17-11-SDP_GT33_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 33,
+      "fps": 30.0,
+      "start_frame": 758,
+      "end_frame": 774,
+      "start_s": 25.233333333,
+      "end_s": 25.766666667,
+      "duration_frames": 17,
+      "duration_s": 0.566666667,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 760,
+      "last_visible_s": 25.3,
+      "reappearance_frame": 772,
+      "reappearance_s": 25.7,
+      "main_visible_frame": 775,
+      "main_visible_s": 25.8,
+      "before_position": {
+        "bbox_xywh": [
+          371.0,
+          135.0,
+          248.0,
+          605.0
+        ],
+        "visibility": 0.088353,
+        "center_normalized": [
+          0.2578125,
+          0.4050925925925926
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          376.0,
+          134.0,
+          245.0,
+          593.0
+        ],
+        "visibility": 0.28049,
+        "center_normalized": [
+          0.2596354166666667,
+          0.39861111111111114
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          328.0,
+          69.0,
+          291.0,
+          751.0
+        ],
+        "visibility": 0.24658,
+        "center_normalized": [
+          0.24661458333333333,
+          0.4115740740740741
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          346.0,
+          84.0,
+          282.0,
+          711.0
+        ],
+        "visibility": 0.042403,
+        "center_normalized": [
+          0.25364583333333335,
+          0.40694444444444444
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          319.0,
+          62.0,
+          296.0,
+          771.0
+        ],
+        "visibility": 0.34343,
+        "center_normalized": [
+          0.24322916666666666,
+          0.41435185185185186
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          761,
+          771
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 728,
+      "context_end_frame": 804,
+      "left_censored": false,
+      "zero_visibility_frames": 11,
+      "low_visibility_frames": 6,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT33_0004",
+      "split": "test",
+      "review_number": 29,
+      "video": "test/029_MOT17-11-SDP_GT33_0004.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 35,
+      "fps": 30.0,
+      "start_frame": 788,
+      "end_frame": 800,
+      "start_s": 26.233333333,
+      "end_s": 26.633333333,
+      "duration_frames": 13,
+      "duration_s": 0.433333333,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 787,
+      "last_visible_s": 26.2,
+      "reappearance_frame": 801,
+      "reappearance_s": 26.666666667,
+      "main_visible_frame": 801,
+      "main_visible_s": 26.666666667,
+      "before_position": {
+        "bbox_xywh": [
+          483.0,
+          232.0,
+          148.0,
+          410.0
+        ],
+        "visibility": 0.34228,
+        "center_normalized": [
+          0.29010416666666666,
+          0.4046296296296296
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          475.0,
+          230.0,
+          151.0,
+          413.0
+        ],
+        "visibility": 0.27632,
+        "center_normalized": [
+          0.28671875,
+          0.4041666666666667
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          492.0,
+          251.0,
+          161.0,
+          456.0
+        ],
+        "visibility": 0.2963,
+        "center_normalized": [
+          0.2981770833333333,
+          0.44351851851851853
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          494.0,
+          254.0,
+          162.0,
+          460.0
+        ],
+        "visibility": 0.34356,
+        "center_normalized": [
+          0.2994791666666667,
+          0.44814814814814813
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          494.0,
+          254.0,
+          162.0,
+          460.0
+        ],
+        "visibility": 0.34356,
+        "center_normalized": [
+          0.2994791666666667,
+          0.44814814814814813
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 758,
+      "context_end_frame": 831,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 13,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT35_0003",
+      "split": "test",
+      "review_number": 33,
+      "video": "test/033_MOT17-11-SDP_GT35_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 37,
+      "fps": 30.0,
+      "start_frame": 771,
+      "end_frame": 771,
+      "start_s": 25.666666667,
+      "end_s": 25.666666667,
+      "duration_frames": 1,
+      "duration_s": 0.033333333,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 770,
+      "last_visible_s": 25.633333333,
+      "reappearance_frame": 772,
+      "reappearance_s": 25.7,
+      "main_visible_frame": 772,
+      "main_visible_s": 25.7,
+      "before_position": {
+        "bbox_xywh": [
+          1045.0,
+          206.0,
+          159.0,
+          414.0
+        ],
+        "visibility": 0.33557,
+        "center_normalized": [
+          0.5856770833333333,
+          0.3824074074074074
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          1040.0,
+          197.0,
+          160.0,
+          427.0
+        ],
+        "visibility": 0.28322,
+        "center_normalized": [
+          0.5833333333333334,
+          0.3800925925925926
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1040.0,
+          197.0,
+          160.0,
+          427.0
+        ],
+        "visibility": 0.28322,
+        "center_normalized": [
+          0.5833333333333334,
+          0.3800925925925926
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          1043.0,
+          196.0,
+          158.0,
+          429.0
+        ],
+        "visibility": 0.31482,
+        "center_normalized": [
+          0.584375,
+          0.3800925925925926
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1043.0,
+          196.0,
+          158.0,
+          429.0
+        ],
+        "visibility": 0.31482,
+        "center_normalized": [
+          0.584375,
+          0.3800925925925926
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 741,
+      "context_end_frame": 802,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 1,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT37_0003",
+      "split": "test",
+      "review_number": 36,
+      "video": "test/036_MOT17-11-SDP_GT37_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 39,
+      "fps": 30.0,
+      "start_frame": 556,
+      "end_frame": 570,
+      "start_s": 18.5,
+      "end_s": 18.966666667,
+      "duration_frames": 15,
+      "duration_s": 0.5,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 555,
+      "last_visible_s": 18.466666667,
+      "reappearance_frame": 571,
+      "reappearance_s": 19.0,
+      "main_visible_frame": 571,
+      "main_visible_s": 19.0,
+      "before_position": {
+        "bbox_xywh": [
+          1066.0,
+          269.0,
+          127.0,
+          342.0
+        ],
+        "visibility": 0.31036,
+        "center_normalized": [
+          0.58828125,
+          0.4074074074074074
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          1064.0,
+          269.0,
+          128.0,
+          342.0
+        ],
+        "visibility": 0.26953,
+        "center_normalized": [
+          0.5875,
+          0.4074074074074074
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1102.0,
+          276.0,
+          135.0,
+          359.0
+        ],
+        "visibility": 0.27941,
+        "center_normalized": [
+          0.6091145833333333,
+          0.4217592592592593
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          1109.0,
+          278.0,
+          135.0,
+          360.0
+        ],
+        "visibility": 0.34559,
+        "center_normalized": [
+          0.6127604166666667,
+          0.42407407407407405
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1109.0,
+          278.0,
+          135.0,
+          360.0
+        ],
+        "visibility": 0.34559,
+        "center_normalized": [
+          0.6127604166666667,
+          0.42407407407407405
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 526,
+      "context_end_frame": 601,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 15,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT39_0003",
+      "split": "test",
+      "review_number": 39,
+      "video": "test/039_MOT17-11-SDP_GT39_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 39,
+      "fps": 30.0,
+      "start_frame": 686,
+      "end_frame": 723,
+      "start_s": 22.833333333,
+      "end_s": 24.066666667,
+      "duration_frames": 38,
+      "duration_s": 1.266666667,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 689,
+      "last_visible_s": 22.933333333,
+      "reappearance_frame": 722,
+      "reappearance_s": 24.033333333,
+      "main_visible_frame": 724,
+      "main_visible_s": 24.1,
+      "before_position": {
+        "bbox_xywh": [
+          1473.0,
+          250.0,
+          246.0,
+          631.0
+        ],
+        "visibility": 0.052632,
+        "center_normalized": [
+          0.83125,
+          0.5236111111111111
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          1463.0,
+          254.0,
+          238.0,
+          624.0
+        ],
+        "visibility": 0.29289,
+        "center_normalized": [
+          0.8239583333333333,
+          0.524074074074074
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1265.0,
+          105.0,
+          268.0,
+          704.0
+        ],
+        "visibility": 0.22677,
+        "center_normalized": [
+          0.7286458333333333,
+          0.42314814814814816
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          1285.0,
+          106.0,
+          257.0,
+          701.0
+        ],
+        "visibility": 0.096899,
+        "center_normalized": [
+          0.7361979166666667,
+          0.42268518518518516
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1245.0,
+          103.0,
+          278.0,
+          708.0
+        ],
+        "visibility": 0.34767,
+        "center_normalized": [
+          0.7208333333333333,
+          0.42314814814814816
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          690,
+          721
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 656,
+      "context_end_frame": 753,
+      "left_censored": false,
+      "zero_visibility_frames": 32,
+      "low_visibility_frames": 6,
+      "zero_block_count": 1,
+      "event_id": "MOT17-11-SDP_GT39_0004",
+      "split": "test",
+      "review_number": 40,
+      "video": "test/040_MOT17-11-SDP_GT39_0004.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 42,
+      "fps": 30.0,
+      "start_frame": 538,
+      "end_frame": 608,
+      "start_s": 17.9,
+      "end_s": 20.233333333,
+      "duration_frames": 71,
+      "duration_s": 2.366666667,
+      "event_type": "full_occlusion_reappearance",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 543,
+      "last_visible_s": 18.066666667,
+      "reappearance_frame": 602,
+      "reappearance_s": 20.033333333,
+      "main_visible_frame": 609,
+      "main_visible_s": 20.266666667,
+      "before_position": {
+        "bbox_xywh": [
+          1115.0,
+          291.0,
+          70.0,
+          239.0
+        ],
+        "visibility": 0.028169,
+        "center_normalized": [
+          0.5989583333333334,
+          0.3800925925925926
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          1112.0,
+          297.0,
+          68.0,
+          233.0
+        ],
+        "visibility": 0.27536,
+        "center_normalized": [
+          0.596875,
+          0.38287037037037036
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1219.0,
+          316.0,
+          120.0,
+          358.0
+        ],
+        "visibility": 0.28099,
+        "center_normalized": [
+          0.6661458333333333,
+          0.4583333333333333
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          1185.0,
+          310.0,
+          115.0,
+          346.0
+        ],
+        "visibility": 0.051724,
+        "center_normalized": [
+          0.6471354166666666,
+          0.44722222222222224
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1226.0,
+          318.0,
+          121.0,
+          359.0
+        ],
+        "visibility": 0.31148,
+        "center_normalized": [
+          0.6700520833333333,
+          0.46064814814814814
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [
+        [
+          544,
+          575
+        ],
+        [
+          589,
+          601
+        ]
+      ],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 508,
+      "context_end_frame": 638,
+      "left_censored": false,
+      "zero_visibility_frames": 45,
+      "low_visibility_frames": 26,
+      "zero_block_count": 2,
+      "event_id": "MOT17-11-SDP_GT42_0003",
+      "split": "test",
+      "review_number": 42,
+      "video": "test/042_MOT17-11-SDP_GT42_0003.mp4",
+      "source_review_status": "keep"
+    },
+    {
+      "sequence": "MOT17-11-SDP",
+      "gt_id": 51,
+      "fps": 30.0,
+      "start_frame": 834,
+      "end_frame": 835,
+      "start_s": 27.766666667,
+      "end_s": 27.8,
+      "duration_frames": 2,
+      "duration_s": 0.066666667,
+      "event_type": "partial_visibility_recovery",
+      "review_status": "reviewed",
+      "review_note": "未列入本次剔除名单，保留在恢复事件清单",
+      "last_visible_frame": 833,
+      "last_visible_s": 27.733333333,
+      "reappearance_frame": 836,
+      "reappearance_s": 27.833333333,
+      "main_visible_frame": 836,
+      "main_visible_s": 27.833333333,
+      "before_position": {
+        "bbox_xywh": [
+          1093.0,
+          293.0,
+          106.0,
+          284.0
+        ],
+        "visibility": 0.31776,
+        "center_normalized": [
+          0.596875,
+          0.4027777777777778
+        ],
+        "near_edges": []
+      },
+      "start_position": {
+        "bbox_xywh": [
+          1100.0,
+          294.0,
+          106.0,
+          284.0
+        ],
+        "visibility": 0.28037,
+        "center_normalized": [
+          0.6005208333333333,
+          0.40370370370370373
+        ],
+        "near_edges": []
+      },
+      "end_position": {
+        "bbox_xywh": [
+          1107.0,
+          295.0,
+          106.0,
+          284.0
+        ],
+        "visibility": 0.25234,
+        "center_normalized": [
+          0.6041666666666666,
+          0.4046296296296296
+        ],
+        "near_edges": []
+      },
+      "reappearance_position": {
+        "bbox_xywh": [
+          1114.0,
+          296.0,
+          106.0,
+          284.0
+        ],
+        "visibility": 0.76636,
+        "center_normalized": [
+          0.6078125,
+          0.40555555555555556
+        ],
+        "near_edges": []
+      },
+      "main_visible_position": {
+        "bbox_xywh": [
+          1114.0,
+          296.0,
+          106.0,
+          284.0
+        ],
+        "visibility": 0.76636,
+        "center_normalized": [
+          0.6078125,
+          0.40555555555555556
+        ],
+        "near_edges": []
+      },
+      "zero_visibility_ranges": [],
+      "censor_reason": null,
+      "recovery_candidate": true,
+      "context_start_frame": 804,
+      "context_end_frame": 866,
+      "left_censored": false,
+      "zero_visibility_frames": 0,
+      "low_visibility_frames": 2,
+      "zero_block_count": 0,
+      "event_id": "MOT17-11-SDP_GT51_0003",
+      "split": "test",
+      "review_number": 47,
+      "video": "test/047_MOT17-11-SDP_GT51_0003.mp4",
+      "source_review_status": "keep"
+    }
+  ],
+  "curated_source": "E:\\CV\\manifests\\test_recovery_events_20261007.json",
+  "curated_source_sha256": "107df63a64c79a388709826847fe399efd45da291872e43281e52f1dfc27e8db",
+  "review_import": "Explicitly retained human-review keep verdict maps to evaluator reviewed; event IDs, numbering and every temporal boundary unchanged"
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "formal_model_sha256": "41b4d15f8024e2b153aa0c2e77d59ff8e4054fc91d5537bb14acdbfb2f8e2fb2",
+  "formal_checkpoint_records": {
+    "epochs": 100,
+    "first": 1,
+    "last": 100
+  },
+  "migration_check": {
+    "training_images": 64,
+    "validation_images": 32,
+    "epochs": 1,
+    "device": "cpu",
+    "checkpoint_reloaded": true,
+    "best_sha256": "5a0f6c9a0c5cf2219525f923e81a3ba4a676e55b34debb2a459156fd737af2c8",
+    "last_sha256": "b7aadd46d62b2a249e1a93b7910964c799b101205b3e326c946afb5f3465e78c"
+  },
+  "full_training_repeated_during_migration": false
+}

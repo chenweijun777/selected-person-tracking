@@ -1,0 +1,31 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m a1_tracker.cli --json
+      - run: python tools/verify_results.py
+      - run: python -m pytest tests/test_geometry.py tests/test_types.py tests/test_tracker.py tests/test_target_manager.py tests/test_target_baselines.py tests/test_multi_template_target.py
+      - run: python -m ruff check src tools tests research
+      - run: python tools/check_release.py
+  runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y python3-tk xvfb
+      - run: python -m pip install -e ".[runtime,evaluation,dev]"
+      - run: python tools/prepare_models.py --download --profile pretrained
+      - run: xvfb-run -a python -m pytest
+      - run: python -m pip check

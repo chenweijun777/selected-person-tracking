@@ -1,0 +1,5 @@
+group,targets,person_frames,initialization,coverage,C,W,R,U,A,formal_success,formal_events,fixed_cohort_success,fixed_cohort_scoreable,fixed_cohort_selected,HOTA,IDF1,MOTA,IDSW,Frag
+Pretrained_Joint,31,5153,96.77,86.67,4466,142,319,149,77,14,16,16,18,20,52.848,59.059,45.475,30.0,52.0
+Finetuned_Joint,31,5153,100.0,90.98,4688,30,264,140,31,17,17,17,18,20,61.739,72.433,56.666,27.0,79.0
+Pretrained_T2A0,31,5153,96.77,66.64,3434,3,1584,89,43,5,9,5,18,20,50.757,54.701,45.74,23.0,52.0
+Finetuned_T2A0,31,5153,100.0,78.98,4070,30,899,135,19,10,11,10,18,20,60.687,69.78,56.91,26.0,80.0

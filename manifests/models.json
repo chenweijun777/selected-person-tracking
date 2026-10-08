@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "file": "best.pt",
+      "role": "finetuned detector",
+      "sha256": "41b4d15f8024e2b153aa0c2e77d59ff8e4054fc91d5537bb14acdbfb2f8e2fb2",
+      "url": null
+    },
+    {
+      "file": "yolo26s.pt",
+      "role": "pretrained reference detector",
+      "sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+      "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26s.pt"
+    },
+    {
+      "file": "yolo26n-reid.onnx",
+      "role": "512-dimensional appearance, independent ShortLink/A2 448_RGB",
+      "sha256": "8529c383197ae4c468eda535d1b165f8b4162cf17bf5fbcff49c7cb6455bc0bb",
+      "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n-reid.onnx"
+    }
+  ]
+}

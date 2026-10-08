@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "frames": 36,
+  "scripted_selection_reset_reselection": true,
+  "fresh_and_persistent_outputs_equal": true,
+  "detector_tracker_construction_during_persistent_replay": 0,
+  "hidden_Tk_initialized": true,
+  "physical_mouse_interaction_tested": false,
+  "source": "36-frame MOT17-05 clip, 14fps MP4; original image data not distributed",
+  "persistent_check_scope": "New cache object in same process; unit tests additionally cover cold restore contracts"
+}

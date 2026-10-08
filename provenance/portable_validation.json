@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "source_export_without_git": true,
+  "runtime_source_and_evaluation_assets_inside_export": true,
+  "dependency_environment": "fresh Windows Python 3.12 venv",
+  "tests_passed": 94,
+  "model_video_frames": 8,
+  "replayed_splits": [
+    "development",
+    "validation",
+    "test"
+  ],
+  "policy_rows_identical": 15,
+  "commands": [
+    "-m pytest",
+    "tools/verify_results.py",
+    "tools/check_release.py",
+    "tools/prepare_reproduction.py --source-dir .",
+    "tools/run_video_joint.py --source outputs/sample.mp4 --output outputs/video_demo --max-frames 8 --device cpu --no-video",
+    "tools/replay_benchmark.py --split development --output outputs/reproduced_development",
+    "tools/replay_benchmark.py --split validation --output outputs/reproduced_validation",
+    "tools/replay_benchmark.py --split test --output outputs/reproduced_test"
+  ],
+  "limitations": [
+    "No full 100-epoch retraining",
+    "No robot deployment",
+    "GitHub Actions not executed remotely"
+  ],
+  "default_public_evaluation_api_passed": true
+}

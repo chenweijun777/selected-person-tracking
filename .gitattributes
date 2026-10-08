@@ -1,0 +1,16 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv -text
+results/* -text -whitespace
+protocols/frozen/* -text -whitespace
+protocols/frozen/** -text -whitespace
+configs/** -text -whitespace
+manifests/** -text -whitespace
+provenance/** -text -whitespace
+protocols/** -text -whitespace
+tools/vendor/** -text -whitespace
+docs/assets/*.svg -whitespace
+*.png binary
+*.cmd text eol=crlf

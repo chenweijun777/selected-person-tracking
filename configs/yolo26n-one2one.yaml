@@ -1,0 +1,10 @@
+# Ultralytics YOLO26n：原生 one-to-one / NMS-free 推理。
+detector:
+  backend: ultralytics
+  model: models/yolo26n.pt
+  image_size: 640
+  confidence: 0.10
+  iou_threshold: 0.70
+  person_class_id: 0
+  device: 0
+  nms: false

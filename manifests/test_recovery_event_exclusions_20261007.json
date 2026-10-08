@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "split": "test",
+  "sequence": "MOT17-11-SDP",
+  "original_review_manifest_sha256": "3106bb33788006e60bee8b7086a418e33aa462113d6118cbca7b518397962a91",
+  "original_gt_events_sha256": "42330c83da9f1f3d22b52d0fc3091ec4133967e92a7b565339a951d4b2ef9c3e",
+  "decision_source": "User explicitly excluded review numbers in this chat on 2026-10-07",
+  "excluded_review_numbers": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    12,
+    13,
+    14,
+    15,
+    23,
+    24,
+    25,
+    26,
+    27,
+    30,
+    31,
+    32,
+    34,
+    35,
+    37,
+    38,
+    41,
+    43,
+    44,
+    45,
+    46,
+    48,
+    49
+  ],
+  "original_recovery_events": 49,
+  "excluded_count": 29,
+  "active_count": 20,
+  "active_event_counts": {
+    "full_occlusion_reappearance": 12,
+    "partial_visibility_recovery": 8
+  },
+  "numbering": "Original review numbers and event IDs preserved; no renumbering",
+  "rules": {
+    "main_visibility_threshold": 0.3,
+    "boundary_margin": 0.02,
+    "gt_filter": "mark=1 and class=1; visibility=0 retained",
+    "timestamps": "(frame-1)/fps; endpoints inclusive; duration=(end-start+1)/fps",
+    "interval_domain": "full sequence for each selected ID",
+    "events": "maximal contiguous subthreshold phases; zero runs retained; no smoothing",
+    "reappearance": "first v>0 after LAST zero block of phase; each zero block is retained",
+    "missing_gt": "unknown, not absent; never bridge annotation gaps",
+    "review": "all events need review; no automatic confirmed exit or occlusion semantics",
+    "evaluation": "candidate flag is not a finalized denominator; require reviewed event and correct pre-event initialization",
+    "data_use": "02/04/05 development; 09/10 validation; 11 test; no threshold tuning",
+    "selection": "Exact workbook GT IDs, deduplicated by sequence and ID"
+  },
+  "decisions": [
+    {
+      "review_number": 3,
+      "event_id": "MOT17-11-SDP_GT6_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 4,
+      "event_id": "MOT17-11-SDP_GT6_0003",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 5,
+      "event_id": "MOT17-11-SDP_GT6_0004",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 6,
+      "event_id": "MOT17-11-SDP_GT7_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 7,
+      "event_id": "MOT17-11-SDP_GT10_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 10,
+      "event_id": "MOT17-11-SDP_GT12_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 12,
+      "event_id": "MOT17-11-SDP_GT14_0003",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 13,
+      "event_id": "MOT17-11-SDP_GT20_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 14,
+      "event_id": "MOT17-11-SDP_GT24_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 15,
+      "event_id": "MOT17-11-SDP_GT25_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 23,
+      "event_id": "MOT17-11-SDP_GT26_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 24,
+      "event_id": "MOT17-11-SDP_GT27_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 25,
+      "event_id": "MOT17-11-SDP_GT31_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 26,
+      "event_id": "MOT17-11-SDP_GT31_0003",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 27,
+      "event_id": "MOT17-11-SDP_GT33_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 30,
+      "event_id": "MOT17-11-SDP_GT34_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 31,
+      "event_id": "MOT17-11-SDP_GT34_0003",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 32,
+      "event_id": "MOT17-11-SDP_GT35_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 34,
+      "event_id": "MOT17-11-SDP_GT36_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 35,
+      "event_id": "MOT17-11-SDP_GT37_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 37,
+      "event_id": "MOT17-11-SDP_GT38_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 38,
+      "event_id": "MOT17-11-SDP_GT39_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 41,
+      "event_id": "MOT17-11-SDP_GT42_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 43,
+      "event_id": "MOT17-11-SDP_GT45_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 44,
+      "event_id": "MOT17-11-SDP_GT48_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 45,
+      "event_id": "MOT17-11-SDP_GT49_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 46,
+      "event_id": "MOT17-11-SDP_GT51_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 48,
+      "event_id": "MOT17-11-SDP_GT62_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    },
+    {
+      "review_number": 49,
+      "event_id": "MOT17-11-SDP_GT89_0002",
+      "verdict": "exclude_by_user_request",
+      "reason": "用户指定剔除"
+    }
+  ]
+}
