@@ -59,6 +59,8 @@ python -m pip install "torch==2.14.0+cu130" "torchvision==0.29.0+cu130" --index-
 python -m pip install -e ".[runtime,evaluation,dev]"
 ```
 
+第二条命令自动安装 Ultralytics、OpenCV、NumPy、ONNX Runtime、ONNX、PyYAML、Pillow、lap、TrackEval，以及 pytest／ruff 检查工具，版本约束见 [pyproject.toml](pyproject.toml)。GUI 还需要 Python 的 Tkinter，Windows 安装 Python 时包含 Tcl/Tk 组件。
+
 ### 运行
 
 从已有权重目录校验复制模型，启动界面后选择视频并点击行人：
