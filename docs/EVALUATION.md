@@ -34,10 +34,46 @@ MOT17-02/04/05 为开发集，09/10 为验证集，11 为自定义测试序列�
 
 ## 从安装到演示
 
-先按 [README 的 CUDA 安装步骤](../README.md#运行与复现)准备 Python 3.12、NVIDIA 驱动、CUDA 版 PyTorch 和项目依赖。所有命令直接使用当前 Python，在仓库根目录执行。GUI 需要 Tkinter，Linux 可额外安装 python3-tk；模型路径/哈希见 `manifests/models.json`。
+以下以 Windows／PowerShell、Python 3.12、NVIDIA GPU、CUDA 13.0 为例，直接安装到当前 Python。所有命令在仓库根目录执行。Linux GUI 还需要安装 python3-tk。
+
+### 1. 准备 Python 和 NVIDIA 驱动
+
+安装 [Python 3.12（64 位）](https://www.python.org/downloads/windows/)，包含 pip 和 Tcl/Tk，并将 Python 加入 PATH。安装支持 CUDA 13.0 的 [NVIDIA 显卡驱动](https://www.nvidia.com/Download/index.aspx)，然后检查：
 
 ```powershell
+python --version
+python -m pip --version
+nvidia-smi
+```
+
+`nvidia-smi` 应能识别显卡。顶部 `CUDA Version` 表示驱动支持的最高 CUDA 版本，实际 PyTorch 运行时版本在第 3 步检查，见 [NVIDIA 说明](https://docs.nvidia.com/datacenter/tesla/drivers/latest/cuda-toolkit-driver-and-architecture-matrix.html)。本项目使用预编译 PyTorch，CUDA 运行时随安装包提供，运行现有代码无需额外安装 CUDA Toolkit 或 cuDNN，见 [PyTorch 说明](https://discuss.pytorch.org/t/should-i-install-the-extra-cudatoolkit-and-cudnn/194528/2)。
+
+### 2. 安装 CUDA 版 PyTorch 和项目依赖
+
+先安装指定 CUDA 构建，再安装项目依赖。版本组合为 PyTorch 2.14.0＋torchvision 0.29.0，`cu130` 对应 CUDA 13.0；来源为 [PyTorch 官方安装源](https://download.pytorch.org/whl/cu130/)。
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install "torch==2.14.0+cu130" "torchvision==0.29.0+cu130" --index-url https://download.pytorch.org/whl/cu130
 python -m pip install -e ".[runtime,evaluation,dev]"
+python -m pip check
+```
+
+项目依赖包含固定版本 `ultralytics==8.4.158`、`trackeval==1.3.0`，以及 OpenCV、NumPy、ONNX Runtime、Pillow、lap 和检查工具。CUDA 用于 YOLO 检测；短轨迹重连接与指定身份恢复所需的外观编码通过 ONNX Runtime 在 CPU 上运行。
+
+### 3. 检查 CUDA 是否真正可用
+
+```powershell
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA runtime:', torch.version.cuda); assert torch.cuda.is_available(), 'CUDA unavailable: check NVIDIA driver and CUDA-enabled PyTorch'; print('GPU:', torch.cuda.get_device_name(0)); print('GPU tensor:', torch.ones(1, device='cuda').cpu())"
+```
+
+应输出 `2.14.0+cu130`、`13.0`、显卡名称和 GPU 运算后的张量。检查通过后，下面的 `--device 0` 使用第一张 NVIDIA 显卡。
+
+### 4. 准备模型并运行
+
+将示例路径替换为自己的目录。正式微调权重暂未发布下载；已有模型可按清单校验复制，模型文件及哈希见 `manifests/models.json`。
+
+```powershell
 python tools/prepare_models.py --source-dir "D:\tracking-models"
 python tools/verify_models.py
 python tools/run_tracking_gui.py
