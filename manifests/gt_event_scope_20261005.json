@@ -1,4 +1,6 @@
 {
+  "event_generation": "恢复事件根据所选 GT ID 的可见度时间序列自动生成，定位遮挡或低可见度后的重新可见片段，再通过人工查看视频复核。",
+  "review_rationale": "自动规则可能将目标第一次进入可见范围误判为完全遮挡后重现。此类事件没有此前可见的目标身份可供恢复，因此从恢复事件清单中剔除。",
   "purpose": "GT event timeline target scope",
   "source_sha256": "e58e9fecfbb5c1029456b59156dc6dbe8156eb63929b4e44e3eeee4f6046340f",
   "gt_filter": "mark == 1 and class == 1; retain every visibility including zero",
