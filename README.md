@@ -6,7 +6,7 @@ Selected-person Tracking and Identity Recovery after Occlusion
 
 以机器人人员跟随为应用背景，实现指定行人的交互选择、二维视觉跟踪与遮挡后身份恢复，重点解决人员交叉、遮挡和相机运动造成的目标丢失与误跟。用户可以通过视频交互界面选择目标、查看跟踪状态，并导出标注视频与跟踪结果。
 
-技术栈：Python · OpenCV · YOLO26s · BoT-SORT · ONNX Runtime · NumPy · Tkinter · TrackEval。
+技术栈：Python · OpenCV · YOLO26s · BoT-SORT · ONNX Runtime · TensorRT · NumPy · Tkinter · TrackEval。
 
 ![实际运行中的指定目标跟踪](docs/assets/tracking_preview.png)
 
@@ -19,6 +19,7 @@ Selected-person Tracking and Identity Recovery after Occlusion
 - 短轨迹重连接：结合外观与几何约束，将符合条件的新轨迹接回此前丢失的轨迹，减少编号断裂，并同步用户选定的目标身份。
 - 指定目标身份恢复：结合外观相似度、运动一致性和多帧确认，在遮挡后判断哪个候选仍是用户选定的人；利用初始外观、逐步更新的外观和可信模板库适应姿态变化，证据不足时拒绝输出。
 - 可复现评估：分别评价所有行人的轨迹质量、指定目标的正确跟踪与误跟、遮挡后的稳定恢复；统一选人起点、人工标注和事件清单，将选人失败及拒绝输出纳入评价。
+- 推理部署：完成 ONNX Runtime CUDA、TensorRT FP32／FP16 部署，实现动态输入与 GPU IO binding，并接入指定行人跟踪应用。
 
 ```mermaid
 flowchart LR
@@ -48,6 +49,21 @@ flowchart LR
 
 评价包含 31 个指定目标、5,153 个目标评价帧和同一清单中的 18 个恢复事件。正确跟踪覆盖率按选人后标注可见度不低于 0.3 的目标人帧统计；目标重现后连续跟对至少 0.2 秒计为稳定恢复。各部件的消融见[恢复策略与消融实验](docs/EXPERIMENTS.md)，评价规则见[指标定义](docs/EVALUATION.md)。
 
+## 推理部署与性能
+
+将微调 YOLO26s O2M 检测器从 PyTorch 迁移到 ONNX Runtime CUDA 和 TensorRT，复用原有预处理、NMS 与坐标还原。RTX 3090 上的实测结果：
+
+| 后端 | 独立检测 FPS | 单目标整链计算 FPS | HOTA | 恢复事件 |
+| --- | ---: | ---: | ---: | ---: |
+| PyTorch | 87.08 | 6.13 | 53.677 | 14/14 |
+| ONNX Runtime FP32 | 91.64 | 6.18 | 53.678 | 14/14 |
+| TensorRT FP32 | 101.99 | 6.26 | 53.679 | 14/14 |
+| TensorRT FP16 | **116.69** | **6.75** | 53.496 | 14/14 |
+
+FP16 独立检测速度提高约 34%，整链计算速度提高约 10%。检测与精度评价覆盖 MOT17-09/10 验证集 1179 帧；整链测速每个后端采集 320 个样本，包含检测、跟踪和目标恢复，排除视频解码、绘制与编码。
+
+部署对照采用微调权重与 2026-10-06 固定跟踪参数，恢复结果为项目共同清单中的 14 个事件。构建、运行和完整测量条件见[部署说明](docs/DEPLOYMENT.md)。
+
 ## 运行与复现
 
 ### 安装
@@ -75,6 +91,12 @@ python tools/run_video_joint.py --source data/demo.mp4 --output outputs/demo --d
 
 模型准备、微调训练及预训练模型的运行方式见[运行说明](docs/EVALUATION.md)。
 
+完成[部署环境安装与引擎构建](docs/DEPLOYMENT.md)后，可运行 TensorRT 后端：
+
+```powershell
+.\.venv-deploy\Scripts\python.exe tools/run_deployed_joint.py --backend trt-fp16 --source data/demo.mp4 --output outputs/deployed_demo --display
+```
+
 ### 复现
 
 准备配套标注与回放输入后，运行测试集评估：
@@ -92,6 +114,7 @@ python tools/replay_benchmark.py --split test --output outputs/reproduce_test
 | 算法设计、目标身份恢复与参数 | [方法说明](docs/METHODS.md)、[身份恢复源码](src/a1_tracker/target/a2/)、[正式参数](configs/finetuned/) |
 | 选型、微调、消融与关键取舍 | [EXPERIMENTS.md](docs/EXPERIMENTS.md) |
 | 指标定义、协议与复现工作流 | [EVALUATION.md](docs/EVALUATION.md)、`protocols/` |
+| ONNX／TensorRT 部署、运行与测速 | [DEPLOYMENT.md](docs/DEPLOYMENT.md)、[部署入口](tools/run_deployed_joint.py) |
 | 筛选后的 GT ID 与恢复事件表 | [评价清单](docs/EVALUATION.md#数据划分) |
 | 当前结果与验证记录 | `results/`、`provenance/` |
 | 可选的未采用尝试 | `research/`，不参与正式运行 |

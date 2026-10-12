@@ -204,6 +204,26 @@
       "path": "results/tracker_selection.csv",
       "sha256": "bd49b7048aec47a362990bec9608dd148a76107d67e3d0566ebb3118974be113",
       "origin_sha256": "535b00828ee5bbe0b9ec910d71a0be3da782194b69fcbe5e82ac66719446e96d"
+    },
+    {
+      "path": "results/deployment_detector.csv",
+      "sha256": "2c01745d7756e3266b7fb1bb58bd9364e626326f04594887a32a9743391cc037"
+    },
+    {
+      "path": "results/deployment_pipeline.csv",
+      "sha256": "3a5b42e4632dbb13fc58a643cb5bdee9e267ab2919b0f64076cc16431269bb29"
+    },
+    {
+      "path": "results/deployment_quality.csv",
+      "sha256": "5b26b0cfff94f082667e4fcde65ef9e6436e290bd29e51cc79b6ac5bb9a5d5f8"
+    },
+    {
+      "path": "provenance/deployment_validation.json",
+      "sha256": "3a10a139dc5d3da492e43a872762b53f9a6b346c203caed9315929a891a69d49"
+    },
+    {
+      "path": "provenance/environment_deployment.txt",
+      "sha256": "bf6c5a88d7891e50a7debcac5cadda31dec6a46aca6372fc750afe6911e0ffab"
     }
   ]
 }

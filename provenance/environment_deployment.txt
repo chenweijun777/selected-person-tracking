@@ -1,0 +1,17 @@
+# Measured deployment environment, 2026-10-09
+# Installation commands: docs/DEPLOYMENT.md
+OS: Windows 11 AMD64
+Python: 3.12.7
+GPU: NVIDIA GeForce RTX 3090, 24 GB
+NVIDIA driver: 591.86
+PyTorch: 2.14.0+cu130
+TorchVision: 0.29.0+cu130
+CUDA (PyTorch): 13.0
+Ultralytics: 8.4.158
+ONNX: 1.23.0
+ONNX Runtime GPU: 1.30.0
+TensorRT: 10.14.1.48.post1 (tensorrt-cu13)
+Detector input/output: FP32
+TensorRT FP16: internal mixed FP16/FP32 computation
+ReID: CPU, two independent 448 RGB encoders
+CPU threads: torch=2, OpenCV=2, ORT intra=2, ORT inter=1

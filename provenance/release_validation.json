@@ -120,5 +120,333 @@
     "tools/verify_models.py": "8245ec4c0be22ae573b100e9ddde31f76dda5d7cc2e13ba053fe739389a49f5d",
     "tools/verify_results.py": "40c4327d2c9ae6e66cfc970de5f0e2c75aae9f7e556d03d3918a3d96e095c808",
     "启动跟踪GUI.cmd": "b06627dde0b791cd540eefa0c07c3e582ec96254fd5fc9387f1e27f602cb78fd"
+  },
+  "deployment_update": {
+    "date": "2026-10-12",
+    "passed": true,
+    "tests": {
+      "tests": 108,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "gpu_entries": {
+      "pytorch": {
+        "application": {
+          "frames": 10,
+          "states": {
+            "TRACKING": 10
+          },
+          "invalid_boxes_skipped": 0,
+          "effective_predict_config": {
+            "end2end": false,
+            "nms_option": true,
+            "nms_iou": 0.7,
+            "confidence": 0.001,
+            "imgsz": 960,
+            "device": "0",
+            "classes": [
+              0
+            ],
+            "max_det": 300,
+            "agnostic_nms": false,
+            "rect": true,
+            "half": null,
+            "backend_format": "pt",
+            "actual_device": "cuda:0",
+            "input_fp16": false,
+            "dynamic": false,
+            "providers": null,
+            "ort_io_binding": false
+          }
+        },
+        "external_working_directory": true,
+        "benchmark_smoke": {
+          "modes": [
+            "detector",
+            "pipeline"
+          ],
+          "samples_per_mode": 5,
+          "warmup": 2,
+          "repeats": 1,
+          "scope": "entry-point functional verification"
+        }
+      },
+      "onnx": {
+        "application": {
+          "frames": 30,
+          "states": {
+            "TRACKING": 30
+          },
+          "invalid_boxes_skipped": 0,
+          "effective_predict_config": {
+            "end2end": false,
+            "nms_option": true,
+            "nms_iou": 0.7,
+            "confidence": 0.001,
+            "imgsz": 960,
+            "device": "0",
+            "classes": [
+              0
+            ],
+            "max_det": 300,
+            "agnostic_nms": false,
+            "rect": true,
+            "half": null,
+            "backend_format": "onnx",
+            "actual_device": "cuda:0",
+            "input_fp16": false,
+            "dynamic": true,
+            "providers": [
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "ort_io_binding": true
+          }
+        },
+        "external_working_directory": true,
+        "benchmark_smoke": {
+          "modes": [
+            "detector",
+            "pipeline"
+          ],
+          "samples_per_mode": 5,
+          "warmup": 2,
+          "repeats": 1,
+          "scope": "entry-point functional verification"
+        }
+      },
+      "trt-fp32": {
+        "application": {
+          "frames": 10,
+          "states": {
+            "TRACKING": 10
+          },
+          "invalid_boxes_skipped": 0,
+          "effective_predict_config": {
+            "end2end": false,
+            "nms_option": true,
+            "nms_iou": 0.7,
+            "confidence": 0.001,
+            "imgsz": 960,
+            "device": "0",
+            "classes": [
+              0
+            ],
+            "max_det": 300,
+            "agnostic_nms": false,
+            "rect": true,
+            "half": null,
+            "backend_format": "engine",
+            "actual_device": "cuda:0",
+            "input_fp16": false,
+            "dynamic": true,
+            "providers": null,
+            "ort_io_binding": false
+          }
+        },
+        "external_working_directory": true,
+        "benchmark_smoke": {
+          "modes": [
+            "detector",
+            "pipeline"
+          ],
+          "samples_per_mode": 5,
+          "warmup": 2,
+          "repeats": 1,
+          "scope": "entry-point functional verification"
+        }
+      },
+      "trt-fp16": {
+        "application": {
+          "frames": 60,
+          "states": {
+            "TRACKING": 60
+          },
+          "invalid_boxes_skipped": 0,
+          "effective_predict_config": {
+            "end2end": false,
+            "nms_option": true,
+            "nms_iou": 0.7,
+            "confidence": 0.001,
+            "imgsz": 960,
+            "device": "0",
+            "classes": [
+              0
+            ],
+            "max_det": 300,
+            "agnostic_nms": false,
+            "rect": true,
+            "half": null,
+            "backend_format": "engine",
+            "actual_device": "cuda:0",
+            "input_fp16": false,
+            "dynamic": true,
+            "providers": null,
+            "ort_io_binding": false
+          }
+        },
+        "external_working_directory": true,
+        "benchmark_smoke": {
+          "modes": [
+            "detector",
+            "pipeline"
+          ],
+          "samples_per_mode": 5,
+          "warmup": 2,
+          "repeats": 1,
+          "scope": "entry-point functional verification"
+        }
+      }
+    },
+    "export_and_build": {
+      "onnx": "f8f660c19c217ae4dd4217f4b08bb3bfefe1b3a351663cfa6f4b3438803321d8",
+      "trt_fp32": {
+        "engine_sha256": "faf6a4cb6f83a14d3cf0083b914957b199dd687bb1478bba47b9ccdfd81d0b8e",
+        "onnx_sha256": "f8f660c19c217ae4dd4217f4b08bb3bfefe1b3a351663cfa6f4b3438803321d8",
+        "gpu": "NVIDIA GeForce RTX 3090",
+        "cuda": "13.0",
+        "tensorrt": "10.14.1.48.post1",
+        "internal_fp16": false,
+        "tf32": false,
+        "profile": {
+          "min": [
+            1,
+            3,
+            32,
+            32
+          ],
+          "opt": [
+            1,
+            3,
+            544,
+            960
+          ],
+          "max": [
+            1,
+            3,
+            960,
+            960
+          ]
+        },
+        "workspace_GiB": 2,
+        "io": [
+          {
+            "name": "images",
+            "dtype": "DataType.FLOAT",
+            "shape": [
+              1,
+              3,
+              -1,
+              -1
+            ]
+          },
+          {
+            "name": "output0",
+            "dtype": "DataType.FLOAT",
+            "shape": [
+              1,
+              5,
+              -1
+            ]
+          }
+        ],
+        "build_seconds": 82.88691689999541
+      },
+      "trt_fp16": {
+        "engine_sha256": "d36b6d1bc262e95b9ae82a912907b10c7b622f84ab8a7048634cf54d4399cb3b",
+        "onnx_sha256": "f8f660c19c217ae4dd4217f4b08bb3bfefe1b3a351663cfa6f4b3438803321d8",
+        "gpu": "NVIDIA GeForce RTX 3090",
+        "cuda": "13.0",
+        "tensorrt": "10.14.1.48.post1",
+        "internal_fp16": true,
+        "tf32": false,
+        "profile": {
+          "min": [
+            1,
+            3,
+            32,
+            32
+          ],
+          "opt": [
+            1,
+            3,
+            544,
+            960
+          ],
+          "max": [
+            1,
+            3,
+            960,
+            960
+          ]
+        },
+        "workspace_GiB": 2,
+        "io": [
+          {
+            "name": "images",
+            "dtype": "DataType.FLOAT",
+            "shape": [
+              1,
+              3,
+              -1,
+              -1
+            ]
+          },
+          {
+            "name": "output0",
+            "dtype": "DataType.FLOAT",
+            "shape": [
+              1,
+              5,
+              -1
+            ]
+          }
+        ],
+        "build_seconds": 212.04170210000302
+      }
+    },
+    "measurement_scope": "Functional checks of the public entry points; historical published FPS tables retain the 2026-10-09 measurements.",
+    "source_sha256": {
+      "README.md": "4b325a7a977345c42d1e5eb448dbefd032e4350a08cc393b4b7a0b1daecafd72",
+      "THIRD_PARTY_NOTICES.md": "d6d892dac395cdabf7f048a61f612f645e4a2789cd82bc54187af6eb622040c4",
+      "docs/DEPLOYMENT.md": "b862fec7cf936cc6d2fb60c9d60d4efe5c1e5a5dbde4510675c434d872e9c1c8",
+      "docs/EVALUATION.md": "8438d5c50890c6b167f0ca1e0d1633046aa6f5b97939753b71ae289855e6f76f",
+      "docs/EXPERIMENTS.md": "c552796fb88766c46c721df9d93416b5e8f6cb5ebe239fd130c488e3bc8089f1",
+      "docs/METHODS.md": "76b234b07397d8fa0afec202097af9446935fbf0122ed69be8d4b04513d22749",
+      "manifests/public_integrity.json": "90f08f4a6dbcdf8b8b859c39a9d90fa1e39ea9da527ee157c08752e4accfa71a",
+      "provenance/deployment_validation.json": "3a10a139dc5d3da492e43a872762b53f9a6b346c203caed9315929a891a69d49",
+      "provenance/environment_deployment.txt": "bf6c5a88d7891e50a7debcac5cadda31dec6a46aca6372fc750afe6911e0ffab",
+      "pyproject.toml": "8de57428fb813f71b3683243971eaa1d0c2b5fddb4414374ab8c359d6390a106",
+      "results/deployment_detector.csv": "2c01745d7756e3266b7fb1bb58bd9364e626326f04594887a32a9743391cc037",
+      "results/deployment_pipeline.csv": "3a5b42e4632dbb13fc58a643cb5bdee9e267ab2919b0f64076cc16431269bb29",
+      "results/deployment_quality.csv": "5b26b0cfff94f082667e4fcde65ef9e6436e290bd29e51cc79b6ac5bb9a5d5f8",
+      "src/a1_tracker/detectors/deployed.py": "b9bf5dcc8f64061fc525e28b85810c39819942d7a1416375e6837ddcb88dda3b",
+      "src/a1_tracker/joint_runtime.py": "ec8f119c953243ca5e52224490f587e4aa7efc3814db8fed53f065d265c0d80e",
+      "tests/test_deployed_detector.py": "67c2e0fcc82e78f446469034c9e0925c04ec3cb01a799f208041b109edf8362f",
+      "tests/test_deployment_workflow.py": "7f7558ef080d297a5f91e79a0078d5df601146a8355ef7c8e0567f8c4f26f796",
+      "tools/benchmark_deployment.py": "5285f65784ef753141d2df432338cb533cd0f267bdf50cef7c6a5d9c081ecf4b",
+      "tools/check_release.py": "3313a6d08a13552551f4fb23d554c719a3235b04f3e0cc816bb54d38559bb943",
+      "tools/deploy_o2m.py": "f8cdf5c1fd7401ae2bd35b5fcd0e9f9d5d7dec8eb84336f5836a380bddcd8b02",
+      "tools/run_deployed_joint.py": "604bbb91f1945044edc5d3bff7b7c9580bdbaed6f680dfb2b36551321b4cd0ec",
+      "tools/verify_results.py": "056db97d9ffcd63cabcd61cd8b7c4cc913401f04ebb92219947d5148bd7ea80e"
+    },
+    "checks": {
+      "results": {
+        "passed": true,
+        "verified_files": 56,
+        "replayed_policy_rows": 15,
+        "deployment_rows": 12
+      },
+      "release": {
+        "passed": true,
+        "files": 176,
+        "total_bytes": 5928452,
+        "errors": []
+      },
+      "lint": {
+        "passed": true
+      }
+    }
   }
 }

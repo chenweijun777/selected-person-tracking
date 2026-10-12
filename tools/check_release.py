@@ -66,6 +66,9 @@ def check():
         if path.stat().st_size > 10 * 1024 * 1024 or path.suffix.lower() in {
             ".pt",
             ".onnx",
+            ".engine",
+            ".plan",
+            ".trt",
             ".mp4",
             ".npz",
             ".zip",

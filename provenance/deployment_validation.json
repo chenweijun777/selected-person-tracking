@@ -1,0 +1,278 @@
+{
+  "experiment_date": "2026-10-09",
+  "published_date": "2026-10-11",
+  "description": "Existing frozen deployment measurements, curated for the public repository",
+  "device": "NVIDIA GeForce RTX 3090",
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "python": "3.12.7"
+  },
+  "versions": {
+    "torch": "2.14.0+cu130",
+    "ultralytics": "8.4.158",
+    "onnxruntime": "1.30.0",
+    "onnx": "1.23.0"
+  },
+  "cuda": "13.0",
+  "tensorrt": "10.14.1.48.post1",
+  "weights_sha256": "41b4d15f8024e2b153aa0c2e77d59ff8e4054fc91d5537bb14acdbfb2f8e2fb2",
+  "configs": {
+    "configs/pretrained/tracker.yaml": "2f3ee6f34d72273c64776c27b8d8274c82ac9eb9d68a058e38fde6ead1ded452",
+    "configs/pretrained/target.json": "d08adc10c78ea3930922f294cfc2822a627a2328925a706414085f26867a7f09"
+  },
+  "reid_sha256": "8529c383197ae4c468eda535d1b165f8b4162cf17bf5fbcff49c7cb6455bc0bb",
+  "split": "validation",
+  "sequences": [
+    "MOT17-09-SDP",
+    "MOT17-10-SDP"
+  ],
+  "detector": {
+    "frames": 1179,
+    "warmup_calls": 20,
+    "gpu_synchronized": true,
+    "includes": [
+      "preprocessing",
+      "forward",
+      "NMS",
+      "coordinate restoration",
+      "CPU boxes"
+    ],
+    "confidence_floor": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "evaluation_confidence": 0.1,
+    "matching_iou": 0.5,
+    "precision_recall_ignore_regions": true
+  },
+  "pipeline": {
+    "samples_per_backend": 320,
+    "target_valid_samples_per_backend": 288,
+    "sequences": 2,
+    "rounds": 2,
+    "timed_frames_per_sequence_per_round": 80,
+    "order": "PyTorch,ORT_FP32,TRT_FP32,TRT_FP16,TRT_FP16,TRT_FP32,ORT_FP32,PyTorch per sequence",
+    "scope": "Fresh GPU detector + CPU native GMC/BoT-SORT/ShortLink + A2 GMC + one selected A2; no cross-session feature cache",
+    "excludes": "Image decode, GUI rendering/playback, video encoding, model loading"
+  },
+  "quality": {
+    "targets": 47,
+    "person_frames": 9640,
+    "recovery_events": 14,
+    "recovery_definition": "project fixed event cohort, stable correct tracking for 0.2 seconds"
+  },
+  "raw_alignment": [
+    {
+      "backend": "ORT_FP32",
+      "inputs_bitwise_equal": true,
+      "samples": 10,
+      "all_candidate_box_max_px": 1.45770263671875,
+      "high_score_box_max_px": 0.1024627685546875,
+      "score_max_absolute_error": 0.027867257595062256
+    },
+    {
+      "backend": "TRT_FP32",
+      "inputs_bitwise_equal": true,
+      "samples": 10,
+      "all_candidate_box_max_px": 1.4578857421875,
+      "high_score_box_max_px": 0.102569580078125,
+      "score_max_absolute_error": 0.027896761894226074
+    },
+    {
+      "backend": "TRT_FP16",
+      "inputs_bitwise_equal": true,
+      "samples": 10,
+      "all_candidate_box_max_px": 10.84051513671875,
+      "high_score_box_max_px": 0.5994720458984375,
+      "score_max_absolute_error": 0.06281894445419312
+    }
+  ],
+  "ort_profile": {
+    "node_execution_counts": {
+      "CUDAExecutionProvider": 1029,
+      "CPUExecutionProvider": 132
+    },
+    "operator_execution_counts": {
+      "CUDAExecutionProvider": {
+        "Conv": 306,
+        "QuickGelu": 261,
+        "Split": 33,
+        "Add": 84,
+        "Concat": 84,
+        "MaxPool": 9,
+        "Shape": 36,
+        "Reshape": 81,
+        "FusedMatMul": 12,
+        "Softmax": 6,
+        "Resize": 6,
+        "Sigmoid": 3,
+        "Slice": 6,
+        "Range": 18,
+        "Cast": 18,
+        "Expand": 18,
+        "Unsqueeze": 21,
+        "Transpose": 6,
+        "Sub": 6,
+        "Div": 3,
+        "ConstantOfShape": 9,
+        "Mul": 3
+      },
+      "CPUExecutionProvider": {
+        "Gather": 48,
+        "Unsqueeze": 36,
+        "Concat": 30,
+        "Add": 3,
+        "Div": 3,
+        "Mul": 12
+      }
+    },
+    "runs": 3
+  },
+  "engines": {
+    "TRT_FP32": {
+      "engine_sha256": "b647754b41f92d7b832add4e3b206a36855e5276419af0969f76358d10fa1edd",
+      "onnx_sha256": "7ce7da41bd8f3347b9b57e98e77f06fe7406f85bd3ae591cbdfbc6da4c034144",
+      "internal_fp16": false,
+      "tf32": false,
+      "IO_precision": "FP32",
+      "profile": {
+        "min": [
+          1,
+          3,
+          32,
+          32
+        ],
+        "opt": [
+          1,
+          3,
+          544,
+          960
+        ],
+        "max": [
+          1,
+          3,
+          960,
+          960
+        ]
+      },
+      "io": [
+        {
+          "name": "images",
+          "dtype": "DataType.FLOAT",
+          "shape": [
+            1,
+            3,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "output0",
+          "dtype": "DataType.FLOAT",
+          "shape": [
+            1,
+            5,
+            -1
+          ]
+        }
+      ],
+      "build_s": 82.69727759994566
+    },
+    "TRT_FP16": {
+      "engine_sha256": "0b0a98b0538423181b30b80adb89858e2d54f7afb3791378be340c4abb345d23",
+      "onnx_sha256": "7ce7da41bd8f3347b9b57e98e77f06fe7406f85bd3ae591cbdfbc6da4c034144",
+      "internal_fp16": true,
+      "tf32": false,
+      "IO_precision": "FP32",
+      "profile": {
+        "min": [
+          1,
+          3,
+          32,
+          32
+        ],
+        "opt": [
+          1,
+          3,
+          544,
+          960
+        ],
+        "max": [
+          1,
+          3,
+          960,
+          960
+        ]
+      },
+      "io": [
+        {
+          "name": "images",
+          "dtype": "DataType.FLOAT",
+          "shape": [
+            1,
+            3,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "output0",
+          "dtype": "DataType.FLOAT",
+          "shape": [
+            1,
+            5,
+            -1
+          ]
+        }
+      ],
+      "build_s": 214.8469189000316
+    }
+  },
+  "application_runs": {
+    "ort": {
+      "frames": 30,
+      "states": {
+        "TRACKING": 30
+      },
+      "invalid_boxes_skipped": 0,
+      "display": false,
+      "save_video": true
+    },
+    "trt_fp16": {
+      "frames": 60,
+      "states": {
+        "TRACKING": 60
+      },
+      "invalid_boxes_skipped": 0,
+      "display": false,
+      "save_video": true
+    }
+  },
+  "timing_context": "Initial independent TRT detector acquisition overlapped a CPU accuracy job; pipeline timing ran separately.",
+  "source_artifact_sha256": {
+    "detector_metrics.json": "507051d92c9222c05aea09e2537d5bb1433d3bab3f7c00f4e27a7cc064254df0",
+    "benchmark.json": "f51e083b0943a3804524d60ac32a7e1411c6a9e2ff68b00d508d770926bfea2a",
+    "target_metrics.json": "ab7c4b8b8d2e159a826a2df786a9eab27a8531f88dc3b96d422e2bfe7131f20e",
+    "detections/PyTorch/MOT17-09-SDP.json": "f1d1cb4d6b2d88b94149135f4b476daf4435e658b28fa4b1f6cf3c178b20ba6c",
+    "detections/PyTorch/MOT17-10-SDP.json": "d4373e6cc79ed00fb3c0a1b65c91709ea693885fa08ac80c0aa4a463d278434a",
+    "mot/PyTorch/pedestrian_summary.txt": "86a6ec20cde4cc69a4d3fd3363bbf9fd05e8f0b554f8662fbea51c8ff134296b",
+    "detections/ORT_FP32/MOT17-09-SDP.json": "6d6c9fbb381ad0024086f755e36508593ffc409de186d43e21f870f8b4fffe7f",
+    "detections/ORT_FP32/MOT17-10-SDP.json": "3a2287e08c751ff6ec92c7728a96e0d832f5ea59d0f55ba3e88cd526b9227244",
+    "mot/ORT_FP32/pedestrian_summary.txt": "8425bcb588fe812d01555ea1d821e8546ba03bdd52b9fe61d3c94e48fc5cfc9d",
+    "detections/TRT_FP32/MOT17-09-SDP.json": "fef34c5278fd9dd3a85f5ad6f7205f9028177917d64a8cd2aa0c9d643afb103a",
+    "detections/TRT_FP32/MOT17-10-SDP.json": "5827eb7f8e8ae300322a83ebe1da6c31e90f173de5abccbe6fc60a653ece2912",
+    "mot/TRT_FP32/pedestrian_summary.txt": "d4b6fb23963d91796b379c7448e30562e26d7f05bb1e851b1b9784860eebacf8",
+    "detections/TRT_FP16/MOT17-09-SDP.json": "afa57e84b102f75c340ab575a9fcd162193a0072388b700cc660d4641690d7cc",
+    "detections/TRT_FP16/MOT17-10-SDP.json": "05d049008733dc55589e0f3babbf0ef049799199d82924e8e194d0737c9c7496",
+    "mot/TRT_FP16/pedestrian_summary.txt": "4d2de36790cfaac2c5ed6a35a5cb65e630deb911cd67b4c096473c177cec4416",
+    "raw_alignment.json": "a21f973a9e7fcb80d934c57fb6a9463f74a5ac26db0a25befaa5d8ad2970f2ad",
+    "ort_provider_profile_summary.json": "4dfc3fb8fba32ff2c040bf2b5607f51e9a686157677e703167327508dab634a7",
+    "stages/build_TRT_FP32.json": "0b17edb764cd44b93d625cb78836a3956c0ce50c480d7d88cd949e3f1ec515cc",
+    "stages/build_TRT_FP16.json": "5787dfe65bbe290368c2bfdde172e0e1fa786e2b58879db422ca95f7f2d7d71a",
+    "stages/prepare.json": "c40c0c83ce03973a37bc452a6a28483b1563e53e35c8dba302a2b10550e22d47",
+    "host_environment.json": "6a33374195737223eb64200cb3ee12881c650a560e8cfdde7b9e11a1a430efba",
+    "demo_ort/summary.json": "f66494d1358f5413104d324f59f031c40e285e5d056754b1fcf425a4c74d1ab1",
+    "demo_trt_fp16/summary.json": "2af3bfb623c27761a1470aa75aab9ab0866d595f91980f5c6ffa38776b17d294",
+    "completion_manifest.json": "b136a9b74a0c486ab0b19584147d4d0ae158e6db5c60c52b63ca4275c40975c5"
+  }
+}

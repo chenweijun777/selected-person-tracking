@@ -65,6 +65,14 @@ python tools/run_crowdhuman_yolo26s.py train --output outputs/crowdhuman_run --d
 
 训练 100 轮，模型输出至 `outputs/crowdhuman_run/train/weights/`。训练设计见 [EXPERIMENTS.md](EXPERIMENTS.md#crowdhuman-微调与下游传递)。
 
+## 部署运行与测速
+
+部署环境使用 `deploy` 依赖组。导出动态 ONNX、构建 TensorRT FP32／FP16 引擎、运行视频应用和测速命令见[部署说明](DEPLOYMENT.md)。
+
+部署对照采用微调权重及 `configs/pretrained/` 中的 2026-10-06 固定参数。精度评价与独立检测测试覆盖验证集 MOT17-09/10 共 1179 帧；整链计时为每后端 320 个样本。整链包含检测、跟踪、ShortLink 和 A2，排除图像解码、绘制与编码。
+
+公开表格见 [deployment_detector.csv](../results/deployment_detector.csv)、[deployment_pipeline.csv](../results/deployment_pipeline.csv)、[deployment_quality.csv](../results/deployment_quality.csv)，设备、版本和原始来源哈希见[部署记录](../provenance/deployment_validation.json)。
+
 ## 结果复现
 
 MOT 数据目录为 `data/MOT17/train/<序列>/`，包含 `img1/`、`gt/gt.txt` 和 `seqinfo.ini`。以下以测试集为例，使用微调模型生成输入、绑定固定选人起点并评估：

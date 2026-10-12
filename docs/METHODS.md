@@ -39,6 +39,12 @@
 
 完整配置见 [预训练参数](../configs/pretrained/)与[微调参数](../configs/finetuned/)。默认使用微调配置。
 
+## 检测推理后端
+
+检测器支持 PyTorch、ONNX Runtime CUDA 和 TensorRT。动态高宽保留矩形 letterbox；模型输出 O2M 原始预测，统一执行外部 NMS 和坐标还原。ORT 通过 GPU IO binding 与 DLPack 连接 PyTorch 张量，TensorRT FP16 使用 FP32 IO 和内部混合精度计算。
+
+部署对照使用微调 `best.pt` 与上表的预训练参数组，固定恢复相似度 0.60、确认时间 0.15 秒、EMA 更新相似度 0.90、EMA 权重 0.10。实现与运行方法见[部署说明](DEPLOYMENT.md)。
+
 ## 视频交互
 
 支持点击选人、暂停、逐帧查看、清除目标、重选和视频／JSONL／MOT 导出。检测、轨迹和外观特征支持缓存，每次重选重新建立目标状态。界面播放帧率与推理耗时分别记录。

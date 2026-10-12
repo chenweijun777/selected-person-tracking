@@ -322,10 +322,14 @@ class JointRuntime:
             str(p): sha256(p)
             for p in (self.tracker_config, self.target_config, self.appearance_model)
         }
-        self.versions = {
-            name: importlib.metadata.version(name)
-            for name in ("ultralytics", "onnxruntime", "torch", "opencv-python", "numpy")
-        }
+        self.versions = {}
+        for name in ("ultralytics", "onnxruntime", "torch", "opencv-python", "numpy"):
+            try:
+                self.versions[name] = importlib.metadata.version(name)
+            except importlib.metadata.PackageNotFoundError:
+                if name != "onnxruntime":
+                    raise
+                self.versions["onnxruntime-gpu"] = importlib.metadata.version("onnxruntime-gpu")
 
     def begin_frame(self, image, timestamp):
         self.motion_warp, self.motion_info = self.motion.update(image)
