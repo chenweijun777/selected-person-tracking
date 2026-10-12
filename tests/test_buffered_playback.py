@@ -90,6 +90,23 @@ def test_gui_model_and_configs_are_the_named_finetuned_profile(monkeypatch, tmp_
     from a1_tracker import joint_runtime, tracking_gui, video_app
     from a1_tracker.detectors import ultralytics
 
+    # This test checks profile wiring with mocked inference, so its inputs are
+    # isolated from optional local model weights and downloaded CI assets.
+    project = tmp_path / "project"
+    for relative in (
+        "configs/finetuned/tracker.yaml",
+        "configs/finetuned/target.json",
+        "src/a1_tracker/video_app.py",
+        "src/a1_tracker/gui_analysis_cache.py",
+    ):
+        destination = project / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes((tracking_gui.ROOT / relative).read_bytes())
+    for name in ("best.pt", "yolo26n-reid.onnx"):
+        destination = project / "models" / name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(b"profile test fixture; inference is mocked")
+    monkeypatch.setattr(tracking_gui, "ROOT", project)
     calls = {}
 
     def detector(model, *args, **kwargs):
@@ -111,14 +128,14 @@ def test_gui_model_and_configs_are_the_named_finetuned_profile(monkeypatch, tmp_
     monkeypatch.setattr(joint_runtime, "JointRuntime", runtime)
     monkeypatch.setattr(video_app, "run_session", session)
     assert tracking_gui.run_gui_session("input.mp4", tmp_path / "out", True, None)["passed"]
-    assert calls["model"].endswith("models\\best.pt") or calls["model"].endswith("models/best.pt")
+    assert calls["model"] == str(project / "models/best.pt")
     assert calls["args"] == (960, 0.001, 0.7)
     assert calls["detector_options"]["nms"]
     fps, tracker, target, appearance = calls["runtime"]
     assert fps == 29.97
-    assert tracker.parts[-2:] == ("finetuned", "tracker.yaml")
-    assert target.parts[-2:] == ("finetuned", "target.json")
-    assert appearance.name == "yolo26n-reid.onnx"
+    assert tracker == project / "configs/finetuned/tracker.yaml"
+    assert target == project / "configs/finetuned/target.json"
+    assert appearance == project / "models/yolo26n-reid.onnx"
     assert calls["provenance"]["profile"] == "finetuned26s_20261007"
 
 
