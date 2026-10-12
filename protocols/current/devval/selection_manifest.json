@@ -1,7 +1,5 @@
 {
-  "protocol": "manifests/clear_start_protocol_20261001.json",
-  "protocol_sha256": "3f7ef1214c535608d3f60f3bdfbedce3331c8bb231e141844235b92b2eea9d6d",
-  "source_manifest_sha256": "6ab13753d49ce08be785821a0a5aaf3666813a9d82985a093af139f4d46a8d91",
+  "schema_version": 1,
   "eligible": [
     {
       "episode_id": "MOT17-02-SDP_GT2_full",
@@ -2481,16 +2479,5 @@
       "preselection_annotated_frames": 12
     }
   ],
-  "source_manifest": "data/target_scope_sync_20261005/episode_manifest.json",
-  "scope_revision": {
-    "scope": {
-      "path": "E:\\CV\\manifests\\target_scope_20261005.json",
-      "sha256": "bd307b343a09d6b29092e1fbf191c3f1f7fc09f83350fab4db6f71b0a21396ce"
-    },
-    "source": {
-      "path": "E:\\CV\\outputs\\detector_clear_start_20261001\\selection_manifest.json",
-      "sha256": "7646a965fbd49a9913fae7f810bd1b9c8f2e27206e8a02a57255e2263d3968e5"
-    },
-    "selection_frames_preserved": true
-  }
+  "origin_sha256": "90bf2a68cc6c41b7a239e9dc5bb8da6a29583bdbd57ad9b0bc17b66d07fa4d92"
 }

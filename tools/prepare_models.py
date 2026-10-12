@@ -32,7 +32,8 @@ def main():
             else:
                 if not spec.get("url"):
                     raise ValueError(
-                        "Fine-tuned best.pt has no published download yet; provide --source-dir or train it"
+                        "best.pt requires local training or matching weights via --source-dir; "
+                        "use --profile pretrained to download the reference models"
                     )
                 print(f"Downloading {spec['file']}", flush=True)
                 with (

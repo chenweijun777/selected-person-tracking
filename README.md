@@ -1,16 +1,16 @@
 # 指定行人跟踪与遮挡恢复系统
 
-**面向机器人人员跟随场景的 PC 端交互式视觉跟踪应用**
+**面向机器人人员跟随场景的交互式视觉跟踪系统**
 
 Selected-person Tracking and Identity Recovery after Occlusion
 
-面向室内服务机器人人员跟随的视觉感知需求，针对人员交叉、短时遮挡及相机运动造成的目标丢失与身份混淆，实现交互选人、持续定位、遮挡搜索、身份恢复和超时重选。项目当前完成视觉算法、离线评估和 PC 应用，机器人端部署与闭环跟随控制属于后续工作。
+以机器人人员跟随为应用背景，实现指定行人的交互选择、二维视觉跟踪与遮挡后身份恢复，重点解决人员交叉、遮挡和相机运动造成的目标丢失与误跟。用户可以通过视频交互界面选择目标、查看跟踪状态，并导出标注视频与跟踪结果。
 
 技术栈：Python · OpenCV · YOLO26s · BoT-SORT · ONNX Runtime · NumPy · Tkinter · TrackEval。
 
 ![实际运行中的指定目标跟踪](docs/assets/tracking_preview.png)
 
-上图来自整理后代码的真实模型运行，仅展示跟踪画面；遮挡恢复效果由下方事件评估和消融支撑。
+上图为系统运行画面。指定目标跟踪和遮挡恢复的评估结果见下文。
 
 ## 视觉算法工作
 
@@ -31,52 +31,49 @@ flowchart LR
     U[用户点击选人] --> A
     V --> M[相机运动估计]
     M --> A
-    A --> O[目标位置 / 身份状态 / 搜索或重选]
-    O --> G[PC 交互界面与结果导出]
+    A --> O[图像中的目标位置 / 身份状态 / 搜索或重选]
+    O --> G[视频交互界面与结果导出]
 ```
 
 ## 最终测试结果
 
-在 MOT17-11-SDP 上开展自定义指定目标测试。两种方法使用相同的微调 YOLO26s 检测权重，以及带相机运动补偿的 BoT-SORT。对照方法只跟随首次选中的轨迹编号；本项目将丢失轨迹保留 5 秒，加入短轨迹重连接，并通过外观与运动验证遮挡后的指定目标身份。
+基于 MOT17 官方训练集序列划分开发、验证和测试集，评估指定行人的持续跟踪与遮挡恢复能力。下表展示 MOT17-11-SDP 测试序列的结果，各组使用相同的目标清单、选人起点和微调 YOLO26s 检测权重，基础跟踪器为带相机运动补偿的 BoT-SORT。
 
-| 跟踪方法 | 正确跟踪覆盖率 | 跟错人的帧数 | 稳定找回目标的事件数 |
+| 跟踪与身份处理方式 | 正确跟踪覆盖率 | 跟错人的帧数 | 稳定找回目标的事件数 |
 | --- | ---: | ---: | ---: |
-| 仅锁定初始轨迹编号 | 78.98% | 30 | 10/18 |
-| 加入短轨迹重连接与指定身份恢复 | **90.98%** | **30** | **17/18** |
+| 基础跟踪，锁定初始轨迹编号 | 78.98% | 30 | 10/18 |
+| 短轨迹重连接，指定目标身份恢复 | **90.98%** | **30** | **17/18** |
 
-评价包含 31 个指定目标、5,153 个目标评价帧，按每个被选中的行人分别计数。正确跟踪覆盖率表示：选人后，目标标注可见度不低于 0.3 的帧中，正确跟踪指定行人的比例。两组均按同一清单中的 18 个可评分恢复事件比较，目标重现后持续稳定跟对才算成功，包含遮挡与低可见度恢复场景。
+改进方案将丢失轨迹保留 5 秒，加入短轨迹重连接，并结合外观、运动约束、多帧确认和外观更新恢复指定目标身份。
 
-这组比较同时包含丢失轨迹保留时间、轨迹重连接和指定身份恢复的变化。各部件的作用通过单独对照检查，见[恢复策略与消融实验](docs/EXPERIMENTS.md)；具体评价规则见[指标定义](docs/EVALUATION.md)。MOT17-11 来自官方训练集，上述结论限于本项目的自定义测试序列。
+评价包含 31 个指定目标、5,153 个目标评价帧和同一清单中的 18 个恢复事件。正确跟踪覆盖率按选人后标注可见度不低于 0.3 的目标人帧统计；目标重现后连续跟对至少 0.2 秒计为稳定恢复。各部件的消融见[恢复策略与消融实验](docs/EXPERIMENTS.md)，评价规则见[指标定义](docs/EVALUATION.md)。
 
 ## 运行与复现
 
 ### 安装
 
-环境：Python 3.12、NVIDIA GPU，以及支持 CUDA 13.0 的驱动。在仓库根目录直接使用当前 Python 执行：
+环境：Python 3.12、NVIDIA GPU、支持 CUDA 13.0 的驱动。命令在仓库根目录执行。
 
 ```powershell
 python -m pip install "torch==2.14.0+cu130" "torchvision==0.29.0+cu130" --index-url https://download.pytorch.org/whl/cu130
 python -m pip install -e ".[runtime,evaluation,dev]"
 ```
 
-第二条命令自动安装 Ultralytics、OpenCV、NumPy、ONNX Runtime、ONNX、PyYAML、Pillow、lap、TrackEval，以及 pytest／ruff 检查工具，版本约束见 [pyproject.toml](pyproject.toml)。GUI 还需要 Python 的 Tkinter，Windows 安装 Python 时包含 Tcl/Tk 组件。
-
 ### 运行
 
-从已有权重目录校验复制模型，启动界面后选择视频并点击行人：
+准备模型后，启动界面选择视频并点击行人：
 
 ```powershell
-python tools/prepare_models.py --source-dir "D:\tracking-models"
 python tools/run_tracking_gui.py
 ```
 
 也可通过命令行运行交互演示：
 
 ```powershell
-python tools/run_video_joint.py --source "D:\videos\demo.mp4" --output outputs/demo --device 0 --display
+python tools/run_video_joint.py --source data/demo.mp4 --output outputs/demo --device 0 --display
 ```
 
-示例路径替换为自己的文件目录。模型目录需包含 `best.pt`、`yolo26s.pt` 和 `yolo26n-reid.onnx`；微调权重暂未发布下载，模型和数据不包含在源码包中。
+模型准备、微调训练及预训练模型的运行方式见[运行说明](docs/EVALUATION.md)。
 
 ### 复现
 
@@ -86,7 +83,7 @@ python tools/run_video_joint.py --source "D:\videos\demo.mp4" --output outputs/d
 python tools/replay_benchmark.py --split test --output outputs/reproduce_test
 ```
 
-CUDA 配置与检查、预训练演示、数据准备、训练及其他集合的复现命令见[评价与复现文档](docs/EVALUATION.md)。所有运行命令使用新的输出目录。
+数据准备、训练和各集合的评估步骤见[评价与复现](docs/EVALUATION.md)。
 
 ## 仓库导航
 
@@ -95,6 +92,7 @@ CUDA 配置与检查、预训练演示、数据准备、训练及其他集合的
 | 算法设计、目标身份恢复与参数 | [方法说明](docs/METHODS.md)、[身份恢复源码](src/a1_tracker/target/a2/)、[正式参数](configs/finetuned/) |
 | 选型、微调、消融与关键取舍 | [EXPERIMENTS.md](docs/EXPERIMENTS.md) |
 | 指标定义、协议与复现工作流 | [EVALUATION.md](docs/EVALUATION.md)、`protocols/` |
+| 筛选后的 GT ID 与恢复事件表 | [评价清单](docs/EVALUATION.md#数据划分) |
 | 当前结果与验证记录 | `results/`、`provenance/` |
 | 可选的未采用尝试 | `research/`，不参与正式运行 |
 

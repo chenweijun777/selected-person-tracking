@@ -11,7 +11,7 @@ import trackeval
 
 from ._common import ROOT
 
-GT = ROOT / "data/MOT17/MOT17/train"
+GT = ROOT / "data/MOT17/train"
 OUT = ROOT / "outputs/tracker_evaluation"
 
 

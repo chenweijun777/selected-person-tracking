@@ -28,7 +28,10 @@ def verify(folder, profile="full"):
     for spec in models(profile):
         path = Path(folder) / spec["file"]
         if not path.is_file():
-            raise FileNotFoundError(f"Missing {path}; run tools/prepare_models.py --download")
+            raise FileNotFoundError(
+                f"Missing {path}; prepare local best.pt or download reference models "
+                "with tools/prepare_models.py --download --profile pretrained"
+            )
         actual = digest(path)
         if actual != spec["sha256"]:
             raise ValueError(f"Model checksum mismatch: {path}")

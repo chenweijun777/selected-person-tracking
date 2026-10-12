@@ -86,7 +86,7 @@
     },
     {
       "path": "manifests/gt_event_scope_20261005.json",
-      "sha256": "9b574d1c3c94908f9cb17d4c69a39886e12672640a3262a90497825c0dd2d4eb"
+      "sha256": "1a17a44c147ceb3d1c5f08808dbefbe19175f5d77f1c1cf165894d434195df28"
     },
     {
       "path": "manifests/models.json",
@@ -94,79 +94,71 @@
     },
     {
       "path": "manifests/recovery_event_exclusions_20261005.json",
-      "sha256": "b125609dc8b8aae729040a9ae9fa9f8db3425952650200355ab48cf92d6bef8b"
+      "sha256": "4db9e74153d11132946fc66b6f7ccec722f0ea100b8dae7870cd55515164ad7a"
     },
     {
       "path": "manifests/reproduction_assets.json",
-      "sha256": "309e17e4b3f04b1251e793eeff34f1df9d869cb9ea9296b235f628b4e7e45d67"
+      "sha256": "833357e163d9f1013d5ca6c879e68b251fd3b0a40c55897f87b7a44f3f134b55"
     },
     {
       "path": "manifests/target_scope_20261005.json",
-      "sha256": "bd307b343a09d6b29092e1fbf191c3f1f7fc09f83350fab4db6f71b0a21396ce"
+      "sha256": "f795c8135775db944d79c3baf4f0cae0ef65d4471b433ff345dd6226c9ab021c"
     },
     {
       "path": "manifests/test_recovery_event_exclusions_20261007.json",
       "sha256": "7331fb70c4a7773869b44d4152d32cbef22a08f415736c5939dca2d5d3fd5238"
     },
     {
-      "path": "manifests/test_recovery_events_20261007.json",
-      "sha256": "107df63a64c79a388709826847fe399efd45da291872e43281e52f1dfc27e8db"
+      "path": "protocols/current/development.json",
+      "sha256": "4b682fbfa9232ddfc7a1c0d4a76fb38dc9636a38102fefa467a3064979905c2a"
     },
     {
-      "path": "protocols/frozen/development.json",
-      "sha256": "5ccb0d2ca78c874c3f1a432fa6a200061746baee5570d474b9d2c905ece1b7b9"
+      "path": "protocols/current/devval/episode_manifest.json",
+      "sha256": "a2ad495ea551cb43f7d38365c3b1f7716d49b85e76f709d2ecb31b4923c36df5"
     },
     {
-      "path": "protocols/frozen/devval/episode_manifest.json",
-      "sha256": "6ab13753d49ce08be785821a0a5aaf3666813a9d82985a093af139f4d46a8d91"
-    },
-    {
-      "path": "protocols/frozen/devval/gt_events.csv",
+      "path": "protocols/current/devval/gt_events.csv",
       "sha256": "91cd63c7510415df45797e6cab3dfa4641503e071de7663be249da71d6241a2c"
     },
     {
-      "path": "protocols/frozen/devval/gt_events.json",
-      "sha256": "f72b6ab583a9bf2ddb5458b257a0f1c1f96408cff2003641e29021d49cfc0891"
+      "path": "protocols/current/devval/gt_events.json",
+      "sha256": "00b4b728267bfb15c50abe673b196c12c69ae5dc137861461cd47c190f259a68"
     },
     {
-      "path": "protocols/frozen/devval/selection_manifest.json",
-      "sha256": "90bf2a68cc6c41b7a239e9dc5bb8da6a29583bdbd57ad9b0bc17b66d07fa4d92"
+      "path": "protocols/current/devval/selection_manifest.json",
+      "sha256": "513e9e646bef7e3d9e361431ef38e346be9f603a5497a8c64d82715cb7192f52"
     },
     {
-      "path": "protocols/frozen/devval/visibility_intervals.csv",
+      "path": "protocols/current/devval/visibility_intervals.csv",
       "sha256": "6cc14d77351a2119c7ad163ea505e203118cd60c42514d5349cf76ecb93f9ce4"
     },
     {
-      "path": "protocols/frozen/test/episode_manifest.json",
-      "sha256": "f963c7f863ee8d8ee3bf731201e10519d7b70fdea230eafa2b4831d933e81983"
+      "path": "protocols/current/test/episode_manifest.json",
+      "sha256": "72dfc377e1db9c8123b76ccb5d7ce40d90b8788cd8f64a162b671ecb5b4c6f3a"
     },
     {
-      "path": "protocols/frozen/test/gt_events.csv",
-      "sha256": "6fc591099e03ff192ffd7c41dc4d3cbbb82088e162530e891008822853e0d2bf"
+      "path": "protocols/current/test/gt_events.csv",
+      "sha256": "e155e6328ce04890c68cc10ebf999368853134422601844a4e977463558e5112"
     },
     {
-      "path": "protocols/frozen/test/gt_events.json",
-      "sha256": "9048b727feb4c9c023701c1f96c0872f705721e48977bb437447160bbeb8679b"
+      "path": "protocols/current/test/gt_events.json",
+      "sha256": "8213ac1a4a7be0237b19d769055ac2bcc321c75ec7897a75a72aba3301a83b2e"
     },
     {
-      "path": "protocols/frozen/test/selection_manifest.json",
-      "sha256": "0bc02e9758d0861437e365fe58c19f14db00eb4956f5de48cc190528c42c8d24"
+      "path": "protocols/current/test/selection_manifest.json",
+      "sha256": "12caca3d519bcf3b53592df8d1cda813c256483811571626f4a5a27ce62f3b33"
     },
     {
-      "path": "protocols/frozen/test/visibility_intervals.csv",
+      "path": "protocols/current/test/visibility_intervals.csv",
       "sha256": "4f9a7cdd9e11afb1b878e04303ce6b722b11f0929654befb2071308786656fcb"
     },
     {
-      "path": "protocols/frozen/test.json",
-      "sha256": "cc185d5120380d90cde8408293e3057e60a2c5dfdeb6da8b223a077755592cc3"
+      "path": "protocols/current/test.json",
+      "sha256": "760e4c9a87d390e42531d780f6badf56497c3741ccdc5f0b03cff94db5473a72"
     },
     {
-      "path": "protocols/frozen/validation.json",
-      "sha256": "db44b8cf28611f51e70738c051feaa608a7f0937465deb48142d2c318a08977c"
-    },
-    {
-      "path": "protocols/path_map.json",
-      "sha256": "190484834c779c623790fdf4594fc376ce11131779b8c221d9078f3ffb7f63fe"
+      "path": "protocols/current/validation.json",
+      "sha256": "4945482e284f042a08671fa6b232e90335e048219298e0c3c4556b4f83f4930e"
     },
     {
       "path": "results/a2_selection.json",
@@ -210,7 +202,8 @@
     },
     {
       "path": "results/tracker_selection.csv",
-      "sha256": "535b00828ee5bbe0b9ec910d71a0be3da782194b69fcbe5e82ac66719446e96d"
+      "sha256": "bd49b7048aec47a362990bec9608dd148a76107d67e3d0566ebb3118974be113",
+      "origin_sha256": "535b00828ee5bbe0b9ec910d71a0be3da782194b69fcbe5e82ac66719446e96d"
     }
   ]
 }

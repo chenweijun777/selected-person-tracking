@@ -1,18 +1,23 @@
 {
   "schema_version": 1,
+  "scoring": {
+    "iou_min": 0.5,
+    "primary_visibility_min": 0.3,
+    "event_correct_visibility_min_exclusive": 0,
+    "stable_correct_seconds": 0.2,
+    "ambiguous_multiple_gt_overlap": "A, never force an identity",
+    "unannotated_target_frames": "unknown; not exit errors"
+  },
   "detector": "Finetuned",
   "tracker": "Finetuned_Joint",
-  "case_scope": "Workbook-selected test31 IDs; model-independent frozen clear starts; failed detector initialization retained",
+  "case_scope": "Fixed selected targets and selection frames; failed initialization retained",
   "sequences": {
     "MOT17-11-SDP": {
       "split": "test",
-      "gt": "E:\\CV\\data\\MOT17\\MOT17\\train\\MOT17-11-SDP\\gt\\gt.txt",
-      "seqinfo": "E:\\CV\\data\\MOT17\\MOT17\\train\\MOT17-11-SDP\\seqinfo.ini",
-      "images": "E:\\CV\\data\\MOT17\\MOT17\\train\\MOT17-11-SDP\\img1",
-      "image_count": 900,
-      "images_sha256": "dc103e4f0b5d8b941cbe6f73fa1ebce8ea72eee4087d369e5ab370cfc4e5c0c9",
-      "t2_tracks": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\tracks\\Finetuned_Joint\\MOT17-11-SDP.txt",
-      "detector_cache": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\detections\\Finetuned\\MOT17-11-SDP.txt"
+      "gt": "data/MOT17/train/MOT17-11-SDP/gt/gt.txt",
+      "seqinfo": "data/MOT17/train/MOT17-11-SDP/seqinfo.ini",
+      "images": "data/MOT17/train/MOT17-11-SDP/img1",
+      "t2_tracks": "reproduction_inputs/MOT17-11-SDP/tracks.txt"
     }
   },
   "cases": [
@@ -544,64 +549,6 @@
       "initial_tracker_id": 221
     }
   ],
-  "files": [
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\clear_start_protocol.json",
-      "sha256": "13bc1f873389aedbfcdf84831eae08ab3477037c92d7fe636388c886db993207"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\episode_manifest.json",
-      "sha256": "f963c7f863ee8d8ee3bf731201e10519d7b70fdea230eafa2b4831d933e81983"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\gt_events.csv",
-      "sha256": "6fc591099e03ff192ffd7c41dc4d3cbbb82088e162530e891008822853e0d2bf"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\gt_events.json",
-      "sha256": "9048b727feb4c9c023701c1f96c0872f705721e48977bb437447160bbeb8679b"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\selection_manifest.json",
-      "sha256": "0bc02e9758d0861437e365fe58c19f14db00eb4956f5de48cc190528c42c8d24"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\scope\\visibility_intervals.csv",
-      "sha256": "4f9a7cdd9e11afb1b878e04303ce6b722b11f0929654befb2071308786656fcb"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\images_manifest.json",
-      "sha256": "dc103e4f0b5d8b941cbe6f73fa1ebce8ea72eee4087d369e5ab370cfc4e5c0c9"
-    },
-    {
-      "path": "E:\\CV\\data\\Select_GT_ID.xlsx",
-      "sha256": "5bddd73b2a04da67a5c539671297c42f9b88e71dd2c9e3a3cfd93fcd7b1efc68"
-    },
-    {
-      "path": "E:\\CV\\outputs\\01a11549-a9b6-7af2-8520-79b20bddee6d\\selected_gt_events_20261007\\selected_gt_scope.json",
-      "sha256": "6ab42f53131285cdcafc63da8da94c1cb03f6c2bc74e945f2f644d9a288ad1aa"
-    },
-    {
-      "path": "E:\\CV\\manifests\\test_recovery_events_20261007.json",
-      "sha256": "107df63a64c79a388709826847fe399efd45da291872e43281e52f1dfc27e8db"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\tracks\\Finetuned_Joint\\MOT17-11-SDP.txt",
-      "sha256": "7763c7badac7a36660d7f2d8da1555ead0a6c817a77aeb953e0133d58364726d"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\configs\\Finetuned_Joint.json",
-      "sha256": "ffaa9a17751bb594aec3746976213f40c8095a7c363397183a420bd9c512b82c"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\configs\\Finetuned_Joint.yaml",
-      "sha256": "b0ed2b1f942db10eded30a6b7c90c1f9833bff89f19079af26ab88a122619647"
-    },
-    {
-      "path": "E:\\CV\\outputs\\test26s_pre_post_joint_t2a0_20261007\\detections\\Finetuned\\MOT17-11-SDP.txt",
-      "sha256": "1b86964efd6195ca88bb7c9b4aaed859678ad8f0d6d7999a7f25db6c1595e7de"
-    }
-  ],
   "events": {
     "test": {
       "common_event_ids": [
@@ -628,12 +575,39 @@
       ]
     }
   },
-  "scoring": {
-    "iou_min": 0.5,
-    "primary_visibility_min": 0.3,
-    "event_correct_visibility_min_exclusive": 0,
-    "stable_correct_seconds": 0.2,
-    "ambiguous_multiple_gt_overlap": "A, never force an identity",
-    "unannotated_target_frames": "unknown; not exit errors"
-  }
+  "origin_sha256": "cc185d5120380d90cde8408293e3057e60a2c5dfdeb6da8b223a077755592cc3",
+  "files": [
+    {
+      "path": "protocols/current/test/gt_events.json",
+      "sha256": "8213ac1a4a7be0237b19d769055ac2bcc321c75ec7897a75a72aba3301a83b2e"
+    },
+    {
+      "path": "protocols/current/test/gt_events.csv",
+      "sha256": "e155e6328ce04890c68cc10ebf999368853134422601844a4e977463558e5112"
+    },
+    {
+      "path": "protocols/current/test/visibility_intervals.csv",
+      "sha256": "4f9a7cdd9e11afb1b878e04303ce6b722b11f0929654befb2071308786656fcb"
+    },
+    {
+      "path": "protocols/current/test/selection_manifest.json",
+      "sha256": "12caca3d519bcf3b53592df8d1cda813c256483811571626f4a5a27ce62f3b33"
+    },
+    {
+      "path": "protocols/current/test/episode_manifest.json",
+      "sha256": "72dfc377e1db9c8123b76ccb5d7ce40d90b8788cd8f64a162b671ecb5b4c6f3a"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-11-SDP/gt/gt.txt",
+      "sha256": "4952d6e4efc705c90688e434fd138a55ada2c0d5f576ba3847ee102fc18aff93"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-11-SDP/seqinfo.ini",
+      "sha256": "b6487e5ae527741884ae30d3dd470c406f5b4aa8ed35381085941c421a43784b"
+    },
+    {
+      "path": "reproduction_inputs/MOT17-11-SDP/tracks.txt",
+      "sha256": "7763c7badac7a36660d7f2d8da1555ead0a6c817a77aeb953e0133d58364726d"
+    }
+  ]
 }

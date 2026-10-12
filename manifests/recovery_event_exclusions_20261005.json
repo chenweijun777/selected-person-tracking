@@ -4,10 +4,6 @@
   "reviewer": "project_user",
   "user_statement": "这些事件都是没有参考意义的，将这些事件从事件清单中删掉",
   "scope": "All methods; development and validation; event metrics only",
-  "source_gallery": {
-    "path": "outputs/a2_latest_failure_gallery_20261004_v2/samples.json",
-    "sha256": "880f26e6241da3029343531cf455bf20ce592a35e0252cf5351fd591b9d9bbb1"
-  },
   "supersedes": "Earlier positive occlusion reviews for these IDs; no additional semantic verdict inferred",
   "decisions": [
     {
@@ -136,5 +132,6 @@
       "verdict": "exclude_no_reference_value",
       "reason": "用户复核：没有参考意义，从事件清单中剔除"
     }
-  ]
+  ],
+  "source_gallery_sha256": "880f26e6241da3029343531cf455bf20ce592a35e0252cf5351fd591b9d9bbb1"
 }

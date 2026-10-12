@@ -28,3 +28,4 @@ resources/
 .ruff_cache/
 reproduction_inputs/
 provenance/local_*.json
+.Rhistory

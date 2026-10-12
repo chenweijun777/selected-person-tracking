@@ -1,18 +1,5 @@
 {
-  "selection_source": "manifests/target_scope_20261005.json",
-  "source_sha256": {
-    "data/MOT17/MOT17/train/MOT17-02-SDP/gt/gt.txt": "2e3ecb488da8886d3200d402b2b08890c6d2879923839444e9b74fa43a551440",
-    "outputs/tracker_comparison_20260925/tracks/T2/MOT17-02-SDP.txt": "d80aaa197c8a073d10212a87deb8eba8ca35f83ccc65733f14eab641a7fdaff2",
-    "data/MOT17/MOT17/train/MOT17-04-SDP/gt/gt.txt": "f8cfbe36ef38a2e1857d7ebfe7d754b2355a3ffb9e1f9cedea435e86e4fbc948",
-    "outputs/tracker_comparison_20260925/tracks/T2/MOT17-04-SDP.txt": "c95e5098a99d6fa254a16d074dd93747b2822991953f5a704641f532ac6cb8be",
-    "data/MOT17/MOT17/train/MOT17-05-SDP/gt/gt.txt": "ed74c54176b21b38cb690eda79a4755cf16e4c4a9ca2f019b0ba8904636174f5",
-    "outputs/tracker_comparison_20260925/tracks/T2/MOT17-05-SDP.txt": "33cf9550ae46de415ea8e9d13fb799a88118cd40ea7b6244cc05c70e52b87a60",
-    "data/MOT17/MOT17/train/MOT17-09-SDP/gt/gt.txt": "592f0d5b519c03b35bb1578c33d726460f63abb91ea0c515f87e8d6d76be001d",
-    "outputs/tracker_comparison_20260925/tracks/T2/MOT17-09-SDP.txt": "afac53a07eff558612004f9f5fbfb922da63012e63cd1bd2a8f0326461af52a1",
-    "data/MOT17/MOT17/train/MOT17-10-SDP/gt/gt.txt": "f8cca05d98fa36d8b6f2b807e03d32407d00d40299d679e4da320e42862677c0",
-    "outputs/tracker_comparison_20260925/tracks/T2/MOT17-10-SDP.txt": "fe0e9613b025ff3c7adb344e25304a94e903a7c566c67f80537b42e7b66dcf6d"
-  },
-  "protocol": "One full GT trajectory per selected ID; first marked GT frame starts episode; model-neutral selection is first visibility>=0.30 and clipped box>=8 px; legacy T2 selection is first later T2 IoU>=0.50 frame; preselection GT frames remain in scope; absence and event types are not confirmed by GT alone",
+  "schema_version": 1,
   "episodes": [
     {
       "episode_id": "MOT17-02-SDP_GT2_full",
@@ -6318,12 +6305,5 @@
       "event_review_status": "unreviewed"
     }
   ],
-  "selection_source_sha256": "bd307b343a09d6b29092e1fbf191c3f1f7fc09f83350fab4db6f71b0a21396ce",
-  "scope_revision": {
-    "source": {
-      "path": "E:\\CV\\outputs\\target_scope_20261001\\episode_manifest.json",
-      "sha256": "1812a6adf6b2437468f61c3ab6faa6a0a0d1f21f66159ae428727b4fdfa11097"
-    },
-    "initialization_frames_preserved": true
-  }
+  "origin_sha256": "6ab13753d49ce08be785821a0a5aaf3666813a9d82985a093af139f4d46a8d91"
 }

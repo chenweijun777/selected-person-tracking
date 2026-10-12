@@ -1,5 +1,4 @@
 {
-  "source": "data/Select_GT_ID.xlsx",
   "source_sha256": "e58e9fecfbb5c1029456b59156dc6dbe8156eb63929b4e44e3eeee4f6046340f",
   "scope": "MOT17-02/04/05/09/10-SDP; all five sequences use workbook-selected IDs",
   "gt_filter": "mark=1 and class=1, positive-width/height pedestrian boxes",
@@ -938,5 +937,6 @@
       "gt_id": 14,
       "selection_mode": "workbook_selected"
     }
-  ]
+  ],
+  "selection_source": "manual GT ID selection"
 }

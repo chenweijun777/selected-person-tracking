@@ -23,6 +23,8 @@ from ._common import (
     csv_rows,
     read_json,
     record,
+    portable_record,
+    project_path,
     resolve_asset,
     sha,
     write_csv,
@@ -51,7 +53,7 @@ def evaluate_run(
 
     Rates are percentages; delays are seconds. strict=False labels recovery results
     provisional. Config's optional evaluation mapping selects existing manifests.
-    Relative paths resolve from the caller's working directory. Reports never overwrite.
+    Relative paths resolve from the project root. Reports never overwrite.
     """
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", run_name):
         raise ValueError("run_name must be a safe directory name")
@@ -66,8 +68,8 @@ def evaluate_run(
         )
     if not isinstance(strict, bool):
         raise TypeError("strict must be bool")
-    path = Path(prediction_path).resolve()
-    config = Path(config_path).resolve() if config_path else None
+    path = project_path(prediction_path)
+    config = project_path(config_path) if config_path else None
     if config is None:
         base = path if path.is_dir() else path.parent
         config = next(
@@ -86,16 +88,16 @@ def evaluate_run(
     unknown = set(options) - {"protocol", "events", "visibility", "episode_manifest"}
     if unknown:
         raise ValueError(f"Unknown evaluation options (thresholds are frozen): {unknown}")
-    scope = ROOT / "protocols/frozen" / ("test" if split == "test" else "devval")
+    scope = ROOT / "protocols/current" / ("test" if split == "test" else "devval")
     options = {"episode_manifest": str(scope / "episode_manifest.json"), **options}
-    protocol_path = Path(
-        options.get("protocol", ROOT / "protocols/frozen" / f"{split}.json")
-    ).resolve()
+    protocol_path = project_path(
+        options.get("protocol", ROOT / "protocols/current" / f"{split}.json")
+    )
     protocol = read_json(protocol_path)
-    event_path = Path(options.get("events", scope / "gt_events.json")).resolve()
-    visibility_path = Path(
+    event_path = project_path(options.get("events", scope / "gt_events.json"))
+    visibility_path = project_path(
         options.get("visibility", event_path.with_name("visibility_intervals.csv"))
-    ).resolve()
+    )
     event_payload = read_json(event_path)
     if event_payload["rules"]["main_visibility_threshold"] != 0.3:
         raise ValueError("Unsupported visibility protocol change")
@@ -104,9 +106,8 @@ def evaluate_run(
     ]
     if not sequences:
         raise ValueError(f"Empty split: {split}")
-    gt_root = ROOT / "data/MOT17/MOT17/train"
-    # Frozen protocols contain ancestry records from older experiments. Only
-    # assets actually consumed by this evaluation are required and verified.
+    gt_root = ROOT / "data/MOT17/train"
+    # Verify published evaluation inputs when they are present.
     dependency_paths = [protocol_path, event_path, visibility_path, event_path.with_suffix(".csv")]
     dependencies = [record(p) for p in dependency_paths]
     for item in protocol.get("files", []):
@@ -179,7 +180,7 @@ def evaluate_run(
         if e["sequence"] in sequences
     ):
         raise ValueError("Event target missing visibility timeline")
-    output = Path(output_dir).resolve() if output_dir else ROOT / "outputs/evaluations" / run_name
+    output = project_path(output_dir) if output_dir else ROOT / "outputs/evaluations" / run_name
     if output.exists():
         raise FileExistsError(f"Use a new output directory: {output}")
     input_paths = [Path(d["path"]) for d in dependencies] + [path, config]
@@ -273,7 +274,7 @@ def evaluate_run(
         shutil.copyfile(config, output / "config_snapshot.yaml")
     else:
         (output / "config_snapshot.yaml").write_text(
-            yaml.safe_dump(settings, allow_unicode=True), encoding="utf-8"
+            yaml.safe_dump(portable_record(settings), allow_unicode=True), encoding="utf-8"
         )
     code_paths = sorted(Path(__file__).parent.glob("*.py")) + [
         ROOT / "src/a1_tracker/geometry.py",
@@ -326,7 +327,7 @@ def evaluate_run(
             raise RuntimeError(f"Input changed during evaluation: {entry['path']}")
     for name, value in (("metrics.json", metrics), ("evaluation_manifest.json", manifest)):
         (output / name).write_text(
-            json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n",
+            json.dumps(portable_record(value), indent=2, ensure_ascii=False, allow_nan=False) + "\n",
             encoding="utf-8",
         )
     return metrics

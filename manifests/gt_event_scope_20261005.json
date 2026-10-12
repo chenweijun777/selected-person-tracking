@@ -1,12 +1,11 @@
 {
   "purpose": "GT event timeline target scope",
-  "source": "data/Select_GT_ID.xlsx",
   "source_sha256": "e58e9fecfbb5c1029456b59156dc6dbe8156eb63929b4e44e3eeee4f6046340f",
   "gt_filter": "mark == 1 and class == 1; retain every visibility including zero",
   "sequences": {
     "MOT17-02-SDP": {
       "selection_mode": "spreadsheet_ids",
-      "gt_path": "data/MOT17/MOT17/train/MOT17-02-SDP/gt/gt.txt",
+      "gt_path": "data/MOT17/train/MOT17-02-SDP/gt/gt.txt",
       "gt_sha256": "2e3ecb488da8886d3200d402b2b08890c6d2879923839444e9b74fa43a551440",
       "gt_ids": [
         2,
@@ -37,7 +36,7 @@
     },
     "MOT17-04-SDP": {
       "selection_mode": "spreadsheet_ids",
-      "gt_path": "data/MOT17/MOT17/train/MOT17-04-SDP/gt/gt.txt",
+      "gt_path": "data/MOT17/train/MOT17-04-SDP/gt/gt.txt",
       "gt_sha256": "f8cfbe36ef38a2e1857d7ebfe7d754b2355a3ffb9e1f9cedea435e86e4fbc948",
       "gt_ids": [
         1,
@@ -93,7 +92,7 @@
     },
     "MOT17-05-SDP": {
       "selection_mode": "spreadsheet_ids",
-      "gt_path": "data/MOT17/MOT17/train/MOT17-05-SDP/gt/gt.txt",
+      "gt_path": "data/MOT17/train/MOT17-05-SDP/gt/gt.txt",
       "gt_sha256": "ed74c54176b21b38cb690eda79a4755cf16e4c4a9ca2f019b0ba8904636174f5",
       "gt_ids": [
         1,
@@ -170,7 +169,7 @@
     },
     "MOT17-09-SDP": {
       "selection_mode": "spreadsheet_ids",
-      "gt_path": "data/MOT17/MOT17/train/MOT17-09-SDP/gt/gt.txt",
+      "gt_path": "data/MOT17/train/MOT17-09-SDP/gt/gt.txt",
       "gt_sha256": "592f0d5b519c03b35bb1578c33d726460f63abb91ea0c515f87e8d6d76be001d",
       "gt_ids": [
         1,
@@ -202,7 +201,7 @@
     },
     "MOT17-10-SDP": {
       "selection_mode": "spreadsheet_ids",
-      "gt_path": "data/MOT17/MOT17/train/MOT17-10-SDP/gt/gt.txt",
+      "gt_path": "data/MOT17/train/MOT17-10-SDP/gt/gt.txt",
       "gt_sha256": "f8cca05d98fa36d8b6f2b807e03d32407d00d40299d679e4da320e42862677c0",
       "gt_ids": [
         1,
@@ -247,7 +246,8 @@
     }
   },
   "selection_manifest": {
-    "path": "E:\\CV\\manifests\\target_scope_20261005.json",
-    "sha256": "bd307b343a09d6b29092e1fbf191c3f1f7fc09f83350fab4db6f71b0a21396ce"
-  }
+    "path": "manifests/target_scope_20261005.json",
+    "sha256": "f795c8135775db944d79c3baf4f0cae0ef65d4471b433ff345dd6226c9ab021c"
+  },
+  "selection_source": "manual GT ID selection"
 }

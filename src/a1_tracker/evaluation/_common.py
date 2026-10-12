@@ -4,7 +4,7 @@ import csv
 import hashlib
 import json
 import math
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -39,21 +39,42 @@ EVENT_FIELDS = (
 
 
 def resolve_asset(value, *, required=True):
-    """Map frozen original paths to portable copies without rewriting manifests."""
-    mapping = read_json(ROOT / "protocols/path_map.json")
+    """Read an asset relative to the project root."""
     key = str(value).replace("\\", "/")
-    mapped = mapping.get(key)
-    original = Path(value)
-    if not mapped and original.is_absolute():
+    original = Path(key)
+    if original.is_absolute() or PureWindowsPath(key).is_absolute():
         if required:
-            raise FileNotFoundError(f"Frozen path has no portable mapping: {value}")
+            raise FileNotFoundError(f"Asset path must be project-relative: {value}")
         return None
-    path = ROOT / mapped if mapped else ROOT / original
+    path = (ROOT / original).resolve()
+    if not path.is_relative_to(ROOT.resolve()):
+        if required:
+            raise FileNotFoundError(f"Asset is outside the project: {value}")
+        return None
     if path.is_file():
         return path
     if required:
         raise FileNotFoundError(f"Missing frozen asset: {value}; prepare local reproduction inputs")
     return None
+
+
+def project_path(value):
+    """Resolve project paths independently of the caller's working directory."""
+    path = Path(value)
+    return (path if path.is_absolute() else ROOT / path).resolve()
+
+
+def portable_record(value):
+    """Serialize in-project report paths relative to the repository."""
+    if isinstance(value, dict):
+        return {key: portable_record(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [portable_record(item) for item in value]
+    if isinstance(value, str):
+        path = Path(value)
+        if path.is_absolute() and path.is_relative_to(ROOT):
+            return path.relative_to(ROOT).as_posix()
+    return value
 
 
 def sha(path):

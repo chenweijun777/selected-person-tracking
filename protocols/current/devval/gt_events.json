@@ -1,54 +1,5 @@
 {
   "schema_version": 1,
-  "scope_sha256": "9b574d1c3c94908f9cb17d4c69a39886e12672640a3262a90497825c0dd2d4eb",
-  "script_sha256": "d47b23d8b6352a4d4460b0ca1975bf640e4466f16e92065eaddd2dcf340421dc",
-  "sources": {
-    "MOT17-02-SDP": {
-      "gt_path": "data/MOT17/MOT17/train/MOT17-02-SDP/gt/gt.txt",
-      "gt_sha256": "2e3ecb488da8886d3200d402b2b08890c6d2879923839444e9b74fa43a551440",
-      "seqinfo_sha256": "f58e8717a5edb67594497a46ca8aff6212fdef8cd04aa9d0c51c811a63d6539c",
-      "fps": 30.0,
-      "length": 600,
-      "width": 1920,
-      "height": 1080
-    },
-    "MOT17-04-SDP": {
-      "gt_path": "data/MOT17/MOT17/train/MOT17-04-SDP/gt/gt.txt",
-      "gt_sha256": "f8cfbe36ef38a2e1857d7ebfe7d754b2355a3ffb9e1f9cedea435e86e4fbc948",
-      "seqinfo_sha256": "13d2c4f151a6738d26c701f490c0d4858b8015dbcaa5b16dc26f9f1b257f50e1",
-      "fps": 30.0,
-      "length": 1050,
-      "width": 1920,
-      "height": 1080
-    },
-    "MOT17-05-SDP": {
-      "gt_path": "data/MOT17/MOT17/train/MOT17-05-SDP/gt/gt.txt",
-      "gt_sha256": "ed74c54176b21b38cb690eda79a4755cf16e4c4a9ca2f019b0ba8904636174f5",
-      "seqinfo_sha256": "8bbcb68df2e6d7d391db3e30e382855688102cc22bc2ce4f9e231081168545ad",
-      "fps": 14.0,
-      "length": 837,
-      "width": 640,
-      "height": 480
-    },
-    "MOT17-09-SDP": {
-      "gt_path": "data/MOT17/MOT17/train/MOT17-09-SDP/gt/gt.txt",
-      "gt_sha256": "592f0d5b519c03b35bb1578c33d726460f63abb91ea0c515f87e8d6d76be001d",
-      "seqinfo_sha256": "439c4e3f764fa6fdf1171f238602ba6b32dc7a71a5cf8d17603d91e896a34fa8",
-      "fps": 30.0,
-      "length": 525,
-      "width": 1920,
-      "height": 1080
-    },
-    "MOT17-10-SDP": {
-      "gt_path": "data/MOT17/MOT17/train/MOT17-10-SDP/gt/gt.txt",
-      "gt_sha256": "f8cca05d98fa36d8b6f2b807e03d32407d00d40299d679e4da320e42862677c0",
-      "seqinfo_sha256": "6867998f66753629b7a4e4093d1e473131be0fa6a23fa7263b4f197bef9db3d8",
-      "fps": 30.0,
-      "length": 654,
-      "width": 1920,
-      "height": 1080
-    }
-  },
   "rules": {
     "main_visibility_threshold": 0.3,
     "boundary_margin": 0.02,
@@ -62,104 +13,51 @@
     "evaluation": "candidate flag is not a finalized denominator; require reviewed event and correct pre-event initialization",
     "data_use": "02/04/05 development; 09/10 validation; no threshold tuning"
   },
-  "summary": {
+  "sources": {
     "MOT17-02-SDP": {
-      "gt_ids": 16,
-      "intervals": 159,
-      "events": 72,
-      "state_frame_counts": {
-        "main_visible": 3493,
-        "unannotated": 4763,
-        "low_visible": 841,
-        "invisible": 503
-      },
-      "event_counts": {
-        "first_annotation": 16,
-        "disappearance_candidate": 11,
-        "full_occlusion_reappearance": 23,
-        "low_visibility_unresolved": 3,
-        "partial_visibility_recovery": 14,
-        "sequence_end_truncation": 5
-      }
+      "gt_path": "data/MOT17/train/MOT17-02-SDP/gt/gt.txt",
+      "gt_sha256": "2e3ecb488da8886d3200d402b2b08890c6d2879923839444e9b74fa43a551440",
+      "seqinfo_sha256": "f58e8717a5edb67594497a46ca8aff6212fdef8cd04aa9d0c51c811a63d6539c",
+      "fps": 30.0,
+      "length": 600,
+      "width": 1920,
+      "height": 1080
     },
     "MOT17-04-SDP": {
-      "gt_ids": 41,
-      "intervals": 225,
-      "events": 160,
-      "state_frame_counts": {
-        "main_visible": 23228,
-        "low_visible": 2731,
-        "invisible": 124,
-        "unannotated": 16967
-      },
-      "event_counts": {
-        "first_annotation": 41,
-        "sequence_end_truncation": 22,
-        "full_occlusion_reappearance": 9,
-        "disappearance_candidate": 19,
-        "partial_visibility_recovery": 50,
-        "low_visibility_unresolved": 19
-      }
+      "gt_path": "data/MOT17/train/MOT17-04-SDP/gt/gt.txt",
+      "gt_sha256": "f8cfbe36ef38a2e1857d7ebfe7d754b2355a3ffb9e1f9cedea435e86e4fbc948",
+      "seqinfo_sha256": "13d2c4f151a6738d26c701f490c0d4858b8015dbcaa5b16dc26f9f1b257f50e1",
+      "fps": 30.0,
+      "length": 1050,
+      "width": 1920,
+      "height": 1080
     },
     "MOT17-05-SDP": {
-      "gt_ids": 62,
-      "intervals": 467,
-      "events": 249,
-      "state_frame_counts": {
-        "main_visible": 3485,
-        "low_visible": 539,
-        "unannotated": 47356,
-        "invisible": 514
-      },
-      "event_counts": {
-        "first_annotation": 62,
-        "partial_visibility_recovery": 51,
-        "low_visibility_unresolved": 13,
-        "disappearance_candidate": 55,
-        "full_occlusion_reappearance": 55,
-        "full_occlusion_unresolved": 6,
-        "sequence_end_truncation": 7
-      }
+      "gt_path": "data/MOT17/train/MOT17-05-SDP/gt/gt.txt",
+      "gt_sha256": "ed74c54176b21b38cb690eda79a4755cf16e4c4a9ca2f019b0ba8904636174f5",
+      "seqinfo_sha256": "8bbcb68df2e6d7d391db3e30e382855688102cc22bc2ce4f9e231081168545ad",
+      "fps": 14.0,
+      "length": 837,
+      "width": 640,
+      "height": 480
     },
     "MOT17-09-SDP": {
-      "gt_ids": 19,
-      "intervals": 235,
-      "events": 97,
-      "state_frame_counts": {
-        "main_visible": 3272,
-        "low_visible": 613,
-        "invisible": 875,
-        "unannotated": 5215
-      },
-      "event_counts": {
-        "first_annotation": 19,
-        "full_occlusion_reappearance": 27,
-        "full_occlusion_unresolved": 6,
-        "disappearance_candidate": 13,
-        "low_visibility_unresolved": 8,
-        "sequence_end_truncation": 6,
-        "partial_visibility_recovery": 18
-      }
+      "gt_path": "data/MOT17/train/MOT17-09-SDP/gt/gt.txt",
+      "gt_sha256": "592f0d5b519c03b35bb1578c33d726460f63abb91ea0c515f87e8d6d76be001d",
+      "seqinfo_sha256": "439c4e3f764fa6fdf1171f238602ba6b32dc7a71a5cf8d17603d91e896a34fa8",
+      "fps": 30.0,
+      "length": 525,
+      "width": 1920,
+      "height": 1080
     },
     "MOT17-10-SDP": {
-      "gt_ids": 28,
-      "intervals": 418,
-      "events": 162,
-      "state_frame_counts": {
-        "main_visible": 6997,
-        "unannotated": 9626,
-        "low_visible": 948,
-        "invisible": 741
-      },
-      "event_counts": {
-        "first_annotation": 28,
-        "disappearance_candidate": 24,
-        "full_occlusion_reappearance": 37,
-        "sequence_end_truncation": 4,
-        "partial_visibility_recovery": 57,
-        "low_visibility_unresolved": 10,
-        "full_occlusion_unresolved": 2
-      }
+      "gt_path": "data/MOT17/train/MOT17-10-SDP/gt/gt.txt",
+      "gt_sha256": "f8cca05d98fa36d8b6f2b807e03d32407d00d40299d679e4da320e42862677c0",
+      "seqinfo_sha256": "6867998f66753629b7a4e4093d1e473131be0fa6a23fa7263b4f197bef9db3d8",
+      "fps": 30.0,
+      "length": 654,
+      "width": 1920,
+      "height": 1080
     }
   },
   "events": [
@@ -58469,54 +58367,5 @@
       "event_id": "MOT17-10-SDP_GT57_0006"
     }
   ],
-  "human_review": {
-    "path": "E:\\CV\\manifests\\recovery_event_review_20261003.json",
-    "sha256": "b89d3c6f3ca07ab9919d5a19acfd334db67164be2c33bfaa465ef6d24e2e9db5",
-    "reviewed_events": 32,
-    "source_reviewed_events": 37
-  },
-  "curation": {
-    "exclusions": {
-      "path": "E:\\CV\\manifests\\recovery_event_exclusions_20261005.json",
-      "sha256": "b125609dc8b8aae729040a9ae9fa9f8db3425952650200355ab48cf92d6bef8b"
-    },
-    "sources": [
-      {
-        "path": "E:\\CV\\outputs\\gt_event_timeline_20261002\\gt_events.json",
-        "sha256": "f388aa9446160ac9c7429c2badb268c032fcf9dc3badc5c8e60befb1ff69735e"
-      },
-      {
-        "path": "E:\\CV\\outputs\\gt_event_reviewed_20261003_37\\gt_events.json",
-        "sha256": "f86fa22c660ffbddeaf9516ef2aa5c0859424efa617c4af5389d2da9c976a195"
-      }
-    ],
-    "removed_event_ids": [
-      "MOT17-02-SDP_GT3_0002",
-      "MOT17-05-SDP_GT125_0002",
-      "MOT17-05-SDP_GT2_0005",
-      "MOT17-05-SDP_GT44_0002",
-      "MOT17-05-SDP_GT94_0006",
-      "MOT17-09-SDP_GT10_0009",
-      "MOT17-09-SDP_GT29_0003",
-      "MOT17-09-SDP_GT7_0002",
-      "MOT17-10-SDP_GT11_0003",
-      "MOT17-10-SDP_GT13_0002",
-      "MOT17-10-SDP_GT18_0002",
-      "MOT17-10-SDP_GT23_0002",
-      "MOT17-10-SDP_GT26_0002",
-      "MOT17-10-SDP_GT26_0005"
-    ]
-  },
-  "scope_revision": {
-    "scope": {
-      "path": "E:\\CV\\manifests\\target_scope_20261005.json",
-      "sha256": "bd307b343a09d6b29092e1fbf191c3f1f7fc09f83350fab4db6f71b0a21396ce"
-    },
-    "source_events": {
-      "path": "E:\\CV\\data\\recovery_event_curation_20261005\\gt_events.json",
-      "sha256": "5a49d6156130cd53a15b68fefc1cd4044f8c440c1639be894d48948e5e23b7ad"
-    },
-    "removed_by_gt_scope": 194,
-    "retained_event_ids_unchanged": true
-  }
+  "origin_sha256": "f72b6ab583a9bf2ddb5458b257a0f1c1f96408cff2003641e29021d49cfc0891"
 }

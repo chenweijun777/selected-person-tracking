@@ -6,9 +6,8 @@ import csv
 import json
 import math
 from collections import defaultdict
-from pathlib import Path
 
-from ._common import ROOT, boolean, box, csv_rows, read_json, record, resolve_asset
+from ._common import ROOT, boolean, box, csv_rows, read_json, record, resolve_asset, project_path
 
 
 def tracker_adapter(path, sequences, lengths):
@@ -47,15 +46,15 @@ def target_adapter(path, protocol, sequences, options, dependencies):
         for c in protocol["cases"]
         if c["sequence"] in sequences and c["selection_frame"] is not None
     ]
-    mapping_path = Path(
+    mapping_path = project_path(
         options.get(
             "episode_manifest",
             ROOT
-            / "protocols/frozen"
+            / "protocols/current"
             / ("test" if "MOT17-11-SDP" in sequences else "devval")
             / "episode_manifest.json",
         )
-    ).resolve()
+    )
     dependencies.append(record(mapping_path))
     episode_map = {
         (e["sequence"], e["episode_id"]): int(e["target_gt_id"])

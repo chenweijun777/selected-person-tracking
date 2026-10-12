@@ -9,6 +9,8 @@ from pathlib import Path
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
+ABSOLUTE_PATH = re.compile(r"(?<![A-Za-z0-9])(?:[A-Za-z]:[\\/]|/(?:home|Users|mnt|tmp)/)")
+TEXT_SUFFIXES = {".py", ".md", ".json", ".jsonl", ".yaml", ".yml", ".toml", ".csv", ".txt", ".cmd", ".ini"}
 PUBLIC = [
     "README.md",
     "LICENSE",
@@ -69,6 +71,10 @@ def check():
             ".zip",
         }:
             errors.append(f"Large/research artifact in release: {rel}")
+        if path.suffix.lower() in TEXT_SUFFIXES:
+            for line_number, line in enumerate(path.read_text(encoding="utf-8-sig").splitlines(), 1):
+                if ABSOLUTE_PATH.search(line):
+                    errors.append(f"Machine-specific absolute path: {rel}:{line_number}")
         if path.suffix == ".py" and path.parts[len(ROOT.parts)] in {
             "src",
             "tools",

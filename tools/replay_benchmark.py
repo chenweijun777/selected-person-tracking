@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 from a1_tracker.evaluation import evaluate_run
+from a1_tracker.evaluation._common import portable_record, project_path
 from a1_tracker.evaluation.replay import ReplaySequence, replay
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,10 +28,12 @@ def main():
     )
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
+    args.inputs = project_path(args.inputs)
+    args.output = project_path(args.output)
     args.output.mkdir(parents=True, exist_ok=False)
-    pp = args.protocol or ROOT / "protocols/frozen" / f"{args.split}.json"
+    pp = project_path(args.protocol) if args.protocol else ROOT / "protocols/current" / f"{args.split}.json"
     protocol = json.loads(pp.read_text(encoding="utf-8"))
-    config = json.loads(args.config.read_text(encoding="utf-8"))
+    config = json.loads(project_path(args.config).read_text(encoding="utf-8"))
     config.pop("status", None)
     cases = [
         c
@@ -60,11 +63,11 @@ def main():
             for seq in sequences:
                 with (args.output / seq / f"{mode}.csv").open(encoding="utf-8", newline="") as src:
                     writer.writerows(csv.DictReader(src))
-        scope = ROOT / "protocols/frozen" / ("test" if args.split == "test" else "devval")
+        scope = ROOT / "protocols/current" / ("test" if args.split == "test" else "devval")
         metadata = args.output / f"{mode}.json"
         metadata.write_text(
             json.dumps(
-                {
+                portable_record({
                     "algorithm": mode,
                     "effective_config": config,
                     "evaluation": {
@@ -73,7 +76,7 @@ def main():
                         "visibility": str(scope / "visibility_intervals.csv"),
                         "episode_manifest": str(scope / "episode_manifest.json"),
                     },
-                },
+                }),
                 indent=2,
             ),
             encoding="utf-8",

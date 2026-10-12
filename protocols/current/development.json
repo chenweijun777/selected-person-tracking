@@ -1,0 +1,1813 @@
+{
+  "schema_version": 1,
+  "scoring": {
+    "gt_filter": "mark=1,class=1; compare original unclipped xyxy boxes",
+    "iou_min": 0.5,
+    "primary_visibility_min": 0.3,
+    "event_correct_visibility_min_exclusive": 0,
+    "stable_correct_seconds": 0.2,
+    "ambiguous_multiple_gt_overlap": "A, never force an identity",
+    "unannotated_target_frames": "unknown; not exit errors"
+  },
+  "detector": "Finetuned_yolo26s_O2M_960",
+  "tracker": "Finetuned_Joint",
+  "case_scope": "Fixed selected targets and selection frames; failed initialization retained",
+  "sequences": {
+    "MOT17-02-SDP": {
+      "split": "development",
+      "gt": "data/MOT17/train/MOT17-02-SDP/gt/gt.txt",
+      "seqinfo": "data/MOT17/train/MOT17-02-SDP/seqinfo.ini",
+      "images": "data/MOT17/train/MOT17-02-SDP/img1",
+      "t2_tracks": "reproduction_inputs/MOT17-02-SDP/tracks.txt"
+    },
+    "MOT17-04-SDP": {
+      "split": "development",
+      "gt": "data/MOT17/train/MOT17-04-SDP/gt/gt.txt",
+      "seqinfo": "data/MOT17/train/MOT17-04-SDP/seqinfo.ini",
+      "images": "data/MOT17/train/MOT17-04-SDP/img1",
+      "t2_tracks": "reproduction_inputs/MOT17-04-SDP/tracks.txt"
+    },
+    "MOT17-05-SDP": {
+      "split": "development",
+      "gt": "data/MOT17/train/MOT17-05-SDP/gt/gt.txt",
+      "seqinfo": "data/MOT17/train/MOT17-05-SDP/seqinfo.ini",
+      "images": "data/MOT17/train/MOT17-05-SDP/img1",
+      "t2_tracks": "reproduction_inputs/MOT17-05-SDP/tracks.txt"
+    }
+  },
+  "cases": [
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 2,
+      "selection_frame": 8,
+      "initial_tracker_id": 1,
+      "end_frame": 56,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1389.0,
+        414.0,
+        1538.0,
+        800.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 3,
+      "selection_frame": 3,
+      "initial_tracker_id": 3,
+      "end_frame": 575,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        586.0,
+        446.0,
+        671.0,
+        710.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 8,
+      "selection_frame": 8,
+      "initial_tracker_id": 2,
+      "end_frame": 43,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1482.0,
+        430.0,
+        1640.0,
+        774.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 16,
+      "selection_frame": 433,
+      "initial_tracker_id": null,
+      "end_frame": 487,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1429.0,
+        323.0,
+        1921.0,
+        1339.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 19,
+      "selection_frame": 162,
+      "initial_tracker_id": 4,
+      "end_frame": 549,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        536.0,
+        422.0,
+        704.0,
+        891.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 20,
+      "selection_frame": 25,
+      "initial_tracker_id": 5,
+      "end_frame": 322,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        648.0,
+        461.0,
+        717.0,
+        655.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 21,
+      "selection_frame": 12,
+      "initial_tracker_id": 15,
+      "end_frame": 80,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1382.0,
+        437.0,
+        1446.0,
+        562.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 23,
+      "selection_frame": 246,
+      "initial_tracker_id": 17,
+      "end_frame": 586,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        777.0,
+        435.0,
+        923.0,
+        878.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 32,
+      "selection_frame": 309,
+      "initial_tracker_id": 610,
+      "end_frame": 600,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        -70.0,
+        400.0,
+        121.0,
+        856.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 33,
+      "selection_frame": 337,
+      "initial_tracker_id": 709,
+      "end_frame": 600,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        -69.0,
+        444.0,
+        144.0,
+        784.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 34,
+      "selection_frame": 355,
+      "initial_tracker_id": 742,
+      "end_frame": 600,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        -61.0,
+        449.0,
+        133.0,
+        857.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 35,
+      "selection_frame": 378,
+      "initial_tracker_id": 805,
+      "end_frame": 600,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        -50.0,
+        435.0,
+        124.0,
+        809.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 36,
+      "selection_frame": 41,
+      "initial_tracker_id": 19,
+      "end_frame": 516,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        581.0,
+        455.0,
+        622.0,
+        590.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 37,
+      "selection_frame": 142,
+      "initial_tracker_id": 160,
+      "end_frame": 336,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        858.0,
+        440.0,
+        947.0,
+        675.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 38,
+      "selection_frame": 255,
+      "initial_tracker_id": 274,
+      "end_frame": 600,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1806.0,
+        404.0,
+        1968.0,
+        779.0
+      ]
+    },
+    {
+      "sequence": "MOT17-02-SDP",
+      "gt_id": 39,
+      "selection_frame": 73,
+      "initial_tracker_id": 111,
+      "end_frame": 376,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1043.0,
+        454.0,
+        1075.0,
+        531.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 1,
+      "selection_frame": 3,
+      "initial_tracker_id": 3,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1362.0,
+        568.0,
+        1465.0,
+        809.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 2,
+      "selection_frame": 3,
+      "initial_tracker_id": 1,
+      "end_frame": 680,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        372.0,
+        407.0,
+        452.0,
+        646.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 3,
+      "selection_frame": 3,
+      "initial_tracker_id": 2,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        102.0,
+        549.0,
+        185.0,
+        799.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 4,
+      "selection_frame": 3,
+      "initial_tracker_id": 5,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1732.0,
+        457.0,
+        1808.0,
+        669.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 5,
+      "selection_frame": 12,
+      "initial_tracker_id": null,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1132.0,
+        973.0,
+        1209.0,
+        1188.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 60,
+      "selection_frame": 3,
+      "initial_tracker_id": 16,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        795.0,
+        149.0,
+        855.0,
+        323.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 61,
+      "selection_frame": 3,
+      "initial_tracker_id": 11,
+      "end_frame": 80,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1791.0,
+        208.0,
+        1856.0,
+        391.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 62,
+      "selection_frame": 3,
+      "initial_tracker_id": 24,
+      "end_frame": 464,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1487.0,
+        70.0,
+        1540.0,
+        216.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 63,
+      "selection_frame": 3,
+      "initial_tracker_id": 10,
+      "end_frame": 688,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1633.0,
+        263.0,
+        1698.0,
+        445.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 65,
+      "selection_frame": 36,
+      "initial_tracker_id": 38,
+      "end_frame": 650,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1500.0,
+        225.0,
+        1560.0,
+        417.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 66,
+      "selection_frame": 3,
+      "initial_tracker_id": 6,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1091.0,
+        211.0,
+        1157.0,
+        391.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 67,
+      "selection_frame": 3,
+      "initial_tracker_id": 7,
+      "end_frame": 519,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1031.0,
+        134.0,
+        1109.0,
+        316.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 70,
+      "selection_frame": 3,
+      "initial_tracker_id": 22,
+      "end_frame": 690,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        873.0,
+        123.0,
+        932.0,
+        303.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 71,
+      "selection_frame": 3,
+      "initial_tracker_id": 28,
+      "end_frame": 680,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        912.0,
+        131.0,
+        961.0,
+        292.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 74,
+      "selection_frame": 3,
+      "initial_tracker_id": 17,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1447.0,
+        249.0,
+        1500.0,
+        419.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 75,
+      "selection_frame": 3,
+      "initial_tracker_id": 31,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1417.0,
+        196.0,
+        1463.0,
+        367.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 80,
+      "selection_frame": 10,
+      "initial_tracker_id": null,
+      "end_frame": 890,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        -29.0,
+        863.0,
+        43.0,
+        1118.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 82,
+      "selection_frame": 132,
+      "initial_tracker_id": 18,
+      "end_frame": 633,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        568.0,
+        242.0,
+        623.0,
+        430.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 83,
+      "selection_frame": 129,
+      "initial_tracker_id": 9,
+      "end_frame": 650,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        525.0,
+        249.0,
+        593.0,
+        455.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 89,
+      "selection_frame": 50,
+      "initial_tracker_id": 32,
+      "end_frame": 560,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        424.0,
+        98.0,
+        476.0,
+        251.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 98,
+      "selection_frame": 167,
+      "initial_tracker_id": 102,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        354.0,
+        -58.0,
+        397.0,
+        99.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 99,
+      "selection_frame": 49,
+      "initial_tracker_id": null,
+      "end_frame": 789,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        379.0,
+        966.0,
+        477.0,
+        1189.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 102,
+      "selection_frame": 873,
+      "initial_tracker_id": null,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1374.0,
+        975.0,
+        1470.0,
+        1181.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 103,
+      "selection_frame": 871,
+      "initial_tracker_id": 900,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1754.0,
+        685.0,
+        1868.0,
+        916.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 105,
+      "selection_frame": 423,
+      "initial_tracker_id": 401,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1867.0,
+        426.0,
+        1945.0,
+        618.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 106,
+      "selection_frame": 309,
+      "initial_tracker_id": 342,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1847.0,
+        535.0,
+        1915.0,
+        748.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 107,
+      "selection_frame": 789,
+      "initial_tracker_id": 719,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1587.0,
+        -25.0,
+        1642.0,
+        122.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 108,
+      "selection_frame": 850,
+      "initial_tracker_id": 898,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1565.0,
+        5.0,
+        1611.0,
+        149.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 111,
+      "selection_frame": 439,
+      "initial_tracker_id": 374,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1513.0,
+        -53.0,
+        1564.0,
+        94.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 112,
+      "selection_frame": 821,
+      "initial_tracker_id": null,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1059.0,
+        -77.0,
+        1116.0,
+        81.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 118,
+      "selection_frame": 220,
+      "initial_tracker_id": 110,
+      "end_frame": 620,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1561.0,
+        -12.0,
+        1615.0,
+        132.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 119,
+      "selection_frame": 343,
+      "initial_tracker_id": 382,
+      "end_frame": 718,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1885.0,
+        65.0,
+        1941.0,
+        224.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 120,
+      "selection_frame": 407,
+      "initial_tracker_id": 424,
+      "end_frame": 700,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1872.0,
+        67.0,
+        1947.0,
+        241.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 121,
+      "selection_frame": 317,
+      "initial_tracker_id": 312,
+      "end_frame": 556,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        1570.0,
+        -38.0,
+        1624.0,
+        104.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 122,
+      "selection_frame": 173,
+      "initial_tracker_id": 177,
+      "end_frame": 377,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        -33.0,
+        607.0,
+        69.0,
+        847.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 123,
+      "selection_frame": 204,
+      "initial_tracker_id": 204,
+      "end_frame": 409,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        -37.0,
+        603.0,
+        65.0,
+        837.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 124,
+      "selection_frame": 367,
+      "initial_tracker_id": 268,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        423.0,
+        -55.0,
+        470.0,
+        83.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 125,
+      "selection_frame": 334,
+      "initial_tracker_id": null,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        372.0,
+        -66.0,
+        415.0,
+        70.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 132,
+      "selection_frame": 943,
+      "initial_tracker_id": 1,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        438.0,
+        226.0,
+        506.0,
+        416.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 133,
+      "selection_frame": 644,
+      "initial_tracker_id": 546,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        357.0,
+        -17.0,
+        407.0,
+        136.0
+      ]
+    },
+    {
+      "sequence": "MOT17-04-SDP",
+      "gt_id": 134,
+      "selection_frame": 943,
+      "initial_tracker_id": 549,
+      "end_frame": 1050,
+      "fps": 30.0,
+      "selection_bbox_xyxy": [
+        478.0,
+        212.0,
+        537.0,
+        393.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 1,
+      "selection_frame": 103,
+      "initial_tracker_id": 2,
+      "end_frame": 381,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        -22.0,
+        -22.0,
+        233.0,
+        602.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 2,
+      "selection_frame": 213,
+      "initial_tracker_id": 8,
+      "end_frame": 336,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        139.0,
+        57.0,
+        279.0,
+        425.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 20,
+      "selection_frame": 246,
+      "initial_tracker_id": 190,
+      "end_frame": 308,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        412.0,
+        171.0,
+        447.0,
+        284.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 23,
+      "selection_frame": 253,
+      "initial_tracker_id": 198,
+      "end_frame": 273,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        464.0,
+        145.0,
+        519.0,
+        323.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 25,
+      "selection_frame": 290,
+      "initial_tracker_id": 202,
+      "end_frame": 305,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        371.0,
+        54.0,
+        478.0,
+        401.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 26,
+      "selection_frame": 288,
+      "initial_tracker_id": 227,
+      "end_frame": 296,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        393.0,
+        62.0,
+        526.0,
+        464.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 30,
+      "selection_frame": 299,
+      "initial_tracker_id": 158,
+      "end_frame": 309,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        405.0,
+        166.0,
+        492.0,
+        337.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 31,
+      "selection_frame": 346,
+      "initial_tracker_id": 233,
+      "end_frame": 349,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        537.0,
+        117.0,
+        625.0,
+        361.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 33,
+      "selection_frame": 302,
+      "initial_tracker_id": 239,
+      "end_frame": 341,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        366.0,
+        161.0,
+        424.0,
+        308.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 34,
+      "selection_frame": 306,
+      "initial_tracker_id": 28,
+      "end_frame": 346,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        298.0,
+        154.0,
+        363.0,
+        322.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 35,
+      "selection_frame": 326,
+      "initial_tracker_id": 263,
+      "end_frame": 334,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        108.0,
+        81.0,
+        205.0,
+        341.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 36,
+      "selection_frame": 306,
+      "initial_tracker_id": 219,
+      "end_frame": 332,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        343.0,
+        189.0,
+        394.0,
+        317.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 37,
+      "selection_frame": 312,
+      "initial_tracker_id": 134,
+      "end_frame": 313,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        -49.0,
+        58.0,
+        115.0,
+        469.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 38,
+      "selection_frame": 316,
+      "initial_tracker_id": 237,
+      "end_frame": 472,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        18.0,
+        146.0,
+        85.0,
+        324.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 41,
+      "selection_frame": 352,
+      "initial_tracker_id": 8,
+      "end_frame": 357,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        508.0,
+        58.0,
+        613.0,
+        407.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 42,
+      "selection_frame": 327,
+      "initial_tracker_id": 268,
+      "end_frame": 464,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        -20.0,
+        124.0,
+        30.0,
+        288.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 44,
+      "selection_frame": 344,
+      "initial_tracker_id": 295,
+      "end_frame": 366,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        213.0,
+        166.0,
+        259.0,
+        264.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 45,
+      "selection_frame": 357,
+      "initial_tracker_id": 268,
+      "end_frame": 396,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        -56.0,
+        41.0,
+        109.0,
+        356.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 47,
+      "selection_frame": 374,
+      "initial_tracker_id": 315,
+      "end_frame": 404,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        184.0,
+        217.0,
+        208.0,
+        273.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 50,
+      "selection_frame": 382,
+      "initial_tracker_id": 324,
+      "end_frame": 401,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        506.0,
+        162.0,
+        587.0,
+        337.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 52,
+      "selection_frame": 439,
+      "initial_tracker_id": 361,
+      "end_frame": 583,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        542.0,
+        73.0,
+        681.0,
+        413.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 53,
+      "selection_frame": 467,
+      "initial_tracker_id": 364,
+      "end_frame": 598,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        566.0,
+        81.0,
+        662.0,
+        404.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 54,
+      "selection_frame": 444,
+      "initial_tracker_id": 355,
+      "end_frame": 612,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        346.0,
+        133.0,
+        409.0,
+        315.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 55,
+      "selection_frame": 515,
+      "initial_tracker_id": 392,
+      "end_frame": 552,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        92.0,
+        81.0,
+        203.0,
+        407.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 56,
+      "selection_frame": 514,
+      "initial_tracker_id": 394,
+      "end_frame": 517,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        10.0,
+        119.0,
+        86.0,
+        356.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 57,
+      "selection_frame": 530,
+      "initial_tracker_id": 396,
+      "end_frame": 546,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        116.0,
+        165.0,
+        167.0,
+        316.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 58,
+      "selection_frame": 540,
+      "initial_tracker_id": 347,
+      "end_frame": 562,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        124.0,
+        142.0,
+        177.0,
+        291.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 59,
+      "selection_frame": 545,
+      "initial_tracker_id": 402,
+      "end_frame": 572,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        187.0,
+        144.0,
+        239.0,
+        298.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 60,
+      "selection_frame": 568,
+      "initial_tracker_id": 361,
+      "end_frame": 579,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        415.0,
+        40.0,
+        530.0,
+        405.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 61,
+      "selection_frame": 585,
+      "initial_tracker_id": 426,
+      "end_frame": 600,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        202.0,
+        153.0,
+        250.0,
+        305.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 62,
+      "selection_frame": 561,
+      "initial_tracker_id": 409,
+      "end_frame": 566,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        453.0,
+        66.0,
+        558.0,
+        434.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 63,
+      "selection_frame": 600,
+      "initial_tracker_id": 441,
+      "end_frame": 617,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        139.0,
+        153.0,
+        212.0,
+        314.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 65,
+      "selection_frame": 615,
+      "initial_tracker_id": 454,
+      "end_frame": 634,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        132.0,
+        152.0,
+        185.0,
+        296.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 66,
+      "selection_frame": 639,
+      "initial_tracker_id": 460,
+      "end_frame": 736,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        308.0,
+        117.0,
+        373.0,
+        358.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 67,
+      "selection_frame": 616,
+      "initial_tracker_id": 392,
+      "end_frame": 692,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        188.0,
+        105.0,
+        267.0,
+        374.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 70,
+      "selection_frame": 664,
+      "initial_tracker_id": 483,
+      "end_frame": 669,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        15.0,
+        118.0,
+        100.0,
+        342.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 71,
+      "selection_frame": 675,
+      "initial_tracker_id": 486,
+      "end_frame": 837,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        399.0,
+        114.0,
+        488.0,
+        388.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 72,
+      "selection_frame": null,
+      "initial_tracker_id": null,
+      "end_frame": 676,
+      "fps": 14.0
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 73,
+      "selection_frame": null,
+      "initial_tracker_id": null,
+      "end_frame": 688,
+      "fps": 14.0
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 76,
+      "selection_frame": 693,
+      "initial_tracker_id": 504,
+      "end_frame": 700,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        40.0,
+        131.0,
+        105.0,
+        317.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 81,
+      "selection_frame": null,
+      "initial_tracker_id": null,
+      "end_frame": 712,
+      "fps": 14.0
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 82,
+      "selection_frame": 715,
+      "initial_tracker_id": 513,
+      "end_frame": 728,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        12.0,
+        88.0,
+        104.0,
+        340.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 86,
+      "selection_frame": 739,
+      "initial_tracker_id": 529,
+      "end_frame": 752,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        96.0,
+        134.0,
+        164.0,
+        332.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 88,
+      "selection_frame": 748,
+      "initial_tracker_id": 536,
+      "end_frame": 763,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        116.0,
+        125.0,
+        178.0,
+        327.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 90,
+      "selection_frame": 766,
+      "initial_tracker_id": 543,
+      "end_frame": 786,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        141.0,
+        159.0,
+        194.0,
+        284.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 91,
+      "selection_frame": 769,
+      "initial_tracker_id": 546,
+      "end_frame": 792,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        180.0,
+        157.0,
+        228.0,
+        283.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 93,
+      "selection_frame": 787,
+      "initial_tracker_id": 352,
+      "end_frame": 834,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        333.0,
+        30.0,
+        537.0,
+        464.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 94,
+      "selection_frame": 802,
+      "initial_tracker_id": 567,
+      "end_frame": 824,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        417.0,
+        40.0,
+        542.0,
+        444.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 95,
+      "selection_frame": 786,
+      "initial_tracker_id": 553,
+      "end_frame": 797,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        172.0,
+        110.0,
+        249.0,
+        358.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 97,
+      "selection_frame": 792,
+      "initial_tracker_id": 571,
+      "end_frame": 835,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        191.0,
+        188.0,
+        228.0,
+        278.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 98,
+      "selection_frame": 779,
+      "initial_tracker_id": 539,
+      "end_frame": 837,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        101.0,
+        167.0,
+        140.0,
+        267.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 99,
+      "selection_frame": 796,
+      "initial_tracker_id": 528,
+      "end_frame": 820,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        121.0,
+        177.0,
+        161.0,
+        275.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 100,
+      "selection_frame": 801,
+      "initial_tracker_id": 575,
+      "end_frame": 837,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        205.0,
+        185.0,
+        233.0,
+        269.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 101,
+      "selection_frame": 800,
+      "initial_tracker_id": 523,
+      "end_frame": 828,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        20.0,
+        144.0,
+        68.0,
+        296.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 102,
+      "selection_frame": 813,
+      "initial_tracker_id": 583,
+      "end_frame": 837,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        269.0,
+        193.0,
+        294.0,
+        280.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 104,
+      "selection_frame": 820,
+      "initial_tracker_id": 594,
+      "end_frame": 837,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        278.0,
+        183.0,
+        311.0,
+        273.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 105,
+      "selection_frame": 830,
+      "initial_tracker_id": 457,
+      "end_frame": 837,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        290.0,
+        176.0,
+        330.0,
+        278.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 123,
+      "selection_frame": 308,
+      "initial_tracker_id": 210,
+      "end_frame": 320,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        501.0,
+        118.0,
+        626.0,
+        383.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 124,
+      "selection_frame": 452,
+      "initial_tracker_id": 360,
+      "end_frame": 541,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        -74.0,
+        5.0,
+        150.0,
+        548.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 125,
+      "selection_frame": 3,
+      "initial_tracker_id": 1,
+      "end_frame": 284,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        121.0,
+        151.0,
+        207.0,
+        335.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 128,
+      "selection_frame": 425,
+      "initial_tracker_id": 352,
+      "end_frame": 807,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        430.0,
+        40.0,
+        617.0,
+        444.0
+      ]
+    },
+    {
+      "sequence": "MOT17-05-SDP",
+      "gt_id": 129,
+      "selection_frame": 629,
+      "initial_tracker_id": 434,
+      "end_frame": 837,
+      "fps": 14.0,
+      "selection_bbox_xyxy": [
+        -64.0,
+        -29.0,
+        156.0,
+        549.0
+      ]
+    }
+  ],
+  "events": {
+    "development": {
+      "common_event_ids": [
+        "MOT17-02-SDP_GT3_0003",
+        "MOT17-02-SDP_GT8_0002",
+        "MOT17-02-SDP_GT23_0005",
+        "MOT17-02-SDP_GT32_0002",
+        "MOT17-02-SDP_GT32_0003",
+        "MOT17-02-SDP_GT33_0002",
+        "MOT17-02-SDP_GT33_0003",
+        "MOT17-02-SDP_GT34_0002",
+        "MOT17-02-SDP_GT35_0003",
+        "MOT17-02-SDP_GT36_0004",
+        "MOT17-02-SDP_GT38_0002",
+        "MOT17-04-SDP_GT60_0002",
+        "MOT17-04-SDP_GT70_0002",
+        "MOT17-04-SDP_GT71_0002",
+        "MOT17-04-SDP_GT82_0004",
+        "MOT17-04-SDP_GT83_0002",
+        "MOT17-05-SDP_GT1_0002",
+        "MOT17-05-SDP_GT20_0003",
+        "MOT17-05-SDP_GT33_0003",
+        "MOT17-05-SDP_GT38_0006",
+        "MOT17-05-SDP_GT38_0007",
+        "MOT17-05-SDP_GT42_0002",
+        "MOT17-05-SDP_GT52_0002",
+        "MOT17-05-SDP_GT54_0003",
+        "MOT17-05-SDP_GT54_0004",
+        "MOT17-05-SDP_GT66_0004",
+        "MOT17-05-SDP_GT67_0003",
+        "MOT17-05-SDP_GT71_0003",
+        "MOT17-05-SDP_GT94_0004",
+        "MOT17-05-SDP_GT94_0005",
+        "MOT17-05-SDP_GT98_0004",
+        "MOT17-05-SDP_GT128_0002"
+      ],
+      "a0_outage_event_ids": [
+        "MOT17-02-SDP_GT3_0003",
+        "MOT17-02-SDP_GT23_0005",
+        "MOT17-02-SDP_GT32_0002",
+        "MOT17-02-SDP_GT32_0003",
+        "MOT17-02-SDP_GT33_0002",
+        "MOT17-02-SDP_GT33_0003",
+        "MOT17-02-SDP_GT34_0002",
+        "MOT17-02-SDP_GT35_0003",
+        "MOT17-02-SDP_GT36_0004",
+        "MOT17-02-SDP_GT38_0002",
+        "MOT17-04-SDP_GT60_0002",
+        "MOT17-04-SDP_GT70_0002",
+        "MOT17-04-SDP_GT71_0002",
+        "MOT17-04-SDP_GT82_0004",
+        "MOT17-05-SDP_GT1_0002",
+        "MOT17-05-SDP_GT20_0003",
+        "MOT17-05-SDP_GT33_0003",
+        "MOT17-05-SDP_GT38_0006",
+        "MOT17-05-SDP_GT38_0007",
+        "MOT17-05-SDP_GT42_0002",
+        "MOT17-05-SDP_GT52_0002",
+        "MOT17-05-SDP_GT54_0003",
+        "MOT17-05-SDP_GT54_0004",
+        "MOT17-05-SDP_GT71_0003",
+        "MOT17-05-SDP_GT98_0004",
+        "MOT17-05-SDP_GT128_0002"
+      ]
+    }
+  },
+  "origin_sha256": "5ccb0d2ca78c874c3f1a432fa6a200061746baee5570d474b9d2c905ece1b7b9",
+  "files": [
+    {
+      "path": "protocols/current/devval/gt_events.json",
+      "sha256": "00b4b728267bfb15c50abe673b196c12c69ae5dc137861461cd47c190f259a68"
+    },
+    {
+      "path": "protocols/current/devval/gt_events.csv",
+      "sha256": "91cd63c7510415df45797e6cab3dfa4641503e071de7663be249da71d6241a2c"
+    },
+    {
+      "path": "protocols/current/devval/visibility_intervals.csv",
+      "sha256": "6cc14d77351a2119c7ad163ea505e203118cd60c42514d5349cf76ecb93f9ce4"
+    },
+    {
+      "path": "protocols/current/devval/selection_manifest.json",
+      "sha256": "513e9e646bef7e3d9e361431ef38e346be9f603a5497a8c64d82715cb7192f52"
+    },
+    {
+      "path": "protocols/current/devval/episode_manifest.json",
+      "sha256": "a2ad495ea551cb43f7d38365c3b1f7716d49b85e76f709d2ecb31b4923c36df5"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-02-SDP/gt/gt.txt",
+      "sha256": "2e3ecb488da8886d3200d402b2b08890c6d2879923839444e9b74fa43a551440"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-02-SDP/seqinfo.ini",
+      "sha256": "f58e8717a5edb67594497a46ca8aff6212fdef8cd04aa9d0c51c811a63d6539c"
+    },
+    {
+      "path": "reproduction_inputs/MOT17-02-SDP/tracks.txt",
+      "sha256": "b40540197f7cdc9aea6f7a9f2bd4fcf203d0647620fe015e92bc4056654cb39b"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-04-SDP/gt/gt.txt",
+      "sha256": "f8cfbe36ef38a2e1857d7ebfe7d754b2355a3ffb9e1f9cedea435e86e4fbc948"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-04-SDP/seqinfo.ini",
+      "sha256": "13d2c4f151a6738d26c701f490c0d4858b8015dbcaa5b16dc26f9f1b257f50e1"
+    },
+    {
+      "path": "reproduction_inputs/MOT17-04-SDP/tracks.txt",
+      "sha256": "95b7a80f19ac251aa886d4ec66e129e8cb802cfc43982992ba63f2193519554e"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-05-SDP/gt/gt.txt",
+      "sha256": "ed74c54176b21b38cb690eda79a4755cf16e4c4a9ca2f019b0ba8904636174f5"
+    },
+    {
+      "path": "data/MOT17/train/MOT17-05-SDP/seqinfo.ini",
+      "sha256": "8bbcb68df2e6d7d391db3e30e382855688102cc22bc2ce4f9e231081168545ad"
+    },
+    {
+      "path": "reproduction_inputs/MOT17-05-SDP/tracks.txt",
+      "sha256": "127895190b332fe19e77f613c7dbad8ff32d3b20d68a7cbad9e81dee3296055f"
+    }
+  ]
+}

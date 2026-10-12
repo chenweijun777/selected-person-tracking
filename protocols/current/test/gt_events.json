@@ -1,6 +1,5 @@
 {
   "schema_version": 1,
-  "split": "test",
   "rules": {
     "main_visibility_threshold": 0.3,
     "boundary_margin": 0.02,
@@ -17,7 +16,7 @@
   },
   "sources": {
     "MOT17-11-SDP": {
-      "gt_path": "data/MOT17/MOT17/train/MOT17-11-SDP/gt/gt.txt",
+      "gt_path": "data/MOT17/train/MOT17-11-SDP/gt/gt.txt",
       "gt_sha256": "4952d6e4efc705c90688e434fd138a55ada2c0d5f576ba3847ee102fc18aff93",
       "seqinfo_sha256": "b6487e5ae527741884ae30d3dd470c406f5b4aa8ed35381085941c421a43784b",
       "fps": 30.0,
@@ -134,7 +133,6 @@
       "event_id": "MOT17-11-SDP_GT1_0002",
       "split": "test",
       "review_number": 1,
-      "video": "test/001_MOT17-11-SDP_GT1_0002.mp4",
       "source_review_status": "keep"
     },
     {
@@ -243,7 +241,6 @@
       "event_id": "MOT17-11-SDP_GT1_0003",
       "split": "test",
       "review_number": 2,
-      "video": "test/002_MOT17-11-SDP_GT1_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -347,7 +344,6 @@
       "event_id": "MOT17-11-SDP_GT10_0003",
       "split": "test",
       "review_number": 8,
-      "video": "test/008_MOT17-11-SDP_GT10_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -456,7 +452,6 @@
       "event_id": "MOT17-11-SDP_GT10_0004",
       "split": "test",
       "review_number": 9,
-      "video": "test/009_MOT17-11-SDP_GT10_0004.mp4",
       "source_review_status": "keep"
     },
     {
@@ -565,7 +560,6 @@
       "event_id": "MOT17-11-SDP_GT14_0002",
       "split": "test",
       "review_number": 11,
-      "video": "test/011_MOT17-11-SDP_GT14_0002.mp4",
       "source_review_status": "keep"
     },
     {
@@ -674,7 +668,6 @@
       "event_id": "MOT17-11-SDP_GT25_0003",
       "split": "test",
       "review_number": 16,
-      "video": "test/016_MOT17-11-SDP_GT25_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -783,7 +776,6 @@
       "event_id": "MOT17-11-SDP_GT25_0004",
       "split": "test",
       "review_number": 17,
-      "video": "test/017_MOT17-11-SDP_GT25_0004.mp4",
       "source_review_status": "keep"
     },
     {
@@ -887,7 +879,6 @@
       "event_id": "MOT17-11-SDP_GT25_0005",
       "split": "test",
       "review_number": 18,
-      "video": "test/018_MOT17-11-SDP_GT25_0005.mp4",
       "source_review_status": "keep"
     },
     {
@@ -991,7 +982,6 @@
       "event_id": "MOT17-11-SDP_GT25_0006",
       "split": "test",
       "review_number": 19,
-      "video": "test/019_MOT17-11-SDP_GT25_0006.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1095,7 +1085,6 @@
       "event_id": "MOT17-11-SDP_GT25_0007",
       "split": "test",
       "review_number": 20,
-      "video": "test/020_MOT17-11-SDP_GT25_0007.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1204,7 +1193,6 @@
       "event_id": "MOT17-11-SDP_GT25_0008",
       "split": "test",
       "review_number": 21,
-      "video": "test/021_MOT17-11-SDP_GT25_0008.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1313,7 +1301,6 @@
       "event_id": "MOT17-11-SDP_GT25_0009",
       "split": "test",
       "review_number": 22,
-      "video": "test/022_MOT17-11-SDP_GT25_0009.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1422,7 +1409,6 @@
       "event_id": "MOT17-11-SDP_GT33_0003",
       "split": "test",
       "review_number": 28,
-      "video": "test/028_MOT17-11-SDP_GT33_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1531,7 +1517,6 @@
       "event_id": "MOT17-11-SDP_GT33_0004",
       "split": "test",
       "review_number": 29,
-      "video": "test/029_MOT17-11-SDP_GT33_0004.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1635,7 +1620,6 @@
       "event_id": "MOT17-11-SDP_GT35_0003",
       "split": "test",
       "review_number": 33,
-      "video": "test/033_MOT17-11-SDP_GT35_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1739,7 +1723,6 @@
       "event_id": "MOT17-11-SDP_GT37_0003",
       "split": "test",
       "review_number": 36,
-      "video": "test/036_MOT17-11-SDP_GT37_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1843,7 +1826,6 @@
       "event_id": "MOT17-11-SDP_GT39_0003",
       "split": "test",
       "review_number": 39,
-      "video": "test/039_MOT17-11-SDP_GT39_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -1952,7 +1934,6 @@
       "event_id": "MOT17-11-SDP_GT39_0004",
       "split": "test",
       "review_number": 40,
-      "video": "test/040_MOT17-11-SDP_GT39_0004.mp4",
       "source_review_status": "keep"
     },
     {
@@ -2065,7 +2046,6 @@
       "event_id": "MOT17-11-SDP_GT42_0003",
       "split": "test",
       "review_number": 42,
-      "video": "test/042_MOT17-11-SDP_GT42_0003.mp4",
       "source_review_status": "keep"
     },
     {
@@ -2169,11 +2149,8 @@
       "event_id": "MOT17-11-SDP_GT51_0003",
       "split": "test",
       "review_number": 47,
-      "video": "test/047_MOT17-11-SDP_GT51_0003.mp4",
       "source_review_status": "keep"
     }
   ],
-  "curated_source": "E:\\CV\\manifests\\test_recovery_events_20261007.json",
-  "curated_source_sha256": "107df63a64c79a388709826847fe399efd45da291872e43281e52f1dfc27e8db",
-  "review_import": "Explicitly retained human-review keep verdict maps to evaluator reviewed; event IDs, numbering and every temporal boundary unchanged"
+  "origin_sha256": "9048b727feb4c9c023701c1f96c0872f705721e48977bb437447160bbeb8679b"
 }

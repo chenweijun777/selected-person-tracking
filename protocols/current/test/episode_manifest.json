@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "episodes": [
     {
       "sequence": "MOT17-11-SDP",
@@ -589,5 +590,6 @@
       "selection_max_gt_iou": 0.07535702693930542,
       "preselection_annotated_frames": 16
     }
-  ]
+  ],
+  "origin_sha256": "f963c7f863ee8d8ee3bf731201e10519d7b70fdea230eafa2b4831d933e81983"
 }

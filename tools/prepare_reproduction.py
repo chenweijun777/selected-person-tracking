@@ -23,8 +23,7 @@ def main():
         if destination.is_file():
             source = destination
         else:
-            portable = args.source_dir / row["destination"]
-            source = portable if portable.is_file() else args.source_dir / row["source"]
+            source = args.source_dir / row["destination"]
         if not source.is_file():
             raise FileNotFoundError(
                 f"Missing {row['destination']}; use a complete local input bundle or rebuild "
