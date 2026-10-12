@@ -1,4 +1,5 @@
 {
+  "selection_rationale": "人工筛选具有有效观察片段的目标，用于评价持续跟踪与遮挡恢复。排除长期可见度为 0、仅出现几帧，以及远处小目标短暂可见后长期遮挡等缺少有效身份确认与跟踪片段的 ID。",
   "source_sha256": "e58e9fecfbb5c1029456b59156dc6dbe8156eb63929b4e44e3eeee4f6046340f",
   "scope": "MOT17-02/04/05/09/10-SDP; all five sequences use workbook-selected IDs",
   "gt_filter": "mark=1 and class=1, positive-width/height pedestrian boxes",

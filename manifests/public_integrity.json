@@ -86,7 +86,7 @@
     },
     {
       "path": "manifests/gt_event_scope_20261005.json",
-      "sha256": "1a17a44c147ceb3d1c5f08808dbefbe19175f5d77f1c1cf165894d434195df28"
+      "sha256": "ca9a236451d82a24219ca80d30bc4141e5046e304783ea4b3475ef328912793d"
     },
     {
       "path": "manifests/models.json",
@@ -94,7 +94,7 @@
     },
     {
       "path": "manifests/recovery_event_exclusions_20261005.json",
-      "sha256": "4db9e74153d11132946fc66b6f7ccec722f0ea100b8dae7870cd55515164ad7a"
+      "sha256": "94b43c57e67c4df7ec8c73fb58eca77272fe08084fe8b3c3fe5a2c94fc9aaf0c"
     },
     {
       "path": "manifests/reproduction_assets.json",
@@ -102,11 +102,11 @@
     },
     {
       "path": "manifests/target_scope_20261005.json",
-      "sha256": "f795c8135775db944d79c3baf4f0cae0ef65d4471b433ff345dd6226c9ab021c"
+      "sha256": "3ee06172fcc5f9908b820864ec4f58a4730656b53c06e29b0591f604988d85a2"
     },
     {
       "path": "manifests/test_recovery_event_exclusions_20261007.json",
-      "sha256": "7331fb70c4a7773869b44d4152d32cbef22a08f415736c5939dca2d5d3fd5238"
+      "sha256": "f6251869b117f8637f7af1012b0d8c61c95b2b5b828aa8bcbc261b6488689eee"
     },
     {
       "path": "protocols/current/development.json",

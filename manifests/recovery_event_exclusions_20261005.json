@@ -1,4 +1,5 @@
 {
+  "exclusion_rationale": "恢复事件根据 GT ID 的可见度时间序列自动生成，再通过人工查看视频复核。将首次出现被自动规则误判为完全遮挡后重现的事件剔除，因为此前没有可见的目标身份可供恢复。",
   "schema_version": 1,
   "review_date": "2026-10-05",
   "reviewer": "project_user",
