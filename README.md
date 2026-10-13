@@ -8,7 +8,7 @@ Selected-person Tracking and Identity Recovery after Occlusion
 
 技术栈：Python · OpenCV · YOLO26s · BoT-SORT · ONNX Runtime · NumPy · Tkinter · TrackEval。
 
-![实际运行中的指定目标跟踪](docs/assets/tracking_preview.png)
+![实际运行中的指定目标跟踪](https://github.com/user-attachments/assets/5fdf569b-5815-49a7-b5f0-e4257d614270)
 
 上图为系统运行画面。指定目标跟踪和遮挡恢复的评估结果见下文。
 
